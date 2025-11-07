@@ -19,8 +19,8 @@
 #+LATEX_HEADER: \usepackage{titlesec}
 #+LATEX_HEADER: \usepackage{titletoc}
 #+LATEX_HEADER: \usepackage{microtype}
-#+LATEX_HEADER: \usepackage{libertine}
-#+LATEX_HEADER: \usepackage[libertine]{newtxmath}
+#+LATEX_HEADER: \usepackage{lmodern}
+#+LATEX_HEADER: \usepackage{mathptmx}
 #+LATEX_HEADER:
 #+LATEX_HEADER: % Professional typography setup
 #+LATEX_HEADER: \microtypesetup{final,factor=1100}
