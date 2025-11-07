@@ -193,15 +193,17 @@ este sendero menos transitado.}
 
 En un mundo que se encuentra en constante evolución, donde los paradigmas educativos tradicionales se enfrentan a crecientes interrogantes, la Crianza en Libertad\index{crianza en libertad} se posiciona como una alternativa inspiradora y necesaria. Este libro es una invitación a explorar nuevas formas de entender y vivir la crianza y la educación, donde la curiosidad y la autonomía\index{autonomía infantil} del niño son las piedras angulares de un aprendizaje significativo.
 
-A través de estas páginas, abordaremos la esencia de la Crianza en Libertad, analizando su definición y los modelos de aprendizaje natural\index{aprendizaje natural} que la respaldan. Nos adentraremos en la historia del movimiento de educación alternativa\index{educación alternativa}, reconociendo las voces pioneras que han dado forma a esta filosofía. Destacaremos la importancia de la autonomía infantil en el proceso educativo, enfatizando la libertad de los niños para explorar sus intereses y expresarse plenamente.
+¿Qué es exactamente la Crianza en Libertad\index{crianza en libertad}? Es rechazar la idea misma de que el aprendizaje\index{aprendizaje natural} deba ser estructurado y controlado desde fuera. Los niños aprenden naturalmente—explorando, preguntando, equivocándose, reintentando—si no interrumpimos ese proceso. Aprenden a caminar sin currículos. Aprenden a hablar sin lecciones formales. ¿Por qué creemos que leer, escribir o entender el mundo requiere algo diferente?
 
-Este libro recopila testimonios conmovedores de familias que han tomado el camino de la educación alternativa. Sus experiencias demuestran que es posible brindar a nuestros hijos un entorno donde el aprendizaje surja de la curiosidad y la alegría de descubrir el mundo.
+Este movimiento tiene raíces profundas. John Holt\index{Holt, John} lo articuló en los años 60 cuando observó cómo la escuela mataba el amor natural por aprender. María Montessori\index{Montessori, María} antes que él. Ivan Illich\index{Illich, Ivan} después. No es nuevo; es un redescubrimiento de cómo siempre aprendimos antes de que existieran aulas estandarizadas.
 
-Además, presentaremos una variedad de recursos prácticos y estrategias que pueden ser implementadas por padres y educadores. Desde actividades que fomentan el juego\index{juego!importancia} y la exploración hasta métodos para cultivar la curiosidad y crear ambientes de aprendizaje enriquecedores, cada sección está diseñada para ser accesible y aplicable en la vida cotidiana.
+Aquí encontrarás testimonios de familias que dieron el salto. Hadrián aprendió a leer a su propio ritmo—sin presión, sin vergüenza, sin comparaciones. Ana construyó su propio currículo a los 9 años siguiendo sus pasiones. Marta y Julio vieron a sus hijos florecer cuando dejaron de forzarlos a encajar en moldes prefabricados. Sus historias te mostrarán que sí es posible, que no estás solo en esto.
 
-También reflexionaremos sobre la crítica a la educación tradicional\index{educación tradicional!crítica}, ofreciendo un análisis de sus limitaciones y resaltando la necesidad urgente de reformar nuestra forma de enseñar, en favor de un enfoque más humano y respetuoso.
+Encontrarás recursos prácticos: cómo estructurar el día sin estructura, qué hacer cuando tu hijo dice "estoy aburrido" a las 10 de la mañana, cómo responder cuando tu madre pregunta con esa voz "¿y si nunca aprende matemáticas?" Actividades que fomentan el juego\index{juego!importancia} y la exploración, métodos para cultivar la curiosidad sin asfixiarla, formas de crear ambientes ricos sin convertir tu casa en un salón de clases.
 
-/Crecer en Libertad/ es una invitación a replantear nuestras prácticas de crianza y educación, a abrazar la singularidad de cada niño y a construir un camino donde la libertad y el respeto sean la norma. Esperamos que este libro sirva como una guía y un recurso valioso para todos aquellos que buscan comprometidos con un enfoque educativo alternativo y enriquecedor, donde cada niño tenga la oportunidad de crecer y aprender en un entorno que celebra su potencial.
+El sistema escolar tradicional\index{educación tradicional!crítica} merece ser cuestionado. Fue diseñado para producir trabajadores obedientes en la Revolución Industrial, no pensadores libres en el siglo XXI. Veremos sus limitaciones, sus fracasos, por qué cada vez más familias buscan alternativas. Pero este no es un libro para quejarse—es un libro para actuar.
+
+Replantea tus prácticas de crianza y educación. Abraza la singularidad de tu hijo en lugar de intentar moldearlo según expectativas ajenas. Construye un camino donde la libertad y el respeto sean la norma, no la excepción. Cada niño merece crecer en un entorno que celebre su potencial en lugar de limitarlo.
 
 #+BEGIN_EXPORT latex
 \cleardoublepage
@@ -278,11 +280,11 @@ Quiero expresar mi más sincero agradecimiento a todas las familias que comparte
 
 A los educadores y pensadores que han iluminado este camino, con sus investigaciones y teorías que desafían las normas establecidas, gracias por su compromiso en generar un cambio significativo en nuestra comprensión de lo que significa enseñar y aprender. Agradezco especialmente a todos aquellos que han participado en debates enriquecedores, ofreciendo diferentes perspectivas y enfoques sobre la crianza y la enseñanza. Sus contribuciones han sido fundamentales para construir una comunidad sólida y unida, donde se celebra la diversidad de pensamientos y cada voz cuenta.
 
-Quiero reconocer también la labor de las comunidades de apoyo que han surgido alrededor de este movimiento, brindando un entorno acogedor y colaborativo donde familias comprometidas comparten recursos, consejos y amistad. Su trabajo es vital para fomentar un cambio significativo en la percepción de la educación alternativa.
+Las comunidades de apoyo que han surgido alrededor de este movimiento merecen reconocimiento especial. Brindan un entorno acogedor y colaborativo donde familias comprometidas comparten recursos, consejos y amistad. Sin ustedes, muchos de nosotros nos habríamos sentido aislados, cuestionando cada decisión en soledad. Su trabajo es vital para fomentar un cambio significativo en la percepción de la educación alternativa.
 
-Asimismo, agradezco a los investigadores y a quienes han compilado recursos, cuyas indagaciones y esfuerzos han sido esenciales para proporcionar una base sólida sobre la cual construir este discurso.
+Los investigadores y compiladores de recursos—aquellos que han dedicado años a documentar, analizar y fundamentar este movimiento—han sido esenciales. Sus indagaciones y esfuerzos proporcionan la base sólida sobre la cual construimos este discurso. Gracias por darnos no solo inspiración, sino evidencia.
 
-Finalmente, doy las gracias a nuestros niños, quienes son verdaderos maestros en esta travesía. Su curiosidad, alegría y autenticidad nos enseñan constantemente que el aprendizaje no se agota en un aula, sino que florece en cada rincón de la vida cotidiana. Agradezco a cada uno de ustedes por abrir sus corazones y compartir sus reflexiones sobre la crianza, el amor y la educación. Juntos, estamos construyendo un futuro en el que la educación y el bienestar de nuestros hijos sean prioridades, marcadas por la compasión, la comprensión y la libertad.
+Y a nuestros niños—nuestros verdaderos maestros en esta travesía. Su curiosidad, alegría y autenticidad nos enseñan constantemente que el aprendizaje no se agota en un aula. Florece en cada rincón de la vida cotidiana: en las preguntas que hacen al despertar, en las horas que pasan absortos en proyectos que nadie les asignó, en la forma en que resuelven problemas que nadie les enseñó a resolver. Agradezco a cada uno de ustedes—lectores, familias, educadores—por abrir sus corazones y compartir sus reflexiones sobre la crianza, el amor y la educación. Juntos, estamos construyendo un futuro donde la educación y el bienestar de nuestros hijos sean prioridades, marcadas por la compasión, la comprensión y la libertad.
 
 #+BEGIN_EXPORT latex
 \cleardoublepage
@@ -425,9 +427,13 @@ Lo más hermoso de estas estrategias es que no requieren títulos pedagógicos. 
 
 *** El Rol del Juego en el Aprendizaje
 
-El juego\index{juego!importancia} es fundamental para que los niños exploren, experimenten e interactúen con su entorno. Según investigaciones, aprenden de manera más efectiva cuando se les da libertad para jugar, lo cual enriquece su capacidad de autorregulación, creatividad y habilidades sociales. El juego libre\index{juego libre} fomenta la autodirección—los niños desarrollan sus propios intereses a su propio ritmo, sin separación artificial entre ocio y "trabajo escolar."
+El juego\index{juego!importancia} es donde ocurre el aprendizaje real. Observa a cualquier niño jugando: está explorando, experimentando, interactuando con su entorno de formas que ningún currículo podría prescribir. Las investigaciones lo confirman una y otra vez—los niños aprenden de manera más efectiva cuando tienen libertad para jugar. Desarrollan autorregulación, creatividad y habilidades sociales sin que nadie les dé lecciones sobre esas cosas.
 
-A través del juego, los niños no solo desarrollan habilidades físicas y cognitivas, sino que también aprenden a socializar, negociar roles y resolver conflictos. Este capítulo enfatiza la importancia del juego no solo como actividad recreativa, sino como un proceso educativo vital que fomenta el desarrollo emocional, cognitivo y físico. Es imperativo que los padres y educadores creen espacios donde el juego no solo sea permitido, sino fomentado, reconociendo su valor educativo intrínseco.
+El juego libre\index{juego libre} es aprendizaje autodirigido. Los niños desarrollan sus propios intereses a su propio ritmo. No existe la separación artificial entre "tiempo de juego" y "tiempo de trabajo escolar"—todo es aprendizaje cuando surge de su propia motivación.
+
+Jugando, los niños desarrollan habilidades físicas y cognitivas. Aprenden a socializar, negociar roles, resolver conflictos. Nadie les enseña estas cosas explícitamente—las descubren en acción, donde realmente importan. El juego es el proceso educativo vital, no una "actividad recreativa" que hacemos después del trabajo "serio."
+
+Crea espacios donde el juego sea la norma, no la recompensa. Reconoce su valor educativo intrínseco. Tu hijo no necesita más "actividades enriquecedoras"—necesita tiempo libre para jugar sin agenda adulta.
 
 *** Métodos para Fomentar la Curiosidad
 
