@@ -16,11 +16,20 @@
 #+LATEX_HEADER: \usepackage{hyperref}
 #+LATEX_HEADER: \usepackage{setspace}
 #+LATEX_HEADER: \usepackage{makeidx}
+#+LATEX_HEADER: \usepackage{titlesec}
+#+LATEX_HEADER: \usepackage{titletoc}
+#+LATEX_HEADER: \usepackage{microtype}
+#+LATEX_HEADER: \usepackage{libertine}
+#+LATEX_HEADER: \usepackage[libertine]{newtxmath}
 #+LATEX_HEADER:
-#+LATEX_HEADER: % Page setup for 6x9 Amazon KDP
-#+LATEX_HEADER: \setstretch{1.10}
-#+LATEX_HEADER: \setlength{\parindent}{0.25in}
-#+LATEX_HEADER: \setlength{\parskip}{0pt}
+#+LATEX_HEADER: % Professional typography setup
+#+LATEX_HEADER: \microtypesetup{final,factor=1100}
+#+LATEX_HEADER: \DisableLigatures{encoding = *, family = * }
+#+LATEX_HEADER:
+#+LATEX_HEADER: % Page setup for 6x9 Amazon KDP with optimal line spacing
+#+LATEX_HEADER: \setstretch{1.15}
+#+LATEX_HEADER: \setlength{\parindent}{1.5em}
+#+LATEX_HEADER: \setlength{\parskip}{0pt plus 0.5pt}
 #+LATEX_HEADER:
 #+LATEX_HEADER: % Advanced typography controls
 #+LATEX_HEADER: % Widow and orphan control (penalidades altas previenen líneas sueltas)
@@ -77,9 +86,53 @@
 #+LATEX_HEADER: \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
 #+LATEX_HEADER:   \hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 #+LATEX_HEADER:
-#+LATEX_HEADER: % Chapter and Part formatting
-#+LATEX_HEADER: \renewcommand{\chaptername}{Capítulo}
+#+LATEX_HEADER: % Professional Part formatting (inspired by Penguin Classics)
 #+LATEX_HEADER: \renewcommand{\partname}{}
+#+LATEX_HEADER: \titleformat{\part}[display]
+#+LATEX_HEADER:   {\centering\Huge\bfseries}
+#+LATEX_HEADER:   {\fontsize{60}{72}\selectfont\thepart}
+#+LATEX_HEADER:   {20pt}
+#+LATEX_HEADER:   {\Huge}
+#+LATEX_HEADER:   [\vspace{2ex}\titlerule]
+#+LATEX_HEADER:
+#+LATEX_HEADER: % Professional Chapter formatting (inspired by classic literature)
+#+LATEX_HEADER: \titleformat{\chapter}[display]
+#+LATEX_HEADER:   {\normalfont\huge\bfseries}
+#+LATEX_HEADER:   {\chaptertitlename\ \thechapter}
+#+LATEX_HEADER:   {20pt}
+#+LATEX_HEADER:   {\Huge}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \titlespacing*{\chapter}{0pt}{50pt}{40pt}
+#+LATEX_HEADER:
+#+LATEX_HEADER: % Section formatting (clean and elegant)
+#+LATEX_HEADER: \titleformat{\section}
+#+LATEX_HEADER:   {\normalfont\Large\bfseries}
+#+LATEX_HEADER:   {\thesection}
+#+LATEX_HEADER:   {1em}
+#+LATEX_HEADER:   {}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+#+LATEX_HEADER:
+#+LATEX_HEADER: % Subsection formatting
+#+LATEX_HEADER: \titleformat{\subsection}
+#+LATEX_HEADER:   {\normalfont\large\bfseries}
+#+LATEX_HEADER:   {\thesubsection}
+#+LATEX_HEADER:   {1em}
+#+LATEX_HEADER:   {}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+#+LATEX_HEADER:
+#+LATEX_HEADER: % Subsubsection formatting
+#+LATEX_HEADER: \titleformat{\subsubsection}
+#+LATEX_HEADER:   {\normalfont\normalsize\bfseries}
+#+LATEX_HEADER:   {\thesubsubsection}
+#+LATEX_HEADER:   {1em}
+#+LATEX_HEADER:   {}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+#+LATEX_HEADER:
+#+LATEX_HEADER: % Chapter name in Spanish
+#+LATEX_HEADER: \renewcommand{\chaptername}{Capítulo}
 #+LATEX_HEADER:
 #+LATEX_HEADER: % Hyperref settings
 #+LATEX_HEADER: \hypersetup{
@@ -100,11 +153,12 @@
 
 #+BEGIN_EXPORT latex
 % Half title page (no page number) - always starts on page 1 (odd)
+% Inspired by Penguin Classics minimalist design
 \begin{titlepage}
 \thispagestyle{empty}
 \centering
-\vspace*{2in}
-{\Huge\bfseries Crecer en Libertad\par}
+\vspace*{2.5in}
+{\fontsize{24}{29}\selectfont\textsc{Crecer en Libertad}\par}
 \end{titlepage}
 
 % Blank page (even) to push full title to odd page
@@ -113,54 +167,71 @@
 \mbox{}
 
 % Full title page (no page number) - now on odd page
+% Inspired by classic literature: elegant hierarchy and generous spacing
 \clearpage
 \thispagestyle{empty}
 \centering
-\vspace*{1.5in}
+\null
+\vspace{1.5in}
 
-{\Huge\bfseries Crecer en Libertad\par}
-\vspace{0.5cm}
-{\LARGE Aprendiendo juntos\par}
+{\fontsize{32}{38}\selectfont\textsc{Crecer}\par}
+\vspace{0.15cm}
+{\fontsize{32}{38}\selectfont\textsc{en Libertad}\par}
 
-\vspace{2cm}
+\vspace{0.8cm}
+{\fontsize{14}{17}\selectfont\textit{Aprendiendo juntos}\par}
 
-{\Large\itshape Juan Manuel Ferrera Díaz\par}
+\vspace{2.5cm}
+
+{\fontsize{16}{19}\selectfont Juan Manuel Ferrera Díaz\par}
 
 \vfill
 
-{\large 2025\par}
+{\small\rule{2in}{0.4pt}\par}
+\vspace{0.3cm}
+{\footnotesize 2025\par}
 
 \clearpage
 
-% Copyright page (even page)
+% Copyright page (even page) - Professional compact layout
 \thispagestyle{empty}
 \vspace*{\fill}
 
 \noindent
-{\small
-\textbf{Crecer en Libertad: Aprendiendo juntos}\\[1em]
-Copyright \copyright\ 2025 por Juan Manuel Ferrera Díaz\\[1.5em]
+{\footnotesize
+\textsc{Crecer en Libertad}: \textit{Aprendiendo juntos}\\[0.8em]
+Copyright \copyright\ 2025 Juan Manuel Ferrera Díaz\\[0.8em]
+Todos los derechos reservados.\\[1.2em]
 
-Todos los derechos reservados.\\[1.5em]
+ISBN 979-8-XXXX-XXXX-X (tapa blanda)\\
+ISBN 979-8-XXXX-XXXX-X (ebook)\\[1.2em]
 
-ISBN: 979-8-XXXX-XXXX-X (tapa blanda)\\
-ISBN: 979-8-XXXX-XXXX-X (ebook)\\[1.5em]
+Primera edición, 2025\\[1.2em]
 
-Primera Edición: 2025\\[1.5em]
+Impreso en Estados Unidos de América\\[1.2em]
 
-Impreso en Estados Unidos de América
+\textit{Para más información sobre educación en libertad, visita:}\\
+\texttt{www.crecerenlibertad.org}
 }
+
+\vspace{2cm}
 
 \cleardoublepage
 
-% Dedication page (optional)
+% Dedication page - Elegant centered layout inspired by classic books
 \thispagestyle{empty}
-\vspace*{2.5in}
+\null
+\vfill
 \begin{center}
-\textit{Para todos los niños y niñas que crecen en libertad,\\
-y para las familias valientes que eligen caminar\\
+{\large\itshape
+Para todos los niños y niñas\\
+que crecen en libertad,\\[1em]
+y para las familias valientes\\
+que eligen caminar\\
 este sendero menos transitado.}
 \end{center}
+\vfill
+\vfill
 
 \cleardoublepage
 #+END_EXPORT
