@@ -300,8 +300,6 @@ Y a nuestros niños—nuestros verdaderos maestros en esta travesía. Su curiosi
 \part{Fundamentos: Comprendiendo la Crianza en Libertad}
 #+END_EXPORT
 
-* Parte 1: Fundamentos
-
 ** Introducción a la Crianza en Libertad
 
 Era una mañana cualquiera cuando mi hijo de cuatro años me preguntó: "Papá, ¿por qué el cielo es azul?" En lugar de darle una respuesta rápida o decirle que lo buscaríamos en Google más tarde, nos sentamos juntos. Lo que comenzó como una simple pregunta sobre el color del cielo se convirtió en dos horas de exploración fascinante sobre la luz, los prismas, el arcoíris, y por qué el atardecer es rojo. Él dirigió toda la conversación, yo solo fui su compañero de viaje.
@@ -408,8 +406,6 @@ Eso es exactamente lo que viene ahora.
 \cleardoublepage
 \part{Práctica: Cómo Vivir la Crianza en Libertad}
 #+END_EXPORT
-
-* Parte 2: Práctica
 
 ** Estrategias y Herramientas Cotidianas
 
@@ -868,8 +864,6 @@ Si el capítulo anterior te dio la armadura emocional, éste te va a dar la cert
 \cleardoublepage
 \part{Inspiración y Futuro}
 #+END_EXPORT
-
-* Parte 3: Inspiración y Futuro
 
 ** Historias de Éxito: Familias que lo Lograron
 
