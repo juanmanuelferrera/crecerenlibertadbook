@@ -99,7 +99,7 @@
 # Title page and front matter will be inserted manually below
 
 #+BEGIN_EXPORT latex
-% Half title page (no page number)
+% Half title page (no page number) - always starts on page 1 (odd)
 \begin{titlepage}
 \thispagestyle{empty}
 \centering
@@ -107,17 +107,20 @@
 {\Huge\bfseries Crecer en Libertad\par}
 \end{titlepage}
 
-\cleardoublepage
+% Blank page (even) to push full title to odd page
+\clearpage
+\thispagestyle{empty}
+\mbox{}
 
-% Full title page (no page number)
-\begin{titlepage}
+% Full title page (no page number) - now on odd page
+\clearpage
 \thispagestyle{empty}
 \centering
 \vspace*{1.5in}
 
 {\Huge\bfseries Crecer en Libertad\par}
 \vspace{0.5cm}
-{\LARGE Crianza y Educación Alternativa\par}
+{\LARGE Aprendiendo juntos\par}
 
 \vspace{2cm}
 
@@ -127,17 +130,15 @@
 
 {\large 2025\par}
 
-\end{titlepage}
+\clearpage
 
-\cleardoublepage
-
-% Copyright page
+% Copyright page (even page)
 \thispagestyle{empty}
 \vspace*{\fill}
 
 \noindent
 {\small
-\textbf{Crecer en Libertad: Crianza y Educación Alternativa}\\[1em]
+\textbf{Crecer en Libertad: Aprendiendo juntos}\\[1em]
 Copyright \copyright\ 2025 por Juan Manuel Ferrera Díaz\\[1.5em]
 
 Todos los derechos reservados.\\[1.5em]
