@@ -77,8 +77,9 @@
 #+LATEX_HEADER: \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
 #+LATEX_HEADER:   \hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 #+LATEX_HEADER:
-#+LATEX_HEADER: % Chapter formatting (simple)
+#+LATEX_HEADER: % Chapter and Part formatting
 #+LATEX_HEADER: \renewcommand{\chaptername}{Capítulo}
+#+LATEX_HEADER: \renewcommand{\partname}{}
 #+LATEX_HEADER:
 #+LATEX_HEADER: % Hyperref settings
 #+LATEX_HEADER: \hypersetup{
