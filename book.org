@@ -1,6 +1,6 @@
 #+TITLE: Crecer en Libertad
 #+SUBTITLE: Crianza y Educación Alternativa
-#+AUTHOR: Juan Manuel Ferrera Díaz
+#+AUTHOR: Juan Manuel Ferrera Diaz
 #+DATE: 2025
 #+LANGUAGE: es
 #+OPTIONS: toc:nil num:t H:3 date:nil author:nil title:nil
