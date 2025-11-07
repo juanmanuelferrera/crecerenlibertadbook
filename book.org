@@ -293,7 +293,14 @@ Finalmente, doy las gracias a nuestros niños, quienes son verdaderos maestros e
 \cleardoublepage
 #+END_EXPORT
 
-* Introducción a la Crianza en Libertad
+#+BEGIN_EXPORT latex
+\cleardoublepage
+\part{Fundamentos: Comprendiendo la Crianza en Libertad}
+#+END_EXPORT
+
+* Parte 1: Fundamentos
+
+** Introducción a la Crianza en Libertad
 
 Era una mañana cualquiera cuando mi hijo de cuatro años me preguntó: "Papá, ¿por qué el cielo es azul?" En lugar de darle una respuesta rápida o decirle que lo buscaríamos en Google más tarde, nos sentamos juntos. Lo que comenzó como una simple pregunta sobre el color del cielo se convirtió en dos horas de exploración fascinante sobre la luz, los prismas, el arcoíris, y por qué el atardecer es rojo. Él dirigió toda la conversación, yo solo fui su compañero de viaje.
 
@@ -301,7 +308,7 @@ Esa experiencia me enseñó algo fundamental: los niños no necesitan que les "e
 
 Esta es la esencia de la Crianza en Libertad.
 
-** Definición de Crianza en Libertad
+*** Definición de Crianza en Libertad
 
 Imagina intentar enseñarle a un pájaro a volar con un manual de instrucciones y horarios fijos. Absurdo, ¿verdad? Los pájaros simplemente... vuelan. Observan, prueban, caen, intentan de nuevo. Nadie los sienta en un pupitre a explicarles la aerodinámica.
 
@@ -309,7 +316,7 @@ La Crianza en Libertad\index{crianza en libertad} parte de esa misma confianza r
 
 Desde los primeros días, los niños aprenden observando\index{observación} e interactuando. Experimentan el aprendizaje mediante actividades prácticas y el juego\index{juego!aprendizaje}. Sus intereses y curiosidades guían sus descubrimientos. La educación se convierte en continuación natural de la vida—sin separaciones rígidas entre aprender, jugar y vivir.
 
-** Historia del Movimiento de Educación Alternativa
+*** Historia del Movimiento de Educación Alternativa
 
 A lo largo de la historia, ha habido un llamado constante hacia un enfoque educativo más humano y menos autoritario. Figuras como John Dewey\index{Dewey, John} y María Montessori\index{Montessori, María} han sido pioneras en la defensa de la educación basada en la experiencia y el respeto hacia el niño como individuo. En la segunda mitad del siglo XX, durante el auge del movimiento contracultural, la idea de un aprendizaje sin colegios ganó notable fuerza.
 
@@ -317,7 +324,7 @@ El movimiento de educación alternativa\index{educación alternativa!historia} h
 
 A medida que se ha expandido la conciencia sobre la importancia de la individualidad y el bienestar emocional de los niños, se han creado redes de apoyo entre familias que comparten estos ideales. Estas comunidades son fundamentales, ya que permiten la colaboración y el intercambio de experiencias, enriqueciendo el proceso educativo y apoyando el desarrollo integral de sus hijos. La interacción y el aprendizaje en grupo son elementos vitales de este enfoque, ya que fomentan el desarrollo de habilidades sociales y emocionales en los niños.
 
-** Importancia de la Autonomía Infantil
+*** Importancia de la Autonomía Infantil
 
 La autonomía\index{autonomía infantil} es clave en la Crianza en Libertad. Cuando los niños toman decisiones sobre su aprendizaje, desarrollan autoconfianza. La relación entre padres e hijos se transforma en colaboración mutua.
 
@@ -335,28 +342,27 @@ Pero quizá te estés preguntando: "Todo esto suena hermoso, ¿pero tiene base c
 
 #+BEGIN_EXPORT latex
 \cleardoublepage
-\part{Fundamentos de la Crianza en Libertad}
 #+END_EXPORT
 
-* Historia y Teoría de la Educación Alternativa
+** Historia y Teoría de la Educación Alternativa
 
 Sofía tiene siete años y nunca ha pisado un aula. Cuando le pregunto qué hizo ayer, me cuenta con los ojos brillantes que estuvo toda la tarde observando hormigas en el jardín. "¿Sabías que se comunican con antenas?", me dice. Luego sacó la enciclopedia, buscó información en internet, y terminó dibujando un hormiguero completo con túneles y cámaras. Nadie le dijo que estudiara insectos. Nadie le asignó ese "proyecto". Simplemente, como millones de niños antes que ella, siguió su curiosidad natural.
 
 Esta escena, repetida en miles de hogares donde se practica la educación alternativa, nos lleva a preguntarnos: ¿qué pasaría si confiáramos más en este impulso innato de aprender? ¿Y si, en lugar de imponer currículos rígidos, acompañáramos la curiosidad natural de los niños?
 
-** Modelos de Aprendizaje Natural
+*** Modelos de Aprendizaje Natural
 
 Los niños son científicos natos. Observa a un bebé: tira su cuchara al suelo una, dos, cincuenta veces. No es que sea terco—está realizando experimentos sobre gravedad, causa y efecto, patrones de sonido. Nadie le enseñó el método científico. Lo usa instintivamente.
 
 El aprendizaje natural\index{aprendizaje natural} confía en ese impulso. Como vimos con Sofía y las hormigas, los niños aprenden mejor explorando libremente a su propio ritmo. Promueve la curiosidad innata en lugar de currículos impuestos. Cada niño tiene pasiones distintas y desarrolla habilidades de forma orgánica—como aprender a caminar, que ningún niño hace "a destiempo" cuando se le deja en libertad.
 
-** La Psicología del Aprendizaje: Cómo Aprenden los Niños
+*** La Psicología del Aprendizaje: Cómo Aprenden los Niños
 
 Mi hija tenía dos años cuando decidió que todas las cosas redondas eran "pelotas". Manzanas, naranjas, la luna—todo era "pelota". Luego empezó a refinar: algunas pelotas se comían, otras no. Algunas rebotaban, otras se quedaban quietas. Nadie le dio clases de categorización. Su cerebro estaba haciendo lo que Alison Gopnik\index{Gopnik, Alison} llama "inferencia bayesiana"—usando estadística inconsciente para entender el mundo.
 
 Los estudios en psicología del desarrollo\index{psicología del desarrollo} confirman lo que los padres observadores ya saben: los niños son máquinas de aprendizaje. La interacción social\index{interacción social} importa—aprenden observando, imitando, conectando. Las relaciones significativas potencian el aprendizaje, no las lecciones formales.
 
-** La Crítica a la Educación Tradicional
+*** La Crítica a la Educación Tradicional
 
 La escuela tradicional\index{educación tradicional!crítica} premia la obediencia. Todos aprenden lo mismo, al mismo tiempo, de la misma manera. Si tu hijo no encaja en ese molde único, el sistema dice que él está "atrasado"—no que el sistema sea demasiado rígido.
 
@@ -391,7 +397,9 @@ La crítica a la educación tradicional señala la urgente necesidad de reformar
 \part{Práctica: Cómo Vivir la Crianza en Libertad}
 #+END_EXPORT
 
-* Estrategias y Herramientas Cotidianas
+* Parte 2: Práctica
+
+** Estrategias y Herramientas Cotidianas
 
 John Taylor Gatto demolió nuestras ilusiones sobre el sistema escolar. Su obra /Dumbing Us Down/ es el grito de guerra que despierta. Este libro es el mapa para quienes, ya despiertos, buscan construir algo mejor.
 
@@ -401,19 +409,19 @@ Las estrategias que compartiremos a continuación no son abstractas ni complicad
 
 Lo más hermoso de estas estrategias es que no requieren títulos pedagógicos. Requieren algo mucho más valioso: tu presencia y tu confianza en tus hijos.
 
-** El Rol del Juego en el Aprendizaje
+*** El Rol del Juego en el Aprendizaje
 
 El juego\index{juego!importancia} lo es todo en el aprendizaje. Les permite explorar e interactuar. Los niños aprenden mejor cuando juegan. El juego libre\index{juego libre} fomenta aprendizaje autodirigido a su propio ritmo.
 
 A través del juego, los niños desarrollan habilidades físicas y aprenden a socializar, negociar roles y resolver conflictos. El juego es un proceso educativo vital. Los padres deben crear espacios donde el juego sea fomentado, reconociendo su valor intrínseco.
 
-** Métodos para Fomentar la Curiosidad
+*** Métodos para Fomentar la Curiosidad
 
 Fomentar la curiosidad\index{curiosidad!fomento} es un objetivo central de la crianza respetuosa. Una estrategia clave es crear un ambiente que estimule la curiosidad de los niños. Esto puede incluir facilitar el acceso a diversos materiales, permitir la exploración sin restricciones y promover preguntas abiertas que inviten a la investigación. Alentando a los niños a hacer preguntas y a buscar sus propias respuestas, se fortalece su autonomía y se les enseña a ver el aprendizaje como un proceso continuo y significativo.
 
 Las experiencias prácticas\index{experiencias prácticas}, como salir a la naturaleza, realizar experimentos sencillos, o involucrar a los niños en proyectos creativos, son excelentes formas de incentivar su curiosidad. Los relatos compartidos en la comunidad destacan cómo las experiencias lúdicas fortalecen los vínculos entre padres e hijos y cómo facilitar el tiempo de juego libre permite a los niños encontrar su propio ritmo de exploración y aprendizaje. Los padres deben modelar una actitud de asombro y desapego hacia el conocimiento, mostrando que el aprendizaje es un proceso continuo y dinámico.
 
-** Crear Ambientes de Aprendizaje Ricos
+*** Crear Ambientes de Aprendizaje Ricos
 
 Los ambientes de aprendizaje\index{ambientes de aprendizaje} deben ser ricos en estímulos y oportunidades de interacción. Esto incluye un espacio físico adecuado, diversidad de recursos (libros, artefactos, herramientas) y la presencia de adultos que acompañen y orienten sin interferir en el proceso natural de aprendizaje del niño. Fomentar un entorno en el que los niños se sientan seguros para experimentar y cometer errores es vital para su desarrollo. Un ambiente atractivo y accesible que ofrezca múltiples formas de interactuar y aprender influye positivamente en el desarrollo de los niños. La creación de entornos que incluyan elementos naturales, materiales artísticos y herramientas variadas puede enriquecer la experiencia sensorial.
 
@@ -421,7 +429,7 @@ Además, es esencial que estos ambientes sean adaptables para atender a los dist
 
 Estas estrategias que acabamos de explorar—el juego, la curiosidad, los ambientes ricos—son el corazón de la crianza en libertad. Pero ninguna familia está sola en este camino. A lo largo de los años, miles de educadores, autores y comunidades han creado un ecosistema de recursos invaluables.
 
-** Recursos Esenciales: Tu Caja de Herramientas
+*** Recursos Esenciales: Tu Caja de Herramientas
 
 Recuerdo la noche que descubrí "La sociedad desescolarizada" de Ivan Illich. Eran las 2 de la madrugada, mi hijo dormía, y yo estaba paralizado por el miedo: "¿Estoy arruinando el futuro de mi hijo al sacarlo de la escuela?" Ese libro no solo respondió mis dudas—me dio el lenguaje para articular lo que mi intuición ya sabía. Me hizo sentir parte de algo más grande, de un movimiento con décadas de historia y pensamiento profundo.
 
@@ -492,7 +500,7 @@ El siguiente capítulo no te va a mentir: educar en libertad implica nadar contr
 \cleardoublepage
 #+END_EXPORT
 
-* Navegando la Presión Social y las Críticas
+** Navegando la Presión Social y las Críticas
 
 La primera vez que le dije a mi madre que íbamos a educar a nuestro hijo sin escuela, hubo un silencio de diez segundos que se sintió como una eternidad. Luego vino la pregunta: "¿Y qué van a pensar los vecinos?" No "¿cómo va a aprender?", no "¿qué necesitan?", sino "¿qué dirán los demás?"
 
@@ -500,19 +508,19 @@ Ahí entendí algo crucial: el mayor obstáculo de la educación alternativa no 
 
 Este capítulo no es para débiles de corazón. Vamos a hablar de las miradas en el parque a las diez de la mañana un martes, de las cenas familiares tensas, del agotamiento emocional que implica defender tu estilo de crianza cada vez que alguien pregunta "¿y a qué escuela va?" Pero también vamos a armarte con testimonios reales de familias que sobrevivieron a esto—y que ahora miran atrás sin arrepentimiento.
 
-** La Estigmatización de la Crianza Alternativa
+*** La Estigmatización de la Crianza Alternativa
 
 La crianza alternativa\index{crianza alternativa!estigmatización}, que incluye métodos como el homeschooling y la crianza respetuosa, a menudo se enfrenta a un fuerte estigma social. Muchas familias que optan por esta forma de educación son vistas con escepticismo o incluso desaprobación por parte de su entorno, reflejando la profunda arraigazón de las estructuras educativas tradicionales en la sociedad. Los padres que eligen no escolarizar a sus hijos pueden ser etiquetados como ``raros'' o ``fuera de lo normal'', lo que genera una presión para conformarse a las expectativas sociales.
 
 Este juicio no solo proviene de personas ajenas; muchas veces, amigos y familiares también expresan preocupaciones, intensificando el desafío para estas familias. La presión social\index{presión social} y el temor a ser juzgados por seres queridos pueden afectar la autoestima de los padres y crear inseguridades sobre sus decisiones, generando un sentimiento de aislamiento tanto para ellos como para sus hijos. Las repercusiones de la crítica pueden ser profundas, llevando a que los niños sientan la carga de ser diferentes en un mundo que valora la conformidad.
 
-** Testimonios de Familias que Educan Libres
+*** Testimonios de Familias que Educan Libres
 
 A pesar de la adversidad y la estigmatización, muchas familias comparten testimonios conmovedores y transformadores sobre su decisión de educar de manera alternativa. Estos relatos destacan cómo, al encontrarse frustrados con el sistema escolar convencional, han encontrado un enfoque más respetuoso y adaptado a las necesidades individuales de sus hijos. Por ejemplo, Marta y Julio describen cómo sus hijos, al ser educados en casa, han desarrollado fuertes pasiones por el aprendizaje, explorando temas que realmente les interesan. Hadrián, su hijo, aprendió a leer con entusiasmo gracias al apoyo incondicional de su madre, lo que ilustra cómo el aprendizaje no estructurado fomenta el amor por el conocimiento.
 
 Estos testimonios desafían la estigmatización y proporcionan inspiración a otros. Al compartir sus experiencias, estas familias contribuyen a un cambio de percepción. Las redes de apoyo—grupos locales o foros en línea—permiten conectar y aliviar el sentido de aislamiento.
 
-** Manejo de la Crítica y el Juicio Externo
+*** Manejo de la Crítica y el Juicio Externo
 
 El manejo de la crítica\index{manejo de críticas} es una parte integral de la crianza en libertad. Muchas veces, los padres enfrentan preguntas incómodas y juicios sobre sus decisiones educativas, tanto de figuras externas como de familiares y amigos. Estrategias para lidiar con estos desafíos incluyen la comunicación abierta sobre los motivos detrás de la elección de la educación alternativa y la disposición a compartir información sobre su enfoque pedagógico.
 
@@ -537,7 +545,9 @@ Si el capítulo anterior te dio la armadura emocional, éste te va a dar la cert
 \part{Inspiración y Futuro}
 #+END_EXPORT
 
-* Historias de Éxito: Familias que lo Lograron
+* Parte 3: Inspiración y Futuro
+
+** Historias de Éxito: Familias que lo Lograron
 
 Tres años después de sacar a mis hijos de la escuela, me encontré con la directora del colegio al que hubieran ido. Fue incómodo. Ella sabía nuestra decisión, y yo sabía que ella no la aprobaba. Pero entonces pasó algo inesperado: me preguntó por mis hijos. No con sarcasmo, sino con genuina curiosidad.
 
@@ -549,19 +559,19 @@ Este capítulo no es propaganda. Es evidencia. Son las historias que necesitas l
 
 Aquí está la prueba de que esto funciona. No en teoría, sino en la vida real, con niños reales, en familias imperfectas como la tuya y la mía.
 
-** Historias Inspiradoras de Educadores en Casa
+*** Historias Inspiradoras de Educadores en Casa
 
 A lo largo de este viaje, hemos escuchado historias de familias que educan en casa. Destacan el esfuerzo de padres que lucharon por elegir cómo educar a sus hijos, enfrentando desafíos legales y sociales. Estas experiencias demuestran que la educación en casa es un espacio donde los niños aprenden y desarrollan habilidades emocionales.
 
 Relatos como el de Ana, quien a pesar de la oposición familiar logró crear un entorno de aprendizaje rico en experiencias y reflexiones compartidas, ilustran la transformación personal que sus hijos experimentan. Desde el desarrollo de la confianza en sí mismos hasta la capacidad de tomar decisiones, los niños florecen al tener la libertad de seguir sus intereses. Además, el caso de un grupo de padres que han trabajado juntos para formar una comunidad educativa que respete la autonomía infantil subraya la importancia del apoyo mutuo en este camino. Estos testimonios muestran cómo la educación en casa permite a los niños aprender a su propio ritmo, sin la presión del sistema escolar tradicional.
 
-** Lo que Nos Enseñan Nuestros Hijos
+*** Lo que Nos Enseñan Nuestros Hijos
 
 El aprendizaje no es unidireccional: los padres aprenden de sus hijos. Muchos educadores en casa descubren que sus hijos poseen una curiosidad innata y habilidades sorprendentes. Las preguntas de los niños desafían a los padres a replantear sus creencias sobre la educación.
 
 Los padres cuentan cómo sus hijos, sin restricciones, innovan en sus métodos de aprendizaje. Momentos que serían rutina escolar se convierten en aprendizaje significativo. El juego y la exploración son vitales. Por ejemplo, un niño que comenzó a leer naturalmente en un ambiente flexible demuestra el poder del juego. Padres e hijos cultivan juntos un espacio donde florece la curiosidad.
 
-** Aprendiendo Juntos: La Familia como Comunidad Educativa
+*** Aprendiendo Juntos: La Familia como Comunidad Educativa
 
 La familia es el núcleo educativo. El aprendizaje ocurre en relación—cada miembro contribuye y se beneficia. Compartir conocimientos crea un ambiente colaborativo. Actividades diarias como cocinar o hacer jardinería se convierten en oportunidades de aprendizaje significativo.
 
@@ -573,17 +583,17 @@ La transformación de los niños, el aprendizaje mutuo, y el apoyo comunitario s
 \cleardoublepage
 #+END_EXPORT
 
-* El Futuro de la Educación: Tu Papel en el Cambio
+** El Futuro de la Educación: Tu Papel en el Cambio
 
-** Visión de un Futuro Educativo Alternativo
+*** Visión de un Futuro Educativo Alternativo
 
 El camino hacia un futuro educativo diferente comienza con la comprensión de las necesidades de los niños y el reconocimiento de la importancia de la crianza en un ambiente que fomente su autonomía y curiosidad. Este futuro educativo debe basarse en un enfoque holístico\index{enfoque holístico}, donde cada niño tenga la oportunidad de ser él mismo, explorando sus intereses y desarrollando sus habilidades únicas en un entorno de respeto y apoyo. La educación alternativa, como el unschooling y la pedagogía Montessori, nos brindan modelos que desafían las limitaciones de las estructuras tradicionales, promoviendo un aprendizaje que es verdaderamente significativo y que respeta la individualidad de cada niño.
 
-** Compromiso con la Crianza Consciente
+*** Compromiso con la Crianza Consciente
 
 La crianza consciente\index{crianza consciente} implica estar presentes con las necesidades emocionales de nuestros hijos. Requiere reflexionar sobre nuestras creencias y reconocer cómo impactan su desarrollo. Al fomentar la empatía\index{empatía}, contribuimos a comunidades más compasivas. La auto-reflexión importa.
 
-** Cómo Contribuir al Movimiento de Crianza en Libertad
+*** Cómo Contribuir al Movimiento de Crianza en Libertad
 
 Para fortalecer el movimiento de crianza en libertad, cada uno de nosotros puede desempeñar un papel activo. Algunas acciones concretas incluyen:
 
