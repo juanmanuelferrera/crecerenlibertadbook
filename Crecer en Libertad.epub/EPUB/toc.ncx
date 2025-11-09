@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta name="dtb:uid" content="urn:uuid:e5fc162f-7d92-4735-8f1a-27b99a2a45fd" />
+    <meta name="dtb:depth" content="1" />
+    <meta name="dtb:totalPageCount" content="0" />
+    <meta name="dtb:maxPageNumber" content="0" />
+    <meta name="cover" content="__var_lpub_shared_scratch_dir_tmp_books_cel_manuscript_leanpub_resources_title_page_png" />
+  </head>
+  <docTitle>
+    <text>Crecer en Libertad</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-0">
+      <navLabel>
+        <text>Crecer en Libertad</text>
+      </navLabel>
+      <content src="text/cover.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint-1">
+      <navLabel>
+        <text>Prefacio</text>
+      </navLabel>
+      <content src="text/all_chapter_contents.xhtml#prefacio" />
+    </navPoint>
+    <navPoint id="navPoint-2">
+      <navLabel>
+        <text>Agradecimientos</text>
+      </navLabel>
+      <content src="text/all_chapter_contents.xhtml#agradecimientos" />
+    </navPoint>
+    <navPoint id="navPoint-3">
+      <navLabel>
+        <text>1. Introducción a la Crianza en Libertad</text>
+      </navLabel>
+      <content src="text/all_chapter_contents.xhtml#1-introducción-a-la-crianza-en-libertad" />
+    </navPoint>
+    <navPoint id="navPoint-4">
+      <navLabel>
+        <text>2. Principios de la Educación Alternativa</text>
+      </navLabel>
+      <content src="text/all_chapter_contents.xhtml#2-principios-de-la-educación-alternativa" />
+    </navPoint>
+    <navPoint id="navPoint-5">
+      <navLabel>
+        <text>3. Cómo Organizar la Educación en Casa</text>
+      </navLabel>
+      <content src="text/all_chapter_contents.xhtml#3-cómo-organizar-la-educación-en-casa" />
+    </navPoint>
+    <navPoint id="navPoint-6">
+      <navLabel>
+        <text>4. Métodos y Recursos de Enseñanza</text>
+      </navLabel>
+      <content src="text/all_chapter_contents.xhtml#4-métodos-y-recursos-de-enseñanza" />
+    </navPoint>
+    <navPoint id="navPoint-7">
+      <navLabel>
+        <text>5. Aspectos Legales y Éticos</text>
+      </navLabel>
+      <content src="text/all_chapter_contents.xhtml#5-aspectos-legales-y-éticos" />
+    </navPoint>
+    <navPoint id="navPoint-8">
+      <navLabel>
+        <text>6. Testimonios y Experiencias de Familias</text>
+      </navLabel>
+      <content src="text/all_chapter_contents.xhtml#6-testimonios-y-experiencias-de-familias" />
+    </navPoint>
+    <navPoint id="navPoint-9">
+      <navLabel>
+        <text>7. Futuro de la Educación en Casa</text>
+      </navLabel>
+      <content src="text/all_chapter_contents.xhtml#7-futuro-de-la-educación-en-casa" />
+    </navPoint>
+    <navPoint id="navPoint-10">
+      <navLabel>
+        <text>Recursos Adicionales y Bibliografía</text>
+      </navLabel>
+      <content src="text/all_chapter_contents.xhtml#recursos-adicionales-y-bibliografía" />
+      <navPoint id="navPoint-11">
+        <navLabel>
+          <text>Libros Esenciales para la Educación en Casa</text>
+        </navLabel>
+        <content src="text/all_chapter_contents.xhtml#libros-esenciales-para-la-educación-en-casa" />
+      </navPoint>
+      <navPoint id="navPoint-12">
+        <navLabel>
+          <text>Plataformas de Aprendizaje en Línea</text>
+        </navLabel>
+        <content src="text/all_chapter_contents.xhtml#plataformas-de-aprendizaje-en-línea" />
+      </navPoint>
+      <navPoint id="navPoint-13">
+        <navLabel>
+          <text>Recursos de Aplicaciones Educativas</text>
+        </navLabel>
+        <content src="text/all_chapter_contents.xhtml#recursos-de-aplicaciones-educativas" />
+      </navPoint>
+      <navPoint id="navPoint-14">
+        <navLabel>
+          <text>Comunidades de Apoyo y Redes de Homeschooling</text>
+        </navLabel>
+        <content src="text/all_chapter_contents.xhtml#comunidades-de-apoyo-y-redes-de-homeschooling" />
+      </navPoint>
+      <navPoint id="navPoint-15">
+        <navLabel>
+          <text>Recursos para la Actividad Comunitaria</text>
+        </navLabel>
+        <content src="text/all_chapter_contents.xhtml#recursos-para-la-actividad-comunitaria" />
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-16">
+      <navLabel>
+        <text>Reflexiones Finales y Apoyo Continuo</text>
+      </navLabel>
+      <content src="text/all_chapter_contents.xhtml#reflexiones-finales-y-apoyo-continuo" />
+    </navPoint>
+    <navPoint id="navPoint-17">
+      <navLabel>
+        <text>Creando un Futuro para la Educación en Casa</text>
+      </navLabel>
+      <content src="text/all_chapter_contents.xhtml#creando-un-futuro-para-la-educación-en-casa" />
+    </navPoint>
+    <navPoint id="navPoint-18">
+      <navLabel>
+        <text>Conclusión</text>
+      </navLabel>
+      <content src="text/all_chapter_contents.xhtml#conclusión" />
+    </navPoint>
+  </navMap>
+</ncx>

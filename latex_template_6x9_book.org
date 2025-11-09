@@ -1,0 +1,311 @@
+#+TITLE: Your Book Title Here
+#+SUBTITLE: Your Subtitle Here
+#+Author: Your Name
+#+DATE: First Edition, Month Year
+
+# =============================================================================
+# LaTeX Configuration Template for 6x9 inch Amazon KDP Books
+# =============================================================================
+# This template provides professional book formatting optimized for:
+# - Amazon KDP 6×9 inch paperback format
+# - 155+ page books
+# - Professional typography with ragged right layout
+# - E-ink reader friendly (no full justification spacing issues)
+#
+# Created for: Stolen Words (November 2025)
+# Reusable for: Any 6×9 inch book project
+# =============================================================================
+
+# LaTeX Configuration for 6x9 inch book format
+#+LATEX_CLASS: book
+#+LATEX_CLASS_OPTIONS: [12pt,twoside]
+#+LATEX_COMPILER: xelatex
+#+OPTIONS: toc:nil num:t title:nil H:2
+
+# Page Layout Configuration (6x9 inches = 152.4x228.6mm)
+# Amazon KDP margins - meets minimum requirements for 155+ pages
+#+LATEX_HEADER: \usepackage[paperwidth=6in,paperheight=9in]{geometry}
+#+LATEX_HEADER: \geometry{
+#+LATEX_HEADER:   inner=15mm,        % Inside margin (gutter) - 0.59" > 0.5" requirement
+#+LATEX_HEADER:   outer=10mm,        % Outside margin - 0.39" > 0.25" requirement
+#+LATEX_HEADER:   top=13mm,          % Top margin - 0.51" > 0.25" requirement
+#+LATEX_HEADER:   bottom=13mm,       % Bottom margin - 0.51" > 0.25" requirement
+#+LATEX_HEADER:   headheight=12pt,   % Reduced header space
+#+LATEX_HEADER:   headsep=7mm,       % Minimal space between header and text
+#+LATEX_HEADER:   footskip=10mm,     % Minimal space for page numbers
+#+LATEX_HEADER:   includehead=true,  % Include header in text area
+#+LATEX_HEADER:   includefoot=true   % Include footer in text area
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \raggedbottom         % Allow flexible page heights
+#+LATEX_HEADER: \enlargethispage{\baselineskip}  % Add extra line when needed
+
+# Typography Configuration - Optimized for print readability
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Libertinus Serif}
+#+LATEX_HEADER: \usepackage[final,babel=true]{microtype}
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \setstretch{1.08}     % Tighter line spacing while maintaining readability
+#+LATEX_HEADER: \setlength{\parindent}{0pt}
+#+LATEX_HEADER: \setlength{\parskip}{4pt plus 2pt minus 1pt}  % Reduced paragraph spacing
+#+LATEX_HEADER: \usepackage{ragged2e}
+#+LATEX_HEADER: \RaggedRight  % Use ragged right instead of full justification
+#+LATEX_HEADER: \setlength{\RaggedRightParindent}{0pt}  % No paragraph indentation
+
+# Hyphenation and line breaking improvements (for ragged right)
+#+LATEX_HEADER: \hyphenpenalty=1000        % Some penalty for hyphenation in ragged right
+#+LATEX_HEADER: \exhyphenpenalty=1000      % Some penalty for hyphenation after explicit hyphen
+#+LATEX_HEADER: \tolerance=5000            % High tolerance for ragged right
+#+LATEX_HEADER: \emergencystretch=3em      % Large emergency stretch
+#+LATEX_HEADER: \righthyphenmin=3          % Hyphenate before at least 3 characters
+#+LATEX_HEADER: \lefthyphenmin=3           % Hyphenate after at least 3 characters
+
+# Widow and orphan control (maximum penalties for professional book typesetting)
+#+LATEX_HEADER: \widowpenalty=10000        % Prevent last line of paragraph at top of page
+#+LATEX_HEADER: \clubpenalty=10000         % Prevent first line of paragraph at bottom of page
+#+LATEX_HEADER: \displaywidowpenalty=10000 % Prevent widow lines before display math
+#+LATEX_HEADER: \brokenpenalty=10000       % Prevent page breaks at hyphens
+#+LATEX_HEADER: \predisplaypenalty=10000   % Discourage page breaks before displays
+#+LATEX_HEADER: \postdisplaypenalty=0      % Allow page breaks after displays
+#+LATEX_HEADER: \interlinepenalty=0        % Allow page breaks between lines
+#+LATEX_HEADER: \raggedbottom              % Already set below, but important for avoiding stretched pages
+
+# Custom hyphenation dictionary
+# ADD YOUR CUSTOM WORDS HERE - Examples from Stolen Words:
+#+LATEX_HEADER: \hyphenation{deve-lopment transmi-ssion Prab-hu-pa-da ma-hat-ma Va-su-de-vah sys-tem-at-ic the-o-log-i-cal in-sti-tu-tion-al trans-for-ma-tion con-scious-ness man-i-fes-ta-tion au-then-tic-i-ty pro-fes-sion-al-ism schol-ar-ly ed-i-to-ri-al ap-pa-ra-tus}
+#+LATEX_HEADER: \hyphenation{neu-ro-sci-ence neu-ro-log-i-cal fun-da-men-tal-ly in-ves-ti-ga-tion doc-u-men-ta-tion rep-re-sen-ta-tive or-gan-i-za-tion-al sub-sti-tu-tion con-tra-dic-tion spec-i-fi-ca-tions ver-i-fi-ca-tion trans-par-en-cy con-se-quen-ces dis-crep-an-cies in-ter-lo-cu-tor Bhak-ti-ve-dan-ta in-de-struc-ti-ble psy-cho-lin-guis-tic sys-tem-at-i-za-tion un-der-stand-ing ac-knowl-edge-ments bib-li-og-ra-phy}
+
+# Additional packages for the book
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \setcounter{tocdepth}{1}  % Show only parts and chapters in TOC
+#+LATEX_HEADER: \usepackage{etoolbox}
+#+LATEX_HEADER: \patchcmd{\tableofcontents}{\@starttoc{toc}}{\@starttoc{toc}}{}{}
+#+LATEX_HEADER:
+# Front matter style: page numbers, no headers (for early pages)
+#+LATEX_HEADER: \fancypagestyle{frontmatter}{%
+#+LATEX_HEADER:   \fancyhf{}%
+#+LATEX_HEADER:   \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER:   \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER:   \renewcommand{\footrulewidth}{0pt}%
+#+LATEX_HEADER: }
+# Main content style: page numbers and headers
+# CUSTOMIZE: Change "Stolen Words" to your book title
+#+LATEX_HEADER: \fancypagestyle{fancy}{%
+#+LATEX_HEADER:   \fancyhf{}%
+#+LATEX_HEADER:   \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER:   \fancyhead[LE]{\small\textsc{Your Book Title}}%
+#+LATEX_HEADER:   \fancyhead[RO]{\small\textsc{\rightmark}}%
+#+LATEX_HEADER:   \renewcommand{\headrulewidth}{0.5pt}%
+#+LATEX_HEADER:   \renewcommand{\footrulewidth}{0pt}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \fancypagestyle{plain}{% Plain style for first pages - no headers, only page numbers
+#+LATEX_HEADER:   \fancyhf{}%
+#+LATEX_HEADER:   \fancyhead{}%
+#+LATEX_HEADER:   \lhead{}\chead{}\rhead{}%
+#+LATEX_HEADER:   \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER:   \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER:   \renewcommand{\footrulewidth}{0pt}%
+#+LATEX_HEADER:   \renewcommand{\leftmark}{}%
+#+LATEX_HEADER:   \renewcommand{\rightmark}{}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \fancypagestyle{chapterpage}{% Chapter pages - no headers at all, only page numbers
+#+LATEX_HEADER:   \fancyhf{}%
+#+LATEX_HEADER:   \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER:   \renewcommand{\footrulewidth}{0pt}%
+#+LATEX_HEADER:   \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \fancypagestyle{chapteropening}{% Chapter opening pages - no headers, no page numbers
+#+LATEX_HEADER:   \fancyhf{}%
+#+LATEX_HEADER:   \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER:   \renewcommand{\footrulewidth}{0pt}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \fancypagestyle{sectionopening}{% Section opening pages - no headers, page numbers only
+#+LATEX_HEADER:   \fancyhf{}%
+#+LATEX_HEADER:   \fancyfoot[C]{\thepage}%
+#+LATEX_HEADER:   \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER:   \renewcommand{\footrulewidth}{0pt}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \fancypagestyle{none}{% Pages with no headers and no page numbers
+#+LATEX_HEADER:   \fancyhf{}%
+#+LATEX_HEADER:   \renewcommand{\headrulewidth}{0pt}%
+#+LATEX_HEADER:   \renewcommand{\footrulewidth}{0pt}%
+#+LATEX_HEADER: }
+
+# Start with empty style (absolutely no page numbers)
+#+LATEX_HEADER: \pagestyle{empty}
+# After main matter starts, force page numbering everywhere
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \newcommand{\forcenumbering}{\let\ps@plain\ps@fancy\let\ps@headings\ps@fancy}
+#+LATEX_HEADER: \makeatother
+
+# Professional typesetting - maintain strict widow/orphan control
+#+LATEX_HEADER: \hbadness=1414                 % Suppress overfull hbox warnings
+#+LATEX_HEADER: \hfuzz=0.3pt                   % Allow tiny overfull boxes
+
+# Section heading orphan/widow control
+#+LATEX_HEADER: \usepackage{titlesec}
+#+LATEX_HEADER: \titlespacing*{\section}{0pt}{*4}{*2.5}
+#+LATEX_HEADER: \titlespacing*{\subsection}{0pt}{*3}{*2}
+#+LATEX_HEADER: \titlespacing*{\subsubsection}{0pt}{*2.5}{*1.5}
+
+# Prevent orphan section headings
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \renewcommand\section{\@startsection{section}{1}{\z@}%
+#+LATEX_HEADER:   {-3.5ex \@plus -1ex \@minus -.2ex}%
+#+LATEX_HEADER:   {2.3ex \@plus.2ex}%
+#+LATEX_HEADER:   {\normalfont\Large\bfseries}}
+#+LATEX_HEADER: \makeatother
+
+# Ensure section headings stay with following text
+#+LATEX_HEADER: \usepackage{needspace}
+#+LATEX_HEADER: \let\oldsection\section
+#+LATEX_HEADER: \renewcommand{\section}[1]{\needspace{4\baselineskip}\oldsection{#1}}
+#+LATEX_HEADER: \let\oldsubsection\subsection
+#+LATEX_HEADER: \renewcommand{\subsection}[1]{\needspace{3\baselineskip}\oldsubsection{#1}}
+
+# Color definitions (customize as needed)
+#+LATEX_HEADER: \definecolor{goldenyellow}{RGB}{255, 223, 0}
+#+LATEX_HEADER: \definecolor{warmgold}{RGB}{255, 204, 0}
+#+LATEX_HEADER: \definecolor{deeporange}{RGB}{255, 140, 0}
+#+LATEX_HEADER: \definecolor{mysticblue}{RGB}{135, 206, 250}
+
+# Photo placeholder command
+#+LATEX_HEADER: \newcommand{\photoplaceholder}[4]{\fbox{\parbox{#1}{\centering\vspace{#2}\\Photo #3\\#4\\\vspace{#2}}}}
+
+# Chapter findings box environment (optional - customize or remove)
+#+LATEX_HEADER: \newenvironment{chapterfindingsbox}%
+#+LATEX_HEADER: {\begin{quote}\begin{itemize}\setlength{\itemsep}{0.3em}}%
+#+LATEX_HEADER: {\end{itemize}\end{quote}}
+
+# Main matter command - switch to Arabic numbering starting at 1
+#+LATEX_HEADER: \newcommand{\startmainmatter}{\clearpage\pagenumbering{arabic}\setcounter{page}{1}\pagestyle{fancy}\forcenumbering}
+
+# Typography improvements - Professional book hierarchy
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else\hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+#+LATEX_HEADER: \renewcommand\LARGE{\@setfontsize\LARGE{18}{22}}
+#+LATEX_HEADER: \renewcommand{\@makechapterhead}[1]{%
+#+LATEX_HEADER:   \vspace*{0.15\textheight}%
+#+LATEX_HEADER:   {\parindent \z@ \raggedright \normalfont
+#+LATEX_HEADER:     \LARGE \bfseries #1\par\nobreak
+#+LATEX_HEADER:     \vskip 8\p@
+#+LATEX_HEADER:   }%
+#+LATEX_HEADER:   \thispagestyle{plain}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \renewcommand{\@makeschapterhead}[1]{%
+#+LATEX_HEADER:   \vspace*{0.15\textheight}%
+#+LATEX_HEADER:   {\parindent \z@ \raggedright \normalfont
+#+LATEX_HEADER:     \LARGE \bfseries #1\par\nobreak
+#+LATEX_HEADER:     \vskip 8\p@
+#+LATEX_HEADER:   }%
+#+LATEX_HEADER:   \thispagestyle{plain}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER: % Prevent section-level headings (Parts) from setting marks
+#+LATEX_HEADER: \renewcommand{\sectionmark}[1]{}
+#+LATEX_HEADER: % Disable subsection marks to prevent *** headings from appearing in headers
+#+LATEX_HEADER: \renewcommand{\subsectionmark}[1]{}
+#+LATEX_HEADER: % Override LaTeX's automatic plain style for chapters
+#+LATEX_HEADER: \renewcommand{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi\thispagestyle{plain}\global\@topnum\z@\@afterindentfalse\secdef\@chapter\@schapter}
+#+LATEX_HEADER: % Professional section and subsection spacing
+#+LATEX_HEADER: \renewcommand\section{\@startsection{section}{1}{\z@}%
+#+LATEX_HEADER:   {-2ex \@plus -1ex \@minus -.2ex}%
+#+LATEX_HEADER:   {2.3ex \@plus.2ex}%
+#+LATEX_HEADER:   {\normalfont\Large\bfseries}}
+#+LATEX_HEADER: \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+#+LATEX_HEADER:   {-2ex \@plus -1ex \@minus -.2ex}%
+#+LATEX_HEADER:   {0.8ex \@plus .2ex}%
+#+LATEX_HEADER:   {\normalfont\large\bfseries}}
+#+LATEX_HEADER: \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+#+LATEX_HEADER:   {-2ex \@plus -1ex \@minus -.2ex}%
+#+LATEX_HEADER:   {0.8ex \@plus .2ex}%
+#+LATEX_HEADER:   {\normalfont\normalsize\bfseries}}
+#+LATEX_HEADER: \makeatother
+
+# Optimize indentation and spacing for professional compact layout
+#+LATEX_HEADER: \setcounter{secnumdepth}{0} % Remove section numbering
+#+LATEX_HEADER: \setlength{\leftmargini}{1.2em} % Reduce first level indent
+#+LATEX_HEADER: \setlength{\leftmarginii}{1.0em} % Reduce second level indent
+#+LATEX_HEADER: \setlength{\leftmarginiii}{0.8em} % Reduce third level indent
+
+# =============================================================================
+# END OF LATEX CONFIGURATION
+# =============================================================================
+# Below this line: Add your book content
+# =============================================================================
+
+# Example Front Matter Structure:
+
+# Half-title page
+#+LATEX: \thispagestyle{empty}
+#+LATEX: \vspace*{0.22\textheight}
+#+LATEX: \begin{center}
+#+LATEX: {\fontfamily{cmr}\fontsize{40}{48}\selectfont\textbf{YOUR BOOK}}\\[0.6cm]
+#+LATEX: {\fontfamily{cmr}\fontsize{40}{48}\selectfont\textbf{TITLE}}
+#+LATEX: \end{center}
+#+LATEX: \vspace*{\fill}
+#+LATEX: \clearpage
+
+# Blank page
+#+LATEX: \thispagestyle{empty}
+#+LATEX: \mbox{}
+#+LATEX: \newpage
+
+# Full title page
+#+LATEX: \thispagestyle{empty}
+#+LATEX: \vspace*{0.18\textheight}
+#+LATEX: \begin{center}
+#+LATEX: {\fontfamily{cmr}\fontsize{36}{42}\selectfont\textbf{YOUR BOOK TITLE}}\\[0.5cm]
+#+LATEX: {\large Your Subtitle Here}\\
+#+LATEX: \vspace{0.15\textheight}
+#+LATEX: {\Large Your Name}\\
+#+LATEX: \vspace*{\fill}
+#+LATEX: {\normalsize First Edition}\\[0.3cm]
+#+LATEX: {\normalsize Month Year}\\[1cm]
+#+LATEX: \end{center}
+#+LATEX: \clearpage
+
+# Copyright page
+#+LATEX: \thispagestyle{empty}
+*YOUR BOOK TITLE*\\
+/Your Subtitle/
+
+Copyright © Year Your Name\\
+www.yourwebsite.com
+
+This work is licensed under Creative Commons Attribution
+NonCommercial-NoDerivatives 4.0 International License.
+
+You are free to share this material in any medium or format for non-commercial purposes, provided you give appropriate credit. You may not distribute modified versions.
+
+#+LATEX: \vspace*{\fill}
+
+First Edition: Month Year\\
+ISBN: Your-ISBN-Here\\
+Published in Country
+
+#+LATEX: \clearpage
+
+# Table of Contents
+#+LATEX: \thispagestyle{frontmatter}
+#+LATEX: \tableofcontents
+#+LATEX: \clearpage
+
+# Start main content with page numbering
+#+LATEX: \startmainmatter
+
+* Your First Chapter
+
+Your content starts here...
+
+# =============================================================================
+# USAGE INSTRUCTIONS:
+# =============================================================================
+# 1. Copy this entire file to your new book project
+# 2. Update the title, author, and date at the top
+# 3. Customize the header text (search for "Your Book Title")
+# 4. Add your custom hyphenation words
+# 5. Modify colors if needed
+# 6. Replace example front matter with your content
+# 7. Compile with: C-c C-e l p (or your Emacs export command)
+# =============================================================================

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>artistName</key>
+	<string>Juan Manuel Ferrera Díaz</string>
+	<key>book-info</key>
+	<dict>
+		<key>mime-type</key>
+		<string>application/epub+zip</string>
+		<key>package-file-hash</key>
+		<string>A1B8C1A5263EDCC33163D43EE67D7436</string>
+		<key>publisher-unique-id</key>
+		<string>urn:uuid:e5fc162f-7d92-4735-8f1a-27b99a2a45fd</string>
+		<key>unique-id</key>
+		<integer>-2348573408736663627</integer>
+		<key>update-level</key>
+		<integer>2</integer>
+	</dict>
+	<key>itemName</key>
+	<string>Crecer en Libertad</string>
+	<key>playlistName</key>
+	<string>Crecer en Libertad</string>
+</dict>
+</plist>
