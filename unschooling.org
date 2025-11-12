@@ -1,5 +1,5 @@
-#+TITLE: Crecer en Libertad: Una Historia Personal v.1
-#+SUBTITLE: Del Duelo a la Libertad Educativa
+#+TITLE: Crecer en Libertad v.1.1
+#+SUBTITLE: Otra forma de aprender es posible
 #+AUTHOR: Juan Manuel Ferrera Díaz
 #+DATE: 2025
 #+LANGUAGE: es
