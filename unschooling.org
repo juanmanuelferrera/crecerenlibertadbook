@@ -430,6 +430,7 @@ No ofrezco un método. Ofrezco una historia.
 
 * PARTE I: EL PARAÍSO
 
+#+LATEX: \cleardoublepage
 ** Capítulo 1: La Semilla
 
 Año 2000. Quizá inicios del 2001—los meses después de la muerte de Yukari se confunden en mi memoria.
@@ -547,6 +548,7 @@ Por ahora, era suficiente saber que existía.
 #+LATEX: \begin{center}* * *\end{center}
 
 
+#+LATEX: \cleardoublepage
 ** Capítulo 2: Sobrevivir
 
 2000-2004. Australia.
@@ -701,6 +703,7 @@ Siempre lo había sido antes.
 
 Y resultó que no era suficiente. Porque cuando llegamos a Tenerife, todo lo que había funcionado en Australia dejó de funcionar.
 
+#+LATEX: \cleardoublepage
 ** Capítulo 3: La Barrera del Idioma
 
 Agosto 2004.
@@ -899,6 +902,7 @@ Y Gatto en mi cajón, esperando.
 
 * PARTE II: LA CRISIS
 
+#+LATEX: \cleardoublepage
 ** Capítulo 4: El Quiebre
 
 Febrero 2005.
@@ -1091,6 +1095,7 @@ Así que saldríamos del sistema.
 
 Y encontraríamos otro camino.
 
+#+LATEX: \cleardoublepage
 ** Capítulo 5: La Salida
 
 Marzo 2005.
@@ -1533,6 +1538,7 @@ Cuando nos fuimos, Arjuna me dijo: "¿Podemos volver?"
 
 Y así encontramos nuestra comunidad.
 
+#+LATEX: \cleardoublepage
 ** Capítulo 6: Lo Que Surgió
 
 Primavera 2005.
@@ -1699,6 +1705,7 @@ Y así fue. El camino se revelaba caminándolo.
 
 * PARTE III: EL CAMINO
 
+#+LATEX: \cleardoublepage
 ** Capítulo 7: La Vida Diaria
 
 2006. Un año después de sacar a los niños del colegio. Seguíamos viviendo en la casa enorme del abuelo en el pueblo cercano a La Laguna. La tía también vivía allí. Tres generaciones bajo un mismo techo. Espacio suficiente para todos.
@@ -2215,6 +2222,7 @@ Pero eso no hacía que doliera menos.
 
 #+LATEX: \begin{center}* * *\end{center}
 
+#+LATEX: \cleardoublepage
 ** Capítulo 8: Crecer en Libertad
 
 2010. Cinco años después de sacar a los niños del colegio. Los encuentros presenciales se habían vuelto irregulares—familias dispersas, dificultad de coordinar fechas, costos de transporte. Pero la necesidad de comunidad seguía ahí.
@@ -3146,6 +3154,7 @@ Se convirtió en armadura.
 
 Y continuamos.
 
+#+LATEX: \cleardoublepage
 ** Capítulo 9: Lérida
 
 Mayo 2013.
@@ -3502,6 +3511,7 @@ Y eso era suficiente.
 
 * PARTE IV: LA MADURACIÓN
 
+#+LATEX: \cleardoublepage
 ** Capítulo 10: Adolescencia
 
 2012-2018.
@@ -4006,6 +4016,7 @@ Porque Arjuna y Nitai crecieron libres. Aprendieron sin ser rotos. Se convirtier
 
 Y eso—esa libertad fundamental—justificó cada momento difícil del camino.
 
+#+LATEX: \cleardoublepage
 ** Capítulo 11: El Resultado
 
 2024. Casi veinte años desde que saqué a los niños del colegio.
