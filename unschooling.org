@@ -182,17 +182,17 @@
 
 # Section heading orphan/widow control
 #+LATEX_HEADER: \usepackage{titlesec}
-#+LATEX_HEADER: \titlespacing*{\section}{0pt}{*4}{*2.5}
+#+LATEX_HEADER: % Chapter titles (sections in Org) positioned lower on page - professional style
+#+LATEX_HEADER: \titleformat{\section}
+#+LATEX_HEADER:   {\normalfont\Large\bfseries}% Format
+#+LATEX_HEADER:   {}% Label
+#+LATEX_HEADER:   {0pt}% Sep
+#+LATEX_HEADER:   {\vspace*{0.25\textheight}}% Before-code: pushes title to 25% down the page
+#+LATEX_HEADER: \titlespacing*{\section}{0pt}{0pt}{40pt}% No extra space before, 40pt after
 #+LATEX_HEADER: \titlespacing*{\subsection}{0pt}{*3}{*2}
 #+LATEX_HEADER: \titlespacing*{\subsubsection}{0pt}{*2.5}{*1.5}
 
-# Prevent orphan section headings
-#+LATEX_HEADER: \makeatletter
-#+LATEX_HEADER: \renewcommand\section{\@startsection{section}{1}{\z@}%
-#+LATEX_HEADER:   {-3.5ex \@plus -1ex \@minus -.2ex}%
-#+LATEX_HEADER:   {2.3ex \@plus.2ex}%
-#+LATEX_HEADER:   {\normalfont\Large\bfseries}}
-#+LATEX_HEADER: \makeatother
+# Prevent orphan section headings - controlled by titlespacing above
 
 # Ensure section headings stay with following text
 #+LATEX_HEADER: \usepackage{needspace}
@@ -265,11 +265,7 @@
 #+LATEX_HEADER: \renewcommand{\subsectionmark}[1]{}
 #+LATEX_HEADER: % Override chapter command to use plain style on opening pages
 #+LATEX_HEADER: \renewcommand{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi\thispagestyle{plain}\global\@topnum\z@\@afterindentfalse\secdef\@chapter\@schapter}
-#+LATEX_HEADER: % Professional section and subsection spacing
-#+LATEX_HEADER: \renewcommand\section{\@startsection{section}{1}{\z@}%
-#+LATEX_HEADER:   {-2ex \@plus -1ex \@minus -.2ex}%
-#+LATEX_HEADER:   {2.3ex \@plus.2ex}%
-#+LATEX_HEADER:   {\normalfont\Large\bfseries}}
+#+LATEX_HEADER: % Section spacing is controlled by titlespacing above (line 186)
 #+LATEX_HEADER: \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
 #+LATEX_HEADER:   {-2ex \@plus -1ex \@minus -.2ex}%
 #+LATEX_HEADER:   {0.8ex \@plus .2ex}%
@@ -441,7 +437,7 @@ Nos trataba con gentileza especial—a mí y a los niños—esa ternura que la g
 
 Porque eso éramos.
 
-Yukari había muerto seis meses antes. Marzo del 2000. No con drama. Con una paz, una calma, una elegancia que solo ella podía tener incluso en la muerte. Su presencia protectora llenaba nuestra habitación—no como algo opresivo sino como algo suave, inevitable, correcto.
+Yukari había muerto seis meses antes. Marzo del 2000. No con drama. Con una paz, una calma, una elegancia que solo ella podía tener incluso en la muerte. Su presencia protectora llenaba nuestra casa-no como algo opresivo sino como algo suave, inevitable, correcto.
 
 Yo había sostenido su mano. Los niños estaban en la habitación de al lado. Cuatro y dos años y medio—demasiado pequeños para entender completamente que mamá no volvería a despertar, pero allí, cerca, en su propio espacio.
 
@@ -453,7 +449,7 @@ Después vinieron los papeles, las llamadas, los procedimientos que alguien más
 
 Y luego una decisión extraña pero necesaria: no podía permitirme estar triste.
 
-No era que no /sintiera/ tristeza. La sentía. Un peso enorme esperando en los bordes de mi mente. Pero si le daba permiso, si me permitía sentirlo completamente, me paralizaría. Y tenía dos niños pequeños que necesitaban comer, vestirse, ser sostenidos, ser protegidos del mundo, que acababan de perder a su madre.
+No era que no /sintiera/ tristeza. La sentía. Un peso enorme esperando en los bordes de mi mente. Pero si le daba permiso, si me permitía sentirlo completamente, me paralizaría. Y tenía dos niños pequeños que necesitaban comer, vestirse, ser protegidos del mundo, que acababan de perder a su madre.
 
 El trabajo por delante me hizo ponerme las pilas.
 
@@ -587,6 +583,8 @@ A las ocho y media, yo colapsaba en el sofá con una ginger beer fría y miraba 
 
 Y al día siguiente, repetir.
 
+No sé en qué momento la supervivencia se volvió vida. O si alguna vez lo hizo.
+
 #+LATEX: \begin{center}* * *\end{center}
 
 La escuela era buena. Necesito enfatizar esto porque lo que vino después podría hacer pensar que todas las escuelas son iguales. No lo son.
@@ -607,7 +605,7 @@ El timbre. Sonaba a las nueve, y los niños debían dejar lo que estaban haciend
 
 Veinte niños sentados en círculo en el suelo, escuchando a Miss Sarah leer un cuento. La mayoría atentos. Algunos inquietos. Uno—siempre había uno—claramente aburrido, mirando por la ventana y Miss Sarah gentilmente pero firmemente recordándole: "Ojos aquí, por favor."
 
-Los grupos por edad. Arjuna tenía cuatro años. Solo podía estar con otros niños de su edad. Los mayores estaban en otro salón. Los más pequeños, también separados. Como si la edad fuera el único criterio relevante para determinar con quién aprendes.
+Los grupos por edad. Arjuna solo podía estar con otros niños de su edad. Los mayores estaban en otro salón. Los más pequeños, también separados. Como si la edad fuera el único criterio relevante para determinar con quién aprendes.
 
 Y la estructura invisible pero omnipresente: el adulto decide qué, cuándo, cómo. Incluso cuando Miss Sarah preguntaba "¿qué quieren hacer hoy?", las opciones eran limitadas, pre-aprobadas, dentro de los confines de lo que una escuela puede ofrecer.
 
@@ -617,6 +615,10 @@ Solo años después, cuando leí más, cuando viví la alternativa, entendí lo 
 
 En ese momento, solo sabía que Arjuna y Nitai estaban a salvo. Que tenían amigos. Que Miss Sarah los cuidaba cuando yo no podía. No necesitaba más.
 
+¿O sí?
+
+Había algo que no podía nombrar. Como cuando sabes que olvidaste algo importante pero no recuerdas qué.
+
 #+LATEX: \begin{center}* * *\end{center}
 
 Los fines de semana eran nuestros.
@@ -625,7 +627,7 @@ Los sábados, mercado del agricultor por la mañana. Arjuna y Nitai corriendo en
 
 Por la tarde, parque. Con el tobogán alto que Arjuna amaba y Nitai temía. Dos horas de ellos quemando energía mientras yo me sentaba en un banco, vigilándolos con un ojo, leyendo con el otro.
 
-A veces sacaba /Dumbing Us Down/ del cajón y releía párrafos. No todo—era demasiado denso, demasiado provocador para digerir en un banco de parque con dos niños gritando cerca. Pero fragmentos. Ideas que resonaban y luego lo guardaba de nuevo.
+A veces sacaba /Dumbing Us Down/ y releía párrafos. No todo—era demasiado denso, demasiado provocador para digerir en un banco de parque con dos niños gritando cerca. Pero fragmentos. Ideas que resonaban y luego lo guardaba de nuevo.
 
 Los domingos, tranquilos. Dibujar en casa. Arjuna obsesionado con los dinosaurios—dibujaba Tiranosaurios con marcadores, me hacía buscar libros en la biblioteca sobre el Jurásico, inventaba historias elaboradas sobre batallas entre carnívoros y herbívoros.
 
@@ -648,6 +650,8 @@ Aunque ya sabía inglés cuando llegamos, vivir en un país de habla inglesa te 
 Hice amigos. Otros padres de la escuela, principalmente madres que me adoptaron como su proyecto social. Invitaciones a cumpleaños. Barbacoas de verduras los fines de semana. Conversaciones superficiales sobre clima, deportes, políticas escolares.
 
 Era, casi, una vida.
+
+El "casi" importaba más de lo que quería admitir. Yukari estaba en todas partes y en ninguna. En el hueco de conversación donde debería estar diciendo algo que yo nunca sabría qué era. En cómo Arjuna fruncía el ceño igual que ella. En la ausencia que había tomado forma de presencia.
 
 Y luego, en el 2004, me negaron la residencia permanente.
 
@@ -681,7 +685,7 @@ Tenía razón. Era su casa. Australia era lo único que recordaban claramente. Y
 
 Nitai preguntó si podía llevar sus bloques. Le dije que sí.
 
-Arjuna no dijo nada más. Solo asintió. Nueve años y ya sabía que algunas cosas no se discuten, solo se soportan.
+Arjuna no dijo nada más. Solo asintió. Ya sabía que algunas cosas no se discuten, solo se soportan.
 
 #+LATEX: \begin{center}* * *\end{center}
 
@@ -712,6 +716,10 @@ Tenerife en agosto tiene un clima subtropical agradable. Tibio, con brisa atlán
 
 Mi suegro nos recibió en el aeropuerto. Hombre de sesenta y tantos, encorvado por el duelo de perder a su hija y ahora cargando con la responsabilidad de su yerno viudo y dos nietos que apenas recordaba. Nos abrazó—ese abrazo español largo, apretado, que los anglosajones nunca hacen. Arjuna se puso rígido. Nitai se escondió detrás de mí.
 
+El padre de Yukari. Abrazándome en el aeropuerto de Tenerife. Cuatro años después de que su hija muriera en mis brazos.
+
+¿Qué se dice? No había manual para esto.
+
 "Bienvenidos," dijo en español. Los niños no respondieron. No entendían.
 
 Condujo en silencio hacia su casa en un pueblo cercano a La Laguna. Casa enorme, varias habitaciones, patio trasero con limoneros. Nos instaló en la habitación que había sido de Yukari cuando era niña. Paredes blancas con marcas de pósters arrancados hacía décadas. Una cama doble para los niños, un colchón en el suelo para mí. También vivía allí la tía—hermana de Yukari—que nos recibió con la misma mezcla de amor y dolor.
@@ -735,6 +743,10 @@ Necesitaban aprender. Rápido. No solo para comunicarse con la familia, sino por
 ¿Por qué decidí inscribirlos en la escuela? Pragmatismo, principalmente. Necesitaba trabajar. No tenía red de apoyo aquí—mi suegro hacía lo que podía, pero era mayor y trabajaba todo el dia. No podía cuidar niños. La escuela era la opción obvia. La única opción.
 
 Y honestamente, parte de mí pensaba: /Tenerife es España. Las escuelas españolas son más relajadas, más humanas que las escuelas anglosajonas. Será diferente a Australia pero no peor./
+
+Estaba equivocado.
+
+Pero todavía no lo sabía.
 
 Qué ingenuo fui.
 
@@ -1017,7 +1029,7 @@ Ahí estaba. La defensa predecible. La misma mierda de siempre: "ustedes no enti
 
 "Destruir el trabajo de un niño delante de sus compañeros no es un 'método tradicional,'" dije. "Es abuso."
 
-La directora me miró. Larga, fría. "Señor Ferrera, entiendo que viene de otro país. Aquí las cosas se hacen diferente. Los niños necesitan disciplina."
+La directora me miró, larga y fríamente. "Señor Ferrera, entiendo que viene de otro país. Aquí las cosas se hacen diferente. Los niños necesitan disciplina."
 
 "Los niños necesitan respeto," respondí. "Y si este colegio no puede dárselo, buscaré uno que sí pueda."
 
@@ -1476,7 +1488,7 @@ Una de las primeras cosas que Anna me dijo fue: "No intentes replicar la escuela
 
 "Muchos padres que sacan a sus hijos del colegio intentan hacer 'escuela en casa': horarios, materias, evaluaciones. Todo el sistema escolar, solo que en la mesa del comedor en lugar del aula. Eso no funciona. Porque el problema no es el edificio—es el modelo."
 
-Eso era exactamente lo que había estado haciendo. Pensando en términos de "materias": matemáticas, lengua, ciencias. Pensando en "cómo voy a enseñarles álgebra" cuando Arjuna tenía nueve años y lo que realmente necesitaba era recuperar su curiosidad.
+Eso era exactamente lo que había estado haciendo. Pensando en términos de "materias": matemáticas, lengua, ciencias. Pensando en "cómo voy a enseñarles álgebra" cuando Arjuna tenía diez años y lo que realmente necesitaba era recuperar su curiosidad.
 
 "Entonces, ¿qué hago?" pregunté.
 
@@ -1970,7 +1982,7 @@ Mis hijos nunca tuvieron que preguntarse "¿para qué sirve esto?" porque siempr
 
 #+LATEX: \begin{center}* * *\end{center}
 
-Con seis años, Nitai estaba obsesionado con los bomberos. No "un poco interesado"—obsesionado. Dormía con casco de juguete. Dibujaba camiones. Veía videos.
+Con ocho años, Nitai estaba obsesionado con los bomberos. No "un poco interesado"—obsesionado. Dormía con casco de juguete. Dibujaba camiones. Veía videos.
 
 Una tarde en la biblioteca, pidió un libro sobre incendios forestales. "Este tiene muchas letras," dije.
 
@@ -2010,11 +2022,11 @@ Aprendieron más en esa tarde que en semanas de libro de texto. Porque el conoci
 
 #+LATEX: \begin{center}* * *\end{center}
 
-Encuentro mensual de familias unschoolers. Arjuna nueve años, conversando con Antonio, educador jubilado de sesenta y cinco.
+Encuentro mensual de familias unschoolers. Arjuna diez años, conversando con Antonio, educador jubilado de sesenta y cinco.
 
 Hablaban de astronomía. Antonio mencionó haber visto el lanzamiento del primer satélite español en los 70. Arjuna fascinado, preguntando detalles que yo no sabía.
 
-Luego Arjuna jugaba con Lucía de tres años, construyendo torres de bloques.
+Luego Arjuna jugaba con Lucía, una niña pequeña, construyendo torres de bloques.
 
 Misma tarde. Dos conversaciones. Sesenta y dos años de diferencia entre ellas.
 
@@ -3375,7 +3387,7 @@ Eran los más críticos. Los que conocían el sistema íntimamente y lo rechazab
 
 Arjuna y Nitai estaban en su elemento.
 
-Nitai había encontrado un grupo de niños de su edad—trece, catorce años—que inventaron un torneo elaborado de algún juego que combinaba captura la bandera con estrategia militar. Corrían por el jardín, planificando ataques, defendiendo territorios imaginarios.
+Nitai había encontrado un grupo de niños de su edad—quince, dieciséis años—que inventaron un torneo elaborado de algún juego que combinaba captura la bandera con estrategia militar. Corrían por el jardín, planificando ataques, defendiendo territorios imaginarios.
 
 Arjuna, más reservado, se había unido a una conversación con adolescentes mayores. Hablaban de música, de ideas, de qué querían hacer con sus vidas. Ninguno iba a seguir el camino tradicional—universidad, carrera convencional. Todos estaban inventando sus propios caminos.
 
@@ -3491,7 +3503,7 @@ Esa era la lucha. No imponer nuestro camino. Solo pedir reconocimiento de que ca
 
 Volviendo de Lérida, con los niños dormidos en el coche, pensé en el camino recorrido.
 
-Cinco años desde que los saqué del colegio. Siete años desde la muerte de Yukari. Ocho años desde que leí "Dumbing Us Down" en esa madrugada en Australia.
+Seis años desde que los saqué del colegio. Diez años desde la muerte de Yukari. Nueve años desde que salimos de Australia.
 
 Tanto había pasado. Tanto había aprendido—sobre educación, sobre niños, sobre confianza, sobre soltar el control.
 
@@ -3691,6 +3703,12 @@ Pausa. Respiró profundo.
 Esa frase me golpeó más fuerte de lo que esperaba.
 
 Porque era mi peor miedo articulado por mi propio hijo: ¿y si no era suficiente?
+
+Esa noche no pude dormir. Años defendiendo esta decisión—ante familia, ante servicios sociales, ante la duda que me despertaba a las tres de la madrugada y preguntaba: ¿qué estás haciendo?
+
+Y ahora Arjuna articulaba exactamente eso. Que le había fallado. Que mi experimento lo había dejado sin las herramientas que el mundo esperaba que tuviera.
+
+¿Tenía razón?
 
 #+LATEX: \begin{center}* * *\end{center}
 
@@ -3960,6 +3978,18 @@ Y yo me quedé en Tenerife. Solo otra vez. Como al principio, después de la mue
 
 Era lo que debía pasar. Pero dolió igual.
 
+La casa en Tenerife era la misma. Misma cocina donde habíamos cocinado juntos durante años. Mismo salón donde Arjuna hacía proyectos hasta la medianoche. Mismas habitaciones donde Nitai practicaba música.
+
+Pero el silencio era distinto.
+
+Cuando Yukari murió, el silencio estaba lleno de ausencia—de conversaciones que nunca tendríamos, de su voz que nunca volvería. Este silencio era diferente. Era espacio vacío donde antes había vida. Energía. Movimiento constante de dos niños que habían crecido sin escuela, llenando cada hora con lo que eligieran hacer.
+
+Ahora: quietud.
+
+Habían crecido. Habían volado. Exactamente lo que se supone que debe pasar cuando haces las cosas bien.
+
+Entonces, ¿por qué dolía tanto?
+
 #+LATEX: \begin{center}* * *\end{center}
 
 Mantuvimos contacto. Llamadas de Skype semanales. Emails ocasionales. Visitaban cuando podían—no a menudo, los vuelos eran caros. Pero suficiente para saber que estaban bien.
@@ -3994,7 +4024,7 @@ Eso lo habíamos logrado.
 
 #+LATEX: \begin{center}* * *\end{center}
 
-Una tarde, Arjuna me llamó desde donde vivía. Veintitrés años.
+Una tarde, Arjuna me llamó desde donde vivía.
 
 "Papá, me estoy apuntando a un curso de lituano."
 
@@ -4006,7 +4036,7 @@ No era un requisito académico. No era para un título. Era porque lo necesitaba
 
 Eso era lo que los años de unschooling les habían dado: la confianza de que podían aprender cualquier cosa cuando la necesitaran.
 
-Semanas después, Nitai me escribió. Veintiún años. "¿Sabes algo de contabilidad? Tengo que hacer impuestos y no entiendo nada."
+Semanas después, Nitai me escribió. "¿Sabes algo de contabilidad? Tengo que hacer impuestos y no entiendo nada."
 
 Le mandé recursos. Aprendió. Resolvió su problema. Siguió adelante.
 

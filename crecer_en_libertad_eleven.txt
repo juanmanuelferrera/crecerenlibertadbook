@@ -1,331 +1,32 @@
-#+TITLE: Crecer en Libertad v.1.1
-#+SUBTITLE: Otra forma de aprender es posible
-#+AUTHOR: Juan Manuel Ferrera Díaz
-#+DATE: Primera Edición, 2025
-#+LANGUAGE: es
 
-# =============================================================================
-# LaTeX Configuration for 6x9 inch Amazon KDP Book
-# =============================================================================
 
-# LaTeX Configuration for 6x9 inch book format
-#+LATEX_CLASS: book
-#+LATEX_CLASS_OPTIONS: [12pt,twoside,openright]
-#+LATEX_COMPILER: xelatex
-#+OPTIONS: toc:nil num:t title:nil H:2
 
-# Page Layout Configuration (6x9 inches = 152.4x228.6mm)
-# Amazon KDP margins - meets minimum requirements for 155+ pages
-#+LATEX_HEADER: \usepackage[paperwidth=6in,paperheight=9in]{geometry}
-#+LATEX_HEADER: \geometry{
-#+LATEX_HEADER:   inner=15mm,        % Inside margin (gutter) - 0.59" > 0.5" requirement
-#+LATEX_HEADER:   outer=10mm,        % Outside margin - 0.39" > 0.25" requirement
-#+LATEX_HEADER:   top=13mm,          % Top margin - 0.51" > 0.25" requirement
-#+LATEX_HEADER:   bottom=13mm,       % Bottom margin - 0.51" > 0.25" requirement
-#+LATEX_HEADER:   headheight=12pt,   % Reduced header space
-#+LATEX_HEADER:   headsep=7mm,       % Minimal space between header and text
-#+LATEX_HEADER:   footskip=10mm,     % Minimal space for page numbers
-#+LATEX_HEADER:   includehead=true,  % Include header in text area
-#+LATEX_HEADER:   includefoot=true   % Include footer in text area
-#+LATEX_HEADER: }
-#+LATEX_HEADER: \raggedbottom         % Allow flexible page heights
-#+LATEX_HEADER: \enlargethispage{\baselineskip}  % Add extra line when needed
 
-# Typography Configuration - Professional Editorial Quality
-#+LATEX_HEADER: \usepackage{fontspec}
-#+LATEX_HEADER: \setmainfont{Libertinus Serif}[
-#+LATEX_HEADER:   Numbers=OldStyle,
-#+LATEX_HEADER:   Ligatures=TeX
-#+LATEX_HEADER: ]
-#+LATEX_HEADER: \setsansfont{Libertinus Sans}[
-#+LATEX_HEADER:   Scale=MatchLowercase,
-#+LATEX_HEADER:   Ligatures=TeX
-#+LATEX_HEADER: ]
-#+LATEX_HEADER: \newfontfamily\partfont{Libertinus Sans}[
-#+LATEX_HEADER:   Scale=1.2,
-#+LATEX_HEADER:   LetterSpace=15,
-#+LATEX_HEADER:   UprightFont={* Light},
-#+LATEX_HEADER:   BoldFont={* SemiBold}
-#+LATEX_HEADER: ]
-#+LATEX_HEADER: \newfontfamily\chapterfont{Libertinus Serif}[
-#+LATEX_HEADER:   Numbers=Lining,
-#+LATEX_HEADER:   UprightFont={* SemiBold},
-#+LATEX_HEADER:   BoldFont={* Bold}
-#+LATEX_HEADER: ]
-#+LATEX_HEADER: \usepackage[final,babel=true]{microtype}
-#+LATEX_HEADER: \usepackage{setspace}
-#+LATEX_HEADER: \setstretch{1.15}     % Professional line spacing for readability
-#+LATEX_HEADER: \setlength{\parindent}{0pt}
-#+LATEX_HEADER: \setlength{\parskip}{6pt plus 2pt minus 1pt}
-#+LATEX_HEADER: \usepackage{ragged2e}
-#+LATEX_HEADER: \RaggedRight  % Use ragged right instead of full justification
-#+LATEX_HEADER: \setlength{\RaggedRightParindent}{0pt}  % No paragraph indentation
 
-# Hyphenation and line breaking improvements (for ragged right)
-#+LATEX_HEADER: \hyphenpenalty=1000        % Some penalty for hyphenation in ragged right
-#+LATEX_HEADER: \exhyphenpenalty=1000      % Some penalty for hyphenation after explicit hyphen
-#+LATEX_HEADER: \tolerance=5000            % High tolerance for ragged right
-#+LATEX_HEADER: \emergencystretch=3em      % Large emergency stretch
-#+LATEX_HEADER: \righthyphenmin=3          % Hyphenate before at least 3 characters
-#+LATEX_HEADER: \lefthyphenmin=3           % Hyphenate after at least 3 characters
 
-# Widow and orphan control (maximum penalties for professional book typesetting)
-#+LATEX_HEADER: \widowpenalty=10000        % Prevent last line of paragraph at top of page
-#+LATEX_HEADER: \clubpenalty=10000         % Prevent first line of paragraph at bottom of page
-#+LATEX_HEADER: \displaywidowpenalty=10000 % Prevent widow lines before display math
-#+LATEX_HEADER: \brokenpenalty=10000       % Prevent page breaks at hyphens
-#+LATEX_HEADER: \predisplaypenalty=10000   % Discourage page breaks before displays
-#+LATEX_HEADER: \postdisplaypenalty=0      % Allow page breaks after displays
-#+LATEX_HEADER: \interlinepenalty=0        % Allow page breaks between lines
-#+LATEX_HEADER: \raggedbottom              % Already set below, but important for avoiding stretched pages
 
-# Custom hyphenation dictionary for Spanish unschooling terms
-#+LATEX_HEADER: \hyphenation{unschoo-ling homeschoo-ling des-esco-la-ri-zar des-esco-la-ri-za-ción edu-ca-ción so-cia-li-za-ción au-to-no-mía cu-rio-si-dad res-pon-sa-bi-li-dad}
 
-# Additional packages for the book
-#+LATEX_HEADER: \usepackage{xcolor}
-#+LATEX_HEADER: \usepackage{graphicx}
-#+LATEX_HEADER: \usepackage{fancyhdr}
-#+LATEX_HEADER: \setcounter{tocdepth}{1}  % Show only parts and chapters in TOC
-#+LATEX_HEADER: \usepackage{etoolbox}
 
-# Table of Contents - Spanish and compact
-#+LATEX_HEADER: \usepackage[spanish]{babel}
-#+LATEX_HEADER: \addto\captionsspanish{\renewcommand{\contentsname}{Contenido}}
-#+LATEX_HEADER: % Compact TOC spacing using native LaTeX commands
-#+LATEX_HEADER: \makeatletter
-#+LATEX_HEADER: \renewcommand*\l@part[2]{%
-#+LATEX_HEADER:   \ifnum \c@tocdepth >-2\relax
-#+LATEX_HEADER:     \addpenalty{-\@highpenalty}%
-#+LATEX_HEADER:     \addvspace{0.5em \@plus\p@}%
-#+LATEX_HEADER:     \setlength\@tempdima{3em}%
-#+LATEX_HEADER:     \begingroup
-#+LATEX_HEADER:       \parindent \z@ \rightskip \@pnumwidth
-#+LATEX_HEADER:       \parfillskip -\@pnumwidth
-#+LATEX_HEADER:       {\leavevmode\normalsize\partfont #1}\hfil
-#+LATEX_HEADER:       \hb@xt@\@pnumwidth{\hss #2}\par
-#+LATEX_HEADER:       \nobreak
-#+LATEX_HEADER:     \endgroup
-#+LATEX_HEADER:   \fi}
-#+LATEX_HEADER: \renewcommand*\l@chapter[2]{%
-#+LATEX_HEADER:   \ifnum \c@tocdepth >\m@ne
-#+LATEX_HEADER:     \addpenalty{-\@highpenalty}%
-#+LATEX_HEADER:     \vskip 0.2em \@plus\p@
-#+LATEX_HEADER:     \setlength\@tempdima{1.5em}%
-#+LATEX_HEADER:     \begingroup
-#+LATEX_HEADER:       \parindent \z@ \rightskip \@pnumwidth
-#+LATEX_HEADER:       \parfillskip -\@pnumwidth
-#+LATEX_HEADER:       \leavevmode \small
-#+LATEX_HEADER:       \advance\leftskip\@tempdima
-#+LATEX_HEADER:       \hskip -\leftskip
-#+LATEX_HEADER:       #1\nobreak\hfil
-#+LATEX_HEADER:       \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
-#+LATEX_HEADER:       \penalty\@highpenalty
-#+LATEX_HEADER:     \endgroup
-#+LATEX_HEADER:   \fi}
-#+LATEX_HEADER: \makeatother
 
-# ============================================================================
-# MODERN PROFESSIONAL PAGE HEADERS AND NUMBERING SYSTEM
-# ============================================================================
-# Based on best practices from Penguin Modern Classics, New York Review Books,
-# and contemporary literary publishers
 
-# Front matter style: Roman numerals, centered, no headers
-#+LATEX_HEADER: \fancypagestyle{frontmatter}{%
-#+LATEX_HEADER:   \fancyhf{}%
-#+LATEX_HEADER:   \fancyfoot[C]{\small\thepage}%
-#+LATEX_HEADER:   \renewcommand{\headrulewidth}{0pt}%
-#+LATEX_HEADER:   \renewcommand{\footrulewidth}{0pt}%
-#+LATEX_HEADER: }
 
-# Main text style: Running heads with elegant typography
-#+LATEX_HEADER: \fancypagestyle{fancy}{%
-#+LATEX_HEADER:   \fancyhf{}%
-#+LATEX_HEADER:   % Page numbers on outside edges (modern clean look)
-#+LATEX_HEADER:   \fancyfoot[LE]{\small\thepage}%
-#+LATEX_HEADER:   \fancyfoot[RO]{\small\thepage}%
-#+LATEX_HEADER:   % Running heads on inside (verso: author, recto: title)
-#+LATEX_HEADER:   \fancyhead[RO]{\small\itshape\nouppercase{\leftmark}}%
-#+LATEX_HEADER:   \fancyhead[LE]{\small\itshape Crecer en Libertad}%
-#+LATEX_HEADER:   % No rules - clean modern look
-#+LATEX_HEADER:   \renewcommand{\headrulewidth}{0pt}%
-#+LATEX_HEADER:   \renewcommand{\footrulewidth}{0pt}%
-#+LATEX_HEADER: }
 
-# Plain style: Chapter opening pages - only page number, bottom outside
-#+LATEX_HEADER: \fancypagestyle{plain}{%
-#+LATEX_HEADER:   \fancyhf{}%
-#+LATEX_HEADER:   \fancyfoot[LE]{\small\thepage}%
-#+LATEX_HEADER:   \fancyfoot[RO]{\small\thepage}%
-#+LATEX_HEADER:   \renewcommand{\headrulewidth}{0pt}%
-#+LATEX_HEADER:   \renewcommand{\footrulewidth}{0pt}%
-#+LATEX_HEADER: }
 
-# Empty style: Completely blank pages
-#+LATEX_HEADER: \fancypagestyle{empty}{%
-#+LATEX_HEADER:   \fancyhf{}%
-#+LATEX_HEADER:   \renewcommand{\headrulewidth}{0pt}%
-#+LATEX_HEADER:   \renewcommand{\footrulewidth}{0pt}%
-#+LATEX_HEADER: }
 
-# Start with empty style (absolutely no page numbers)
-#+LATEX_HEADER: \pagestyle{empty}
-# After main matter starts, force page numbering everywhere
-#+LATEX_HEADER: \makeatletter
-#+LATEX_HEADER: \newcommand{\forcenumbering}{\let\ps@plain\ps@fancy\let\ps@headings\ps@fancy}
-#+LATEX_HEADER: \makeatother
 
-# Professional typesetting - maintain strict widow/orphan control
-#+LATEX_HEADER: \hbadness=1414                 % Suppress overfull hbox warnings
-#+LATEX_HEADER: \hfuzz=0.3pt                   % Allow tiny overfull boxes
 
-# Section heading orphan/widow control
-#+LATEX_HEADER: \usepackage{titlesec}
-#+LATEX_HEADER: % Chapter titles (sections in Org) positioned lower on page - professional style
-#+LATEX_HEADER: \titleformat{\section}
-#+LATEX_HEADER:   {\normalfont\Large\bfseries}% Format
-#+LATEX_HEADER:   {}% Label
-#+LATEX_HEADER:   {0pt}% Sep
-#+LATEX_HEADER:   {\vspace*{0.25\textheight}}% Before-code: pushes title to 25% down the page
-#+LATEX_HEADER: \titlespacing*{\section}{0pt}{0pt}{40pt}% No extra space before, 40pt after
-#+LATEX_HEADER: \titlespacing*{\subsection}{0pt}{*3}{*2}
-#+LATEX_HEADER: \titlespacing*{\subsubsection}{0pt}{*2.5}{*1.5}
 
-# Prevent orphan section headings - controlled by titlespacing above
 
-# Ensure section headings stay with following text
-#+LATEX_HEADER: \usepackage{needspace}
-#+LATEX_HEADER: \let\oldsection\section
-#+LATEX_HEADER: \renewcommand{\section}[1]{\needspace{4\baselineskip}\oldsection{#1}}
-#+LATEX_HEADER: \let\oldsubsection\subsection
-#+LATEX_HEADER: \renewcommand{\subsection}[1]{\needspace{3\baselineskip}\oldsubsection{#1}}
 
-# Main matter command - switch to Arabic numbering starting at 1
-#+LATEX_HEADER: \newcommand{\startmainmatter}{\clearpage\pagenumbering{arabic}\setcounter{page}{1}\pagestyle{fancy}\forcenumbering}
 
-# Typography improvements - Professional book hierarchy
-#+LATEX_HEADER: \makeatletter
-#+LATEX_HEADER: \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else\hbox{}\thispagestyle{empty}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
-#+LATEX_HEADER: \renewcommand\LARGE{\@setfontsize\LARGE{18}{22}}
-#+LATEX_HEADER: % Custom Part formatting - always start on odd page
-#+LATEX_HEADER: \renewcommand{\@part}[2][]{%
-#+LATEX_HEADER:   \cleardoublepage%
-#+LATEX_HEADER:   \thispagestyle{empty}%
-#+LATEX_HEADER:   \null\vfil%
-#+LATEX_HEADER:   \secdef\@part\@spart%
-#+LATEX_HEADER: }
-#+LATEX_HEADER: \def\@part[#1]#2{%
-#+LATEX_HEADER:   \ifnum \c@secnumdepth >-2\relax%
-#+LATEX_HEADER:     \refstepcounter{part}%
-#+LATEX_HEADER:     \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
-#+LATEX_HEADER:   \else%
-#+LATEX_HEADER:     \addcontentsline{toc}{part}{#1}%
-#+LATEX_HEADER:   \fi%
-#+LATEX_HEADER:   \markboth{}{}%
-#+LATEX_HEADER:   {\centering%
-#+LATEX_HEADER:    \interlinepenalty \@M%
-#+LATEX_HEADER:    \partfont\LARGE\MakeUppercase{#2}\par}%
-#+LATEX_HEADER:   \@endpart}
-#+LATEX_HEADER: \def\@spart#1{%
-#+LATEX_HEADER:   {\centering%
-#+LATEX_HEADER:    \interlinepenalty \@M%
-#+LATEX_HEADER:    \partfont\LARGE\MakeUppercase{#1}\par}%
-#+LATEX_HEADER:   \@endpart}
-#+LATEX_HEADER: \def\@endpart{\vfil\newpage%
-#+LATEX_HEADER:   \if@twoside%
-#+LATEX_HEADER:     \null%
-#+LATEX_HEADER:     \thispagestyle{empty}%
-#+LATEX_HEADER:     \newpage%
-#+LATEX_HEADER:   \fi%
-#+LATEX_HEADER:   \if@tempswa%
-#+LATEX_HEADER:     \twocolumn%
-#+LATEX_HEADER:   \fi}
-#+LATEX_HEADER: \renewcommand{\@makechapterhead}[1]{%
-#+LATEX_HEADER:   \vspace*{0.12\textheight}%
-#+LATEX_HEADER:   {\parindent \z@ \raggedright
-#+LATEX_HEADER:     \chapterfont\huge #1\par\nobreak
-#+LATEX_HEADER:     \vskip 20\p@
-#+LATEX_HEADER:   }%
-#+LATEX_HEADER:   \thispagestyle{plain}%
-#+LATEX_HEADER: }
-#+LATEX_HEADER: \renewcommand{\@makeschapterhead}[1]{%
-#+LATEX_HEADER:   \vspace*{0.12\textheight}%
-#+LATEX_HEADER:   {\parindent \z@ \raggedright
-#+LATEX_HEADER:     \chapterfont\huge #1\par\nobreak
-#+LATEX_HEADER:     \vskip 20\p@
-#+LATEX_HEADER:   }%
-#+LATEX_HEADER:   \thispagestyle{plain}%
-#+LATEX_HEADER: }
-#+LATEX_HEADER: % Configure chapter marks for running heads
-#+LATEX_HEADER: \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-#+LATEX_HEADER: % Parts don't set marks
-#+LATEX_HEADER: \renewcommand{\sectionmark}[1]{}
-#+LATEX_HEADER: % Subsections don't set marks
-#+LATEX_HEADER: \renewcommand{\subsectionmark}[1]{}
-#+LATEX_HEADER: % Override chapter command to use plain style on opening pages
-#+LATEX_HEADER: \renewcommand{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi\thispagestyle{plain}\global\@topnum\z@\@afterindentfalse\secdef\@chapter\@schapter}
-#+LATEX_HEADER: % Section spacing is controlled by titlespacing above (line 186)
-#+LATEX_HEADER: \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-#+LATEX_HEADER:   {-2ex \@plus -1ex \@minus -.2ex}%
-#+LATEX_HEADER:   {0.8ex \@plus .2ex}%
-#+LATEX_HEADER:   {\normalfont\large\bfseries}}
-#+LATEX_HEADER: \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-#+LATEX_HEADER:   {-2ex \@plus -1ex \@minus -.2ex}%
-#+LATEX_HEADER:   {0.8ex \@plus .2ex}%
-#+LATEX_HEADER:   {\normalfont\normalsize\bfseries}}
-#+LATEX_HEADER: \makeatother
 
-# Optimize indentation and spacing for professional compact layout
-#+LATEX_HEADER: \setcounter{secnumdepth}{0} % Remove section numbering
-#+LATEX_HEADER: \setlength{\leftmargini}{1.2em} % Reduce first level indent
-#+LATEX_HEADER: \setlength{\leftmarginii}{1.0em} % Reduce second level indent
-#+LATEX_HEADER: \setlength{\leftmarginiii}{0.8em} % Reduce third level indent
 
-# =============================================================================
-# END OF LATEX CONFIGURATION
-# =============================================================================
 
-# =============================================================================
-# FRONT MATTER - Professional Editorial Quality
-# =============================================================================
 
-#+LATEX: \frontmatter
-#+LATEX: \pagestyle{empty}
 
-# Half-title page (página i) - Minimal, elegant
-#+LATEX: \thispagestyle{empty}
-#+LATEX: \vspace*{0.25\textheight}
-#+LATEX: \begin{center}
-#+LATEX: {\chapterfont\Huge Crecer en Libertad}
-#+LATEX: \end{center}
-#+LATEX: \vspace*{\fill}
-#+LATEX: \clearpage
 
-# Blank page (página ii)
-#+LATEX: \thispagestyle{empty}
-#+LATEX: \mbox{}
-#+LATEX: \clearpage
 
-# Full title page (página iii) - Complete information
-#+LATEX: \thispagestyle{empty}
-#+LATEX: \vspace*{0.20\textheight}
-#+LATEX: \begin{center}
-#+LATEX: {\chapterfont\huge Crecer en Libertad}\\[0.8cm]
-#+LATEX: {\large\itshape Otra forma de aprender es posible}\\
-#+LATEX: \vspace{0.18\textheight}
-#+LATEX: {\Large Juan Manuel Ferrera Díaz}\\
-#+LATEX: \vspace*{\fill}
-#+LATEX: {\normalsize Primera Edición}\\[0.4cm]
-#+LATEX: {\normalsize 2025}
-#+LATEX: \end{center}
-#+LATEX: \clearpage
 
-# Copyright page (página iv) - Legal and publication information
-#+LATEX: \thispagestyle{empty}
-#+LATEX: \vspace*{\fill}
-#+LATEX: \begin{flushleft}
-#+LATEX: \small
 
 *Crecer en Libertad*\\
 /Otra forma de aprender es posible/
@@ -350,43 +51,22 @@ para proteger su privacidad.
 Las opiniones expresadas en este libro son las del autor y\\
 no necesariamente reflejan las de ninguna organización.
 
-#+LATEX: \vspace{0.5cm}
 
 Impreso bajo demanda
 
-#+LATEX: \end{flushleft}
-#+LATEX: \clearpage
 
-# Dedication page (página v) - To Yukari
-#+LATEX: \thispagestyle{empty}
-#+LATEX: \vspace*{0.30\textheight}
-#+LATEX: \begin{center}
-#+LATEX: \itshape
 
 Para Yukari,\\
 que nos enseñó a vivir con valentía\\
 y morir con gracia
 
-#+LATEX: \vspace{0.5cm}
 
 Y para Arjuna y Nitai,\\
 que me enseñaron todo lo demás
 
-#+LATEX: \end{center}
-#+LATEX: \vspace*{\fill}
-#+LATEX: \clearpage
 
-# Author's Note (página vi-vii) - Context for the reader
-#+LATEX: \thispagestyle{empty}
 
-#+LATEX: \vspace*{0.08\textheight}
-#+LATEX: \begin{center}
-#+LATEX: {\chapterfont\Large Nota del Autor}
-#+LATEX: \end{center}
-#+LATEX: \vspace{0.8cm}
 
-#+LATEX: \setlength{\parindent}{1.5em}
-#+LATEX: \setlength{\parskip}{0.5em}
 
 Este libro es una memoria personal. He reconstruido conversaciones y eventos lo mejor que mi memoria permite, sabiendo que la memoria es imperfecta y selectiva.
 
@@ -402,31 +82,14 @@ Escribí este libro para las familias que están considerando caminos alternativ
 
 No ofrezco un método. Ofrezco una historia.
 
-#+LATEX: \vspace{0.5cm}
-#+LATEX: \begin{flushright}
-#+LATEX: \textit{J.M.F.}\\
-#+LATEX: \textit{Tenerife, 2025}
-#+LATEX: \end{flushright}
 
-#+LATEX: \clearpage
 
-# Table of Contents (páginas viii-ix)
-#+LATEX: \pagestyle{frontmatter}
-#+LATEX: \tableofcontents
-#+LATEX: \clearpage
 
-# Start main matter - Arabic numbering, running heads
-#+LATEX: \mainmatter
-#+LATEX: \pagestyle{fancy}
 
-# =============================================================================
-# END OF FRONT MATTER
-# =============================================================================
 
 
 * PARTE I: EL PARAÍSO
 
-#+LATEX: \cleardoublepage
 ** Capítulo 1: La Semilla
 
 Año 2000. Quizá inicios del 2001—los meses después de la muerte de Yukari se confunden en mi memoria.
@@ -437,7 +100,7 @@ Nos trataba con gentileza especial—a mí y a los niños—esa ternura que la g
 
 Porque eso éramos.
 
-Yukari había muerto seis meses antes. Marzo del 2000. No con drama. Con una paz, una calma, una elegancia que solo ella podía tener incluso en la muerte. Su presencia protectora llenaba nuestra casa-no como algo opresivo sino como algo suave, inevitable, correcto.
+Yukari había muerto seis meses antes. Marzo del 2000. No con drama. Con una paz, una calma, una elegancia que solo ella podía tener incluso en la muerte. Su presencia protectora llenaba nuestra habitación—no como algo opresivo sino como algo suave, inevitable, correcto.
 
 Yo había sostenido su mano. Los niños estaban en la habitación de al lado. Cuatro y dos años y medio—demasiado pequeños para entender completamente que mamá no volvería a despertar, pero allí, cerca, en su propio espacio.
 
@@ -461,7 +124,6 @@ La escuela fue mi salvación. Habíamos venido a Australia por ella—esa peque�
 
 Y era una buena escuela. Realmente lo era. Los maestros eran amables. Los niños tranquilos. Arjuna y Nitai eran demasiado pequeños para ser plenamente conscientes de haber perdido a su madre. Tenían su figura de padre bien establecida. Iban felices cada mañana.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Una tarde, el director se acercó a mí en el patio mientras esperaba a los niños.
 
@@ -501,7 +163,6 @@ Arjuna gritó mi nombre desde el otro lado del patio. Había encontrado un palo 
 
 Guardé el libro en mi mochila.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Lo leí en las madrugadas. Seis, siete de la mañana, antes de que los niños despertaran. En la penumbra de esa habitación, con una taza de infusión que se enfriaba lentamente, mientras Australia se despertaba afuera y dentro todo estaba quieto y tranquilo.
 
@@ -541,10 +202,8 @@ Y las semillas necesitan tiempo para germinar.
 
 Por ahora, era suficiente saber que existía.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 
-#+LATEX: \cleardoublepage
 ** Capítulo 2: Sobrevivir
 
 2000-2004. Australia.
@@ -561,7 +220,6 @@ La escuela abría a las nueve. Los dejaba en sus aulas—Arjuna con Miss Sarah, 
 
 Y luego yo tenía hasta las tres de la tarde para dar mis clases.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Daba clases de instrumentos musicales a miembros de la comunidad. También enseñaba sánscrito y filosofía. A cambio, teníamos casa, comida, y la escolarización de los niños cubierta. No había dinero, pero no lo necesitábamos—todo lo esencial estaba resuelto.
 
@@ -583,7 +241,6 @@ A las ocho y media, yo colapsaba en el sofá con una ginger beer fría y miraba 
 
 Y al día siguiente, repetir.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 La escuela era buena. Necesito enfatizar esto porque lo que vino después podría hacer pensar que todas las escuelas son iguales. No lo son.
 
@@ -613,7 +270,6 @@ Solo años después, cuando leí más, cuando viví la alternativa, entendí lo 
 
 En ese momento, solo sabía que Arjuna y Nitai estaban a salvo. Que tenían amigos. Que Miss Sarah los cuidaba cuando yo no podía. No necesitaba más.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Los fines de semana eran nuestros.
 
@@ -621,7 +277,7 @@ Los sábados, mercado del agricultor por la mañana. Arjuna y Nitai corriendo en
 
 Por la tarde, parque. Con el tobogán alto que Arjuna amaba y Nitai temía. Dos horas de ellos quemando energía mientras yo me sentaba en un banco, vigilándolos con un ojo, leyendo con el otro.
 
-A veces sacaba /Dumbing Us Down/ y releía párrafos. No todo—era demasiado denso, demasiado provocador para digerir en un banco de parque con dos niños gritando cerca. Pero fragmentos. Ideas que resonaban y luego lo guardaba de nuevo.
+A veces sacaba /Dumbing Us Down/ del cajón y releía párrafos. No todo—era demasiado denso, demasiado provocador para digerir en un banco de parque con dos niños gritando cerca. Pero fragmentos. Ideas que resonaban y luego lo guardaba de nuevo.
 
 Los domingos, tranquilos. Dibujar en casa. Arjuna obsesionado con los dinosaurios—dibujaba Tiranosaurios con marcadores, me hacía buscar libros en la biblioteca sobre el Jurásico, inventaba historias elaboradas sobre batallas entre carnívoros y herbívoros.
 
@@ -633,7 +289,6 @@ Y el domingo por la noche, esa sensación de peso regresando. El lunes cerca. Ot
 
 No era infelicidad, exactamente. Era... agotamiento funcional. Sobrevivir no es vivir, pero cuando eres un viudo solo en país extranjero con dos niños pequeños, sobrevivir es suficiente logro.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Pasaron tres años así.
 
@@ -651,7 +306,6 @@ Razones técnicas que no entendí completamente. Algo sobre visas, tiempos, docu
 
 Otras opciones significaba volver.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 No quería volver.
 
@@ -679,7 +333,6 @@ Nitai preguntó si podía llevar sus bloques. Le dije que sí.
 
 Arjuna no dijo nada más. Solo asintió. Nueve años y ya sabía que algunas cosas no se discuten, solo se soportan.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Dejamos Murwillumbah en julio del 2004.
 
@@ -695,11 +348,9 @@ Pero tenía a mis hijos. Y eso tendría que ser suficiente.
 
 Siempre lo había sido antes.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Y resultó que no era suficiente. Porque cuando llegamos a Tenerife, todo lo que había funcionado en Australia dejó de funcionar.
 
-#+LATEX: \cleardoublepage
 ** Capítulo 3: La Barrera del Idioma
 
 Agosto 2004.
@@ -714,7 +365,6 @@ Condujo en silencio hacia su casa en un pueblo cercano a La Laguna. Casa enorme,
 
 Esa primera noche fue tranquila. Los niños estaban cansados, pero no hubo dramas. Se adaptaron como lo hacen los niños cuando los adultos no proyectamos nuestros miedos sobre ellos.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Los primeros días fueron supervivencia pura. Adaptarnos al calor, al ritmo español—tiendas cerradas de dos a cinco, cenas a las nueve de la noche, gente gritando conversaciones normales con un volumen que los australianos reservarían para emergencias.
 
@@ -734,7 +384,6 @@ Y honestamente, parte de mí pensaba: /Tenerife es España. Las escuelas españo
 
 Qué ingenuo fui.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Dos semanas antes de empezar el curso, me senté con ellos en el patio trasero bajo el limonero. Tenía un puñado de palitos de colores que había cortado de ramas—rojo, azul, verde, amarillo. Los había pintado con témpera barata de una tienda de manualidades.
 
@@ -774,7 +423,6 @@ En tres días, los colores estaban grabados. Una semana después, añadimos núm
 
 No era perfecto. No era suficiente. Cuando empezó la escuela, aún eran casi completamente monolingües en inglés. Pero tenían algo—un puñado de palabras, una base mínima, la sensación de que el español no era imposible, solo difícil.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El colegio público Nuestra Señora del Carmen estaba a diez minutos caminando. Edificio de cemento de los años setenta, pintado de un amarillo institucional deprimente, con barrotes en las ventanas y un patio de asfalto negro que se calentaba tanto bajo el sol que los niños no podían jugar descalzos.
 
@@ -792,7 +440,6 @@ Firmé papeles. Me dieron uniformes—polo blanco, pantalón azul. Los niños lo
 
 Lo segundo resultó cierto.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El primer día, los acompañé hasta la puerta. Arjuna caminaba lento, arrastrando los pies, con esa expresión de animal asustado pero resignado. Nitai me agarraba la mano con tanta fuerza que sus nudillos estaban blancos.
 
@@ -820,7 +467,6 @@ Se sentó. Los otros niños seguían mirándolo. Uno se rió. La Señora López 
 
 Dejé a Nitai en su aula—experiencia casi idéntica, maestra más gentil pero igual de desbordada—y caminé de vuelta a casa sintiendo un nudo en el estómago que no podía explicar.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Esa primera semana fue brutal.
 
@@ -858,7 +504,6 @@ Y funcionaba. Los profesores dejaron de llamarlo. Los niños dejaron de molestar
 
 Pero algo en él se apagó. Esa parte que preguntaba "¿por qué?" se durmió para sobrevivir el día.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Por las noches volvimos al juego de los palos.
 
@@ -898,7 +543,6 @@ Y Gatto en mi cajón, esperando.
 
 * PARTE II: LA CRISIS
 
-#+LATEX: \cleardoublepage
 ** Capítulo 4: El Quiebre
 
 Febrero 2005.
@@ -925,7 +569,6 @@ Yo no sabía qué responder. Porque la pregunta real no era si estaba bien. La p
 
 Y la respuesta, en el colegio Nuestra Señora del Carmen, era sí.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El día que todo cambió fue un martes de marzo del 2005.
 
@@ -965,7 +608,6 @@ Miré el cuaderno. Miré a mi hijo. Nueve años. Ojos rojos. Hombros caídos.
 
 Y algo en mí se rompió.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 No fui al colegio al día siguiente a gritar a la maestra. Quería. Cada fibra de mi cuerpo quería ir, entrar en esa aula, y preguntarle qué carajo le daba derecho a destrozar el trabajo de un niño de nueve años que estaba aprendiendo en un idioma que no era el suyo, en un sistema que no entendía, lejos de todo lo que conocía.
 
@@ -999,7 +641,6 @@ Otra madre: "Yo también."
 
 En dos días, teníamos doce familias.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 La reunión con la directora fue tensa. Nos recibió en su oficina—ese espacio institucional con paredes beige y diplomas enmarcados que proclamaban credenciales pero no garantizaban competencia.
 
@@ -1013,7 +654,7 @@ Ahí estaba. La defensa predecible. La misma mierda de siempre: "ustedes no enti
 
 "Destruir el trabajo de un niño delante de sus compañeros no es un 'método tradicional,'" dije. "Es abuso."
 
-La directora me miró, larga y fríamente. "Señor Ferrera, entiendo que viene de otro país. Aquí las cosas se hacen diferente. Los niños necesitan disciplina."
+La directora me miró. Larga, fría. "Señor Ferrera, entiendo que viene de otro país. Aquí las cosas se hacen diferente. Los niños necesitan disciplina."
 
 "Los niños necesitan respeto," respondí. "Y si este colegio no puede dárselo, buscaré uno que sí pueda."
 
@@ -1025,7 +666,6 @@ Porque éramos doce familias. Y doce familias retirando a sus hijos significaba 
 
 Salimos de esa oficina sabiendo que habíamos logrado algo. Pero también sabiendo que habíamos hecho enemigos.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 La Señora Martínez cogió baja médica dos días después.
 
@@ -1091,7 +731,6 @@ Así que saldríamos del sistema.
 
 Y encontraríamos otro camino.
 
-#+LATEX: \cleardoublepage
 ** Capítulo 5: La Salida
 
 Marzo 2005.
@@ -1126,7 +765,6 @@ No hubo resistencia. No hubo "pero todos mis amigos van al colegio." Porque la v
 
 Salir del colegio no era perder nada. Era recuperar algo que habían perdido.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 La parte legal era más complicada.
 
@@ -1148,7 +786,6 @@ Envié el burofax un lunes. El martes, los niños no fueron al colegio.
 
 Y así, sin ceremonias, sin despedidas dramáticas, salimos del sistema.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Los primeros días fueron de planificación obsesiva.
 
@@ -1178,7 +815,6 @@ Me inscribí. Pagué la cuota mensual—no era barata. Descargué los materiales
 
 Estaba resuelto: estructura externa, validación oficial, tranquilidad mental de que estábamos "haciendo lo correcto."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Domingo por la noche antes del primer día. Los niños durmiendo. Yo preparando materiales como profesor novato.
 
@@ -1190,7 +826,6 @@ Esto era lo que hacían las familias que educaban en casa, ¿verdad? Estructura.
 
 Me fui a dormir convencido.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Lunes. Primer día de "escuela en casa."
 
@@ -1250,7 +885,6 @@ Once y media. Ya llevábamos dos horas y media. Me dolía la cabeza. Los niños 
 
 Corrieron afuera. Como prisioneros liberados.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Esa noche, después de acostarlos, me senté en la cocina mirando el horario en la pared.
 
@@ -1262,7 +896,6 @@ La mesa del comedor se había convertido en pupitre. El comedor en aula. Y yo en
 
 Y los niños—libres del colegio hacía solo días—habían vuelto a estar prisioneros. Solo que ahora el carcelero era yo.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Día dos. Martes.
 
@@ -1286,7 +919,6 @@ Mediodía. Nitai: "¿Papá, cuándo terminamos?"
 
 Pero no sonaba convincente. Ni siquiera a mí.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Día tres. Miércoles.
 
@@ -1356,7 +988,6 @@ Cancelé la suscripción a K12 Academy. Nunca llegamos a usar un solo módulo de
 
 Y entonces sí—entonces fue el caos.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Las semanas siguientes fueron desorientación pura.
 
@@ -1380,7 +1011,6 @@ Recordaba a Gatto vagamente. Pero Gatto hablaba de escuelas, no de qué hacer /d
 
 Así que esperé. Observé. E intenté confiar.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Fue durante esas primeras semanas de desconcierto que busqué ayuda—y libros.
 
@@ -1414,7 +1044,6 @@ Le escribí de vuelta con todas mis dudas. Ella respondió con paciencia. Email 
 
 Anna se convirtió en mi guía, mi mentora, mi conexión con un mundo que no sabía que existía: un mundo de familias que habían decidido que el sistema educativo no servía a sus hijos y que estaban creando alternativas.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 En uno de sus primeros emails, Anna escribió: "Si leíste a Gatto, deberías leer a Holt también. Y a Illich. Son los fundamentos."
 
@@ -1422,7 +1051,6 @@ Adjuntos había dos PDFs: "How Children Fail" de John Holt y "Deschooling Societ
 
 Los abrí esa misma noche. Los niños durmiendo. Infusión de hierbas enfriándose en la mesa. La casa en silencio.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Holt me impactó de forma diferente a Gatto.
 
@@ -1434,7 +1062,6 @@ Y luego algo radical: "Quizá no necesiten escuelas en absoluto. Quizá aprenden
 
 Esto no era solo crítica. Era permiso para imaginar otra cosa.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Illich me dio el marco filosófico.
 
@@ -1442,7 +1069,6 @@ Illich me dio el marco filosófico.
 
 Propuesta radical: desescolarizar la sociedad entera. No solo algunos niños fuera del colegio—cambiar nuestra comprensión fundamental de qué es aprender.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Las madrugadas se llenaron de lectura. Subrayando. Procesando.
 
@@ -1452,7 +1078,6 @@ Gatto: "El sistema existe para controlar, no para educar."
 
 Entre los tres, construyeron el fundamento de lo que iba a hacer: desescolarizar completamente a mis hijos.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Le escribí a Anna: "Leí a Holt e Illich. Cambiaron todo."
 
@@ -1464,7 +1089,6 @@ Le escribí a Anna: "Leí a Holt e Illich. Cambiaron todo."
 
 Eso sería la parte más difícil.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Una de las primeras cosas que Anna me dijo fue: "No intentes replicar la escuela en casa."
 
@@ -1482,7 +1106,6 @@ Sonaba demasiado simple. Demasiado bueno para ser verdad.
 
 Pero decidí confiar. Porque no tenía otra opción. Y porque Anna hablaba con la certeza de quien había visto esto funcionar docenas de veces.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Las semanas pasaron. Tres, cuatro, cinco semanas sin "hacer nada."
 
@@ -1506,7 +1129,6 @@ Estaban... sanando.
 
 Y yo estaba aprendiendo algo fundamental: los niños no necesitan ser enseñados. Necesitan ser liberados. Necesitan espacio, tiempo, respeto, recursos. Y luego aprenden porque eso es lo que los humanos hacen naturalmente cuando no están siendo forzados.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Anna me invitó a un encuentro informal de familias homeschoolers en Santa Cruz.
 
@@ -1534,7 +1156,6 @@ Cuando nos fuimos, Arjuna me dijo: "¿Podemos volver?"
 
 Y así encontramos nuestra comunidad.
 
-#+LATEX: \cleardoublepage
 ** Capítulo 6: Lo Que Surgió
 
 Primavera 2005.
@@ -1589,7 +1210,6 @@ No estaba "jugando." Estaba haciendo entomología, biología, estudio de sistema
 
 Pero para él solo eran hormigas. Y eso era exactamente correcto.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Anna me había hablado de "unschooling" en uno de sus emails. Palabra extraña. Desescolarizar. Aprender sin escuela.
 
@@ -1611,7 +1231,6 @@ No seguíamos cronología. No había exámenes. Pero aprendían.
 
 Más allá de eso: disfrutaban aprendiendo. La curiosidad que se había apagado en el colegio estaba regresando, más fuerte que antes.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El trabajo era desafío constante.
 
@@ -1629,7 +1248,6 @@ El bienestar de los niños era la meta. No mi comodidad. No mi conveniencia. Su 
 
 Así que seguíamos. Con un poco de ingenio, como decía yo en esos días. Con creatividad. Con flexibilidad. Con confianza de que si el objetivo era claro—que ellos estuvieran bien—el camino se iría revelando.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 No llamé a lo que hacíamos "unschooling" hasta meses después. Al principio solo era "educación en casa." Luego "aprendizaje natural." Eventualmente, cuando conocí a más familias y leí más sobre el concepto, acepté el término.
 
@@ -1645,7 +1263,6 @@ Ambos hablaban español fluido ahora. También inglés. Bilingües naturales por
 
 Y sobre todo: eran niños felices. Curiosos. Sin ansiedad. Sin miedo a cometer errores. Sin la carga de sentirse inadecuados.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Anna me invitó a dar una charla en un encuentro de familias homeschoolers más grande—quizá veinte familias de toda Canarias.
 
@@ -1669,7 +1286,6 @@ Vi dudas en algunos rostros. Era mucho pedir—confiar así, soltar control así
 
 Pero también vi esperanza. Porque si yo lo estaba haciendo—padre solo, sin recursos especiales, sin formación pedagógica—ellos también podían.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Regresamos a casa esa tarde—Arjuna, Nitai y yo en el autobús desde Santa Cruz. Los niños exhaustos de jugar todo el día con otros niños. Yo exhausto de hablar, de ser "el que ya lo hizo" cuando todavía sentía que estaba aprendiendo cada día.
 
@@ -1701,7 +1317,6 @@ Y así fue. El camino se revelaba caminándolo.
 
 * PARTE III: EL CAMINO
 
-#+LATEX: \cleardoublepage
 ** Capítulo 7: La Vida Diaria
 
 2006. Un año después de sacar a los niños del colegio. Seguíamos viviendo en la casa enorme del abuelo en el pueblo cercano a La Laguna. La tía también vivía allí. Tres generaciones bajo un mismo techo. Espacio suficiente para todos.
@@ -1714,7 +1329,6 @@ Arjuna tenía once. Nitai, nueve. Suficientemente mayores para estar dos horas s
 
 El resto del día era nuestro.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Una tarde lluviosa, los niños inquietos. Energía sin salida.
 
@@ -1744,7 +1358,6 @@ Negociaron. Probaron. Ajustaron. Dos horas después teníamos un juego funcional
 
 Habían aprendido más sobre democracia real—compromiso, negociación bajo presión—que en cualquier clase de civismo.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Llevábamos días de mal humor. Yo estresado por dinero. Ellos irritables, peleándose entre sí.
 
@@ -1764,7 +1377,6 @@ Tendidos en el suelo, sudando. La tensión del día—desvanecida.
 
 A veces la mejor forma de resolver conflicto no es hablar. Es moverse juntos hasta que el cuerpo suelta lo que las palabras no pueden.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Arjuna tenía once años. Puse cigarrillos en la repisa del salón, a la vista.
 
@@ -1784,7 +1396,6 @@ Meses después, el paquete seguía intacto. Les pregunté: "¿Van a fumar o no?"
 
 "Papá, estás mal de la cabeza."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Nitai a los nueve años tenía fascinación con los dulces. Como todos los niños. 
 
@@ -1822,7 +1433,6 @@ A la semana siguiente le di otros cinco euros. Los administró diferente. Compr�
 
 Había aprendido. La vida le había enseñado.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Los años de adolescencia trajeron desafíos diferentes. Arjuna a los trece, catorce, empezó a tener emociones complejas que no sabía procesar. A veces explotaba—frustración, enojo sin razón clara.
 
@@ -1850,7 +1460,6 @@ Y cuando era yo el que necesitaba hablar referente a ellos, les exponía el prob
 
 El reloj de cocina se convirtió en ritual. Las conversaciones fluyeron.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El aprendizaje transversal era constante, aunque no lo llamáramos así.
 
@@ -1876,7 +1485,6 @@ Las comimos. Estaban deliciosas.
 
 Eso era aprendizaje transversal. Todo conectado porque en la vida real, todo está conectado.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 "¿Cuánto tardamos a La Laguna en autobús?" preguntó Arjuna.
 
@@ -1892,7 +1500,6 @@ Fuimos. Tardamos cincuenta y dos minutos—tráfico que no anticipó.
 
 "Sí. Pero ahora sabes que la teoría y la práctica no siempre coinciden. Eso también es matemáticas."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Las diligencias cotidianas eran lecciones disfrazadas. Correos: leer tarifas, calcular costos, decidir urgente vs ordinario. Farmacia: entender prescripciones médicas, dosis, conversión de unidades. Banco: interés, comisiones, presupuesto mensual.
 
@@ -1902,7 +1509,6 @@ Eran simplemente: vida.
 
 Y en la vida, aprendes lo que necesitas cuando lo necesitas.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Pintar la habitación de Arjuna fue un proyecto de dos semanas.
 
@@ -1920,7 +1526,6 @@ Cuando terminamos, la habitación era suya en forma nueva. Él la había medido,
 
 ¿Alguien llamó a eso "clase de matemáticas" o "clase de arte"? No. Era pintar una habitación. Pero aprendieron más que en semanas de libro de texto.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El patio trasero de la casa del abuelo tenía una esquina sin usar. Nitai preguntó: "¿Podemos plantar algo?"
 
@@ -1956,7 +1561,6 @@ Aprendieron paciencia. Ciclos de vida. Responsabilidad diaria. Que el fracaso no
 
 No fue "clase de ciencias naturales." Fue cultivar comida. Fracasar. Aprender. Intentar de nuevo. Y en el proceso, cultivaron algo más: resiliencia.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 En una escuela, estas serían seis asignaturas separadas, en seis aulas diferentes, con seis profesores diferentes, en seis días diferentes. En la vida real, eran todas parte de un solo proyecto integrado.
 
@@ -1964,9 +1568,8 @@ Eso es aprendizaje transversal: todo se conecta porque en la vida real, todo est
 
 Mis hijos nunca tuvieron que preguntarse "¿para qué sirve esto?" porque siempre estaban aprendiendo cosas que servían para algo visible, tangible, real.
 
-#+LATEX: \begin{center}* * *\end{center}
 
-Con ocho años, Nitai estaba obsesionado con los bomberos. No "un poco interesado"—obsesionado. Dormía con casco de juguete. Dibujaba camiones. Veía videos.
+Con seis años, Nitai estaba obsesionado con los bomberos. No "un poco interesado"—obsesionado. Dormía con casco de juguete. Dibujaba camiones. Veía videos.
 
 Una tarde en la biblioteca, pidió un libro sobre incendios forestales. "Este tiene muchas letras," dije.
 
@@ -1988,13 +1591,11 @@ Nunca los obligué. Siempre confié.
 
 Y esa confianza—más que cualquier técnica, más que cualquier currículo, más que cualquier método—fue lo que los dejó florecer.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 No tuve que "enseñarles" ortografía, vocabulario, comprensión lectora. Leían libros que les apasionaban. Absorbían por ósmosis.
 
 Tu trabajo no es ser transmisor constante de sabiduría. Es poner en su camino cosas que vale la pena absorber.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Los llevaba con amigos que eran expertos—no para "clases," sino para que vieran trabajo real.
 
@@ -2004,7 +1605,6 @@ Raúl explicó las frecuencias, la tensión de cuerdas, física del sonido. No e
 
 Aprendieron más en esa tarde que en semanas de libro de texto. Porque el conocimiento venía de una persona real haciendo un trabajo real que amaba.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Encuentro mensual de familias unschoolers. Arjuna nueve años, conversando con Antonio, educador jubilado de sesenta y cinco.
 
@@ -2018,7 +1618,6 @@ En la escuela, pasas años encerrado con tu misma edad exacta. Como si la edad f
 
 En la vida real, tus mejores maestros pueden tener cinco años o setenta.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 A veces la gente me preguntaba: "¿Cómo es que tus hijos están tan bien educados?"
 
@@ -2032,7 +1631,6 @@ Tus hijos te observan constantemente. No escuchan tanto tus palabras—observan 
 
 Por eso digo que no los eduqué. Simplemente viví de cierta manera delante de ellos, y ellos absorbieron lo que resonaba con quiénes son.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Primer día que Arjuna dijo "joder" en casa—aprendido en el colegio antes de sacarlo.
 
@@ -2054,7 +1652,6 @@ Esa noche: "¿Estás enojado por lo de hoy?"
 
 Asintió. Y mantuvo el acuerdo. No por miedo—porque lo entendía.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Mi objetivo siempre fue este: que mis hijos nunca pudieran decirme "me obligaste a esto."
 
@@ -2062,7 +1659,6 @@ Confía en su criterio, y eso les hace tener buen criterio. Trata sus decisiones
 
 Esa era la regla de oro. La única regla que realmente importaba.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 No todo fue perfecto. Hubo días malos. Días donde yo estaba agotado y corto de paciencia. Días donde ellos se peleaban entre sí y yo solo quería paz. Días donde las finanzas eran tan ajustadas que no sabía cómo íbamos a comer la próxima semana.
 
@@ -2078,7 +1674,6 @@ El camino se revelaba caminándolo.
 
 Un día a la vez.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Anna se llevó a los niños ese fin de semana—quería pasar tiempo con ellos en La Laguna, visitar un museo que Arjuna había mencionado. Me quedé solo en el apartamento por primera vez en meses.
 
@@ -2096,7 +1691,6 @@ Clara me había enviado un mensaje la semana anterior. Nos conocimos por un amig
 
 Acepté. No había salido con nadie desde Yukari. Más de cuatro años.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El bar estaba en La Orotava. Pequeño, con terraza que daba a la plaza. Clara ya estaba sentada cuando llegué. Sonrió.
 
@@ -2160,7 +1754,6 @@ Nos despedimos cordialmente. "Fue un placer." "Igualmente."
 
 Nos escribimos un par de veces después. Sus respuestas cada vez más breves. Luego, nada.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Caminé de vuelta a casa en la oscuridad. Calles vacías. Sonido de mis pasos en el pavimento.
 
@@ -2200,7 +1793,6 @@ Sino sobre mí.
 
 ¿Cuánto de tu vida entregas antes de que empiece a doler demasiado?
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Anna me devolvió los niños el domingo. Entraron como torbellino—mochilas, historias, preguntas sobre qué había hecho yo.
 
@@ -2216,9 +1808,7 @@ Era: "esto es lo que elegí, y lo volvería a elegir."
 
 Pero eso no hacía que doliera menos.
 
-#+LATEX: \begin{center}* * *\end{center}
 
-#+LATEX: \cleardoublepage
 ** Capítulo 8: Crecer en Libertad
 
 2010. Cinco años después de sacar a los niños del colegio. Los encuentros presenciales se habían vuelto irregulares—familias dispersas, dificultad de coordinar fechas, costos de transporte. Pero la necesidad de comunidad seguía ahí.
@@ -2233,7 +1823,6 @@ Busqué. Había muy poco. Algunos sitios americanos, traducidos torpemente. Nada
 
 Le respondí: "Hagámoslo."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El nombre surgió naturalmente. "Crecer en Libertad." No "homeschooling" (anglicismo innecesario). No "educación libre" (demasiado cargado políticamente). Crecer en libertad—simple, claro, directo.
 
@@ -2247,7 +1836,6 @@ Marta se unió también como moderadora. Madre de tres, llevaba años educando e
 
 Éramos tres. Quizá había veinte familias en total que conocíamos entre todos. Empezamos pequeños.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Enero 2011. Lanzamos el foro.
 
@@ -2271,7 +1859,6 @@ Y respondían. Tres, cuatro familias contando sus propias historias. "Yo tambié
 
 El foro empezó a respirar solo.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Arjuna tenía dieciséis años. Nitai, catorce. A veces me veían escribiendo respuestas largas en el foro, ayudando a familias nuevas.
 
@@ -2291,7 +1878,6 @@ Asintió. No dijo más. Pero años después me dijo que ese momento le enseñó 
 
 Un aprendizaje que no estaba en ningún currículo.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El foro creció más rápido de lo esperado.
 
@@ -2310,7 +1896,6 @@ Otras eran complejas: "¿Hasta qué punto intervengo si veo que mi hija no está
 
 No había respuestas únicas. Pero había experiencias compartidas. Perspectivas múltiples. Y eso era valioso.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 2012. Una madre nueva en el foro escribió: "Necesito evidencia. No puedo simplemente confiar. Necesito saber que esto funciona, que hay investigación, que no estoy experimentando con el futuro de mi hijo."
 
@@ -2338,7 +1923,6 @@ Pero lo más importante: Gray había estudiado familias unschoolers. Encuestas a
 
 "El aprendizaje autodirigido funciona," concluía Gray. "No a pesar de la ausencia de instrucción formal, sino debido a ella. Los niños aprenden mejor cuando son libres de seguir sus intereses, a su propio ritmo, según sus propias necesidades."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Copié fragmentos del artículo de Gray en mi respuesta a esa madre. Añadí el enlace. Le dije: "Esto no es fe ciega. Hay evidencia. Hay ciencia. Puedes confiar."
 
@@ -2350,7 +1934,6 @@ Esa era la magia del foro. No solo apoyo emocional—también rigor intelectual.
 
 No éramos hippies irresponsables experimentando con nuestros hijos. Éramos familias informadas eligiendo un camino respaldado por evidencia—evidencia que el sistema educativo prefería ignorar porque cuestionaba su monopolio sobre el aprendizaje.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Moderar el foro era trabajo.
 
@@ -2362,7 +1945,6 @@ Nos complementábamos.
 
 Hubo tensiones a veces. Desacuerdos sobre cómo manejar ciertos temas. Pero los resolvíamos hablando—como adultos, como personas comprometidas con la misma meta.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Lo que no esperaba era cuánto iba a aprender yo del foro.
 
@@ -2376,7 +1958,6 @@ Una familia en Valencia explicó cómo manejaban el dinero con sus hijos—asign
 
 El foro no era solo tres personas ayudando a otras. Era una comunidad de aprendizaje mutuo.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 2012. El foro tenía ciento cincuenta familias. Las conversaciones eran cada vez más ricas, más profundas.
 
@@ -2386,7 +1967,6 @@ Otros acababan de empezar—aterrorizados, llenos de dudas, necesitando confirma
 
 Y en medio, familias como la nuestra—varios años de experiencia, todavía aprendiendo, pero con suficiente camino recorrido para saber que funcionaba.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Una conversación que recuerdo bien:
 
@@ -2404,7 +1984,6 @@ La madre original respondió días después: "Nunca lo había visto así. Pensab
 
 Esas conversaciones eran transformadoras. No solo para quien preguntaba—para todos los que leían.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Otra conversación que recuerdo:
 
@@ -2418,7 +1997,6 @@ La madre respondió días después: "Lloré leyendo esto. De alivio. Gracias."
 
 Ese era el valor del foro. No solo información. Confirmación. Comunidad. Saber que no estabas loco.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Arjuna y Nitai crecían. Trece y once ahora. Empezaban a tener sus propias opiniones sobre educación.
 
@@ -2444,7 +2022,6 @@ Esas conversaciones—pequeñas, espontáneas—eran parte del aprendizaje tambi
 
 Cosas que ningún examen medía.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El foro trajo algo inesperado: legitimidad.
 
@@ -2458,7 +2035,6 @@ Algunas de esas semillas germinaban. Algunas familias nuevas se unían al foro d
 
 Y el círculo crecía.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 No todo era idealismo.
 
@@ -2470,7 +2046,6 @@ Algunos se fueron molestos. Eso dolió. Pero la mayoría entendió. Y el foro se
 
 También hubo trolls ocasionales—gente que entraba solo para criticar, para decir que estábamos "abusando" de nuestros hijos al no enviarlos al colegio. Los bloqueábamos rápido. No teníamos tiempo ni energía para debates estériles.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 2013. El foro cumplió dos años. Doscientas familias registradas. Miles de posts. Cientos de conversaciones significativas.
 
@@ -2488,7 +2063,6 @@ Y empezamos a planear.
 
 Pero esa es historia para después.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Por ahora, el foro era un éxito silencioso.
 
@@ -2516,7 +2090,6 @@ Y esa comunidad—invisible para el mundo exterior pero real e importante para q
 
 Una familia a la vez.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 2011. Sexto año educando en casa. El foro acababa de lanzarse, la comunidad empezaba a crecer, los niños prosperaban. Y entonces llegó la denuncia.
 
@@ -2532,7 +2105,6 @@ Arjuna, dieciséis años, preguntó: "¿Qué es eso?"
 
 No le di más detalles. No quería preocuparlo por algo que tal vez no tendría consecuencias. Pero la verdad era que sí era algo serio: el sistema entrando a tu casa a juzgar si eres buen padre.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Llamé a Anna esa noche.
 
@@ -2558,7 +2130,6 @@ Silencio al otro lado. Luego: "Tranquilo. Esto pasa. Lo importante: tus hijos es
 
 Lo sabía. Pero el miedo no es racional.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El jueves a las diez en punto, sonó el timbre. Dos mujeres. Cuarenta y tantos, aspecto profesional pero cansado. Llevaban carpetas, bolígrafos, esa actitud de quien ha visto demasiadas casas con problemas reales.
 
@@ -2650,7 +2221,6 @@ Arjuna preguntó: "¿Tenemos problemas?"
 
 Porque lo estaba. Porque "tendrá consecuencias" significaba que esto no terminaba aquí.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Dos meses después, carta del Fiscal de Menores de la Provincia de Santa Cruz de Tenerife. Citación para entrevista. Debía presentarme en su oficina el lunes siguiente a las nueve de la mañana.
 
@@ -2682,7 +2252,6 @@ Nitai apareció detrás de Arjuna. Había escuchado.
 
 "Entonces veremos qué pasa."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Esa noche no pude dormir.
 
@@ -2724,7 +2293,6 @@ Pausa larga.
 
 No me tranquilizó.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Los días siguientes fueron neblinosos. Intenté mantener mi rutina normal. Arjuna estudiando Khan Academy. Nitai leyendo en el sofá. Yo cocinando, limpiando, funcionando.
 
@@ -2758,7 +2326,6 @@ Lo miré. Su expresión era seria. No era rabieta infantil. Era convicción.
 
 Pero no sabía si era verdad.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Lunes. Me desperté a las seis aunque la cita era a las nueve. No había dormido más de tres horas.
 
@@ -2780,7 +2347,6 @@ Arjuna y Nitai desayunaban en silencio cuando bajé.
 
 Salí antes de que pudieran ver que yo tampoco lo creía completamente.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 La oficina del Fiscal estaba en Santa Cruz. Edificio gubernamental gris, seguridad en la entrada, pasillos largos con luz fluorescente.
 
@@ -2828,7 +2394,6 @@ Respiré hondo.
 
 Abrí.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Oficina pequeña, desordenada. Escritorio cubierto de expedientes. Y detrás del escritorio, un hombre de cincuenta y tantos con expresión de quien está permanentemente molesto.
 
@@ -2990,7 +2555,6 @@ Me levanté. Las piernas me temblaban pero me mantuve erguido.
 
 Salí sin esperar respuesta.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Caminé rápido hacia la salida. Pasé seguridad. Crucé las puertas de cristal.
 
@@ -3026,7 +2590,7 @@ Finalmente saqué el móvil. Llamé a Anna.
 
 Mi voz se quebró.
 
-"No los vas a perder. Juan, escúchame. Trabajo con estas familias hace años. He visto docenas de casos. Amenazas, sí. Multas ocasionales, sí. ¿Retirada de custodia? Nunca. No cuando los niños están claramente bien."
+"No los vas a perder. Juan, escúchame. Trabajo con estas familias hace diez años. He visto docenas de casos. Amenazas, sí. Multas ocasionales, sí. ¿Retirada de custodia? Nunca. No cuando los niños están claramente bien."
 
 "¿Pero podría?"
 
@@ -3048,7 +2612,6 @@ Mi voz se quebró.
 
 "Lo sé. Pero lo estás haciendo bien. Los niños están bien. Eso es lo que importa."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Conduje a casa en piloto automático. No recuerdo el viaje.
 
@@ -3070,7 +2633,6 @@ No lo estaba. Pero era lo que necesitaban oír.
 
 "Estoy seguro."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Esa noche, después de que los niños durmieran, me senté en la cocina con la carta de citación todavía sobre la mesa.
 
@@ -3088,7 +2650,6 @@ Rompí la carta.
 
 No sirvió de nada. Pero lo necesitaba.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Las dos semanas pasaron. No inscribí a los niños. No recibí multa.
 
@@ -3106,7 +2667,6 @@ Evidencia. Por si alguna vez alguien cuestionaba otra vez.
 
 No celebré. Todavía estaba furioso. Furioso de haber tenido que pasar por esto. Furioso de que el sistema tuviera ese poder sobre familias que simplemente querían educar diferente.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Esa noche les conté a los niños.
 
@@ -3134,7 +2694,6 @@ Nitai me miró con ojos serios. Ocho años pero parecía mayor.
 
 Era promesa que no sabía si podía cumplir. Pero la hice de todas formas.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Había terminado. Por ahora.
 
@@ -3150,7 +2709,6 @@ Se convirtió en armadura.
 
 Y continuamos.
 
-#+LATEX: \cleardoublepage
 ** Capítulo 9: Lérida
 
 Mayo 2013.
@@ -3175,7 +2733,6 @@ Ninguno había estado rodeado de tantos niños homeschoolers a la vez. En Canari
 
 Esto era diferente. Esto era el foro hecho carne.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 La casa de campo era enorme. Antigua masía catalana convertida en alojamiento rural. Piedra gris, vigas de madera, jardín amplio con árboles viejos y espacio para correr.
 
@@ -3191,7 +2748,6 @@ Marta apareció también. Energía incansable como siempre, organizando, asegur�
 
 No había plan estricto. Esa era la ironía hermosa. Fin de semana organizado por familias que rechazaban estructura rígida. "Desorganización organizada," lo llamó alguien después.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Esa primera noche cenamos todos juntos—treinta adultos, quizá 25 niños de todas las edades. Mesas largas en el comedor de la masía. Comida traída por cada familia, compartida. Caos controlado de platos pasándose, conversaciones superpuestas, risas.
 
@@ -3209,7 +2765,6 @@ Historias similares. Variaciones del mismo tema. Familias eligiendo un camino di
 
 Pero aquí, en esta mesa, nadie tenía que explicarse. Todos entendían.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Lo que no esperaba era la emoción.
 
@@ -3221,7 +2776,6 @@ Varios asentían. Algunos también con lágrimas.
 
 Ese era el poder del encuentro. No solo información. No solo consejos prácticos. Validación. Pertenencia. Saber visceralmente—no solo intelectualmente—que no estás solo.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Sábado. Día completo sin agenda fija.
 
@@ -3303,7 +2857,6 @@ La madre nueva dejó de escribir. "Llevo dos meses intentando convencer a todos.
 
 Risas de reconocimiento. Todos habíamos pasado por esa transición: de necesitar validación externa a confiar en nuestros propios ojos.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Una madre de Barcelona, Carmen, mencionó a su hijo Marcos: "Dos años, obsesionado con dinosaurios. Puede nombrar cincuenta especies del Cretácico. Lee papers científicos en inglés porque las fuentes en español son limitadas."
 
@@ -3315,7 +2868,6 @@ Al rato, dos niños en el jardín comparando conocimientos de terópodos, mientr
 
 "Si él quiere, cuando él quiera. Pero no porque yo decida que 'ya es hora.' Cuando sepa qué quiere hacer con esta pasión, encontrará el camino."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Laura, Miguel y sus dos hijas llegaron tarde—acababan de volver de cinco años viajando por Europa en campervan. Veintisiete países. Las niñas educándose en museos, mercados, conversaciones con personas de docenas de culturas diferentes.
 
@@ -3327,7 +2879,6 @@ Las dos niñas—diez y doce años—se integraron al grupo de niños instantán
 
 Observándolas jugar, pensé: no hay curriculum que enseñe esa confianza. Solo se gana viviendo.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Marta y Julio, de Galicia, con tres hijos. Su mayor, Hadrián, había aprendido a leer a los diez años.
 
@@ -3343,7 +2894,6 @@ El silencio entre las madres decía todo. Cuántas habíamos pasado noches preoc
 
 "Aprendió porque lo necesitó," añadió Julio. "Quería leer sobre astronomía. El interés lo movió. Ningún método fonético obligatorio hubiera funcionado mejor que su propia motivación."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Cuando la madre nueva expresó preocupación sobre su hijo con dislexia—"La escuela dice que necesita intervención especializada"—alguien mencionó a Samuel.
 
@@ -3355,7 +2905,6 @@ Cuando la madre nueva expresó preocupación sobre su hijo con dislexia—"La es
 
 La madre nueva tomó nota de lo que dijo Elena. Después las vi conversando aparte, larga y profundamente.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Había algo curioso en la composición del grupo.
 
@@ -3367,7 +2916,6 @@ Otro maestro de secundaria decía: "Veo todos los días cómo el sistema aplasta
 
 Eran los más críticos. Los que conocían el sistema íntimamente y lo rechazaban conscientemente.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Arjuna y Nitai estaban en su elemento.
 
@@ -3383,7 +2931,6 @@ Me acerqué a escuchar.
 
 Arjuna escuchaba intensamente. Estas eran conversaciones que no tenía en Canarias—otros adolescentes que pensaban diferente, que cuestionaban el guión social estándar.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Domingo por la tarde. Tiempo de partir.
 
@@ -3401,7 +2948,6 @@ Cuando llegó mi turno, dije: "Cuando empezamos hace cinco años, pensé que est
 
 Anna, siempre la visionaria, cerró: "Esto es solo el principio. El año que viene volveremos. Y seremos más. Y seguiremos creciendo. Porque esto funciona. Y las familias necesitan saber que funciona."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El viaje de vuelta fue silencioso. Los niños dormidos en el asiento trasero, agotados de tres días de juego constante. Yo conduciendo, procesando.
 
@@ -3411,7 +2957,6 @@ Familias eligiendo educar diferente. Veían que el sistema convencional no serv�
 
 No éramos muchos. Quizá doscientas, trescientas familias en todo España. Pequeño comparado con millones de niños en las escuelas. Pero éramos suficientes para formar comunidad. Para apoyarnos mutuamente. Para demostrar que era posible.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Semanas después del encuentro, el foro explotó con actividad.
 
@@ -3427,7 +2972,6 @@ Otro padre: "Mi hijo preguntó cuándo podemos volver. Nunca lo había visto tan
 
 Eso era lo que el encuentro había dado. Normalidad. En un mundo donde educar en casa era extraño, radical, sospechoso, habíamos creado un espacio—breve pero intenso—donde era normal. Donde los niños podían simplemente ser niños. Donde los padres podían simplemente ser padres, sin tener que defenderse constantemente.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Arjuna me dijo algo semanas después que me quedó grabado.
 
@@ -3441,7 +2985,6 @@ Su claridad me sorprendió. Habíamos normalizado tanto la escuela que cualquier
 
 Lo que hacíamos no era un experimento peligroso. Era volver a lo básico. Confiar en los procesos naturales de aprendizaje que habían funcionado durante milenios antes de que existiera la escolarización masiva obligatoria.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 2013 fue el año bisagra.
 
@@ -3453,7 +2996,6 @@ Algunos de nosotros dábamos entrevistas. Yo participé en un par—una radio lo
 
 No pedíamos revolución. Solo reconocimiento legal. Solo que dejaran de amenazarnos con denuncias. Solo permiso para educar a nuestros hijos como considerábamos mejor.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Arjuna tenía quince. Nitai, trece. Llevaban cinco años sin pisar un aula. Y estaban bien—mejor que bien.
 
@@ -3469,7 +3011,6 @@ No seguían un currículo nacional. No hacían exámenes estandarizados. Pero ap
 
 Y eso, descubríamos cada día, era suficiente.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El encuentro de Lérida me enseñó algo que no había articulado antes: no estábamos solos haciendo esto, pero tampoco éramos un movimiento masivo.
 
@@ -3483,7 +3024,6 @@ Para esos niños—y para sus familias—debería haber opción legal, respetada
 
 Esa era la lucha. No imponer nuestro camino. Solo pedir reconocimiento de que caminos alternativos existen y pueden ser válidos.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Volviendo de Lérida, con los niños dormidos en el coche, pensé en el camino recorrido.
 
@@ -3507,7 +3047,6 @@ Y eso era suficiente.
 
 * PARTE IV: LA MADURACIÓN
 
-#+LATEX: \cleardoublepage
 ** Capítulo 10: Adolescencia
 
 2012-2018.
@@ -3518,7 +3057,6 @@ No había estructura externa que los sostuviera. No había horarios de colegio q
 
 Era libertad completa. Y la libertad completa en la adolescencia puede ser aterradora—tanto para ellos como para mí.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Hubo un tiempo en que ellos quisieron probar el colegio convencional.
 
@@ -3548,7 +3086,6 @@ Quizá ahora sería diferente.
 
 Pero ¿cómo se lo decía a papá sin que sonara como "todo lo que hiciste fue inútil"?
 
-#+LATEX: \begin{center}* * *\end{center}
 
 A la mañana siguiente bajó a desayunar. Arjuna ya estaba en la cocina.
 
@@ -3560,7 +3097,6 @@ Arjuna lo miró. Llevaban días hablando de esto, los dos hermanos, sin animarse
 
 Arjuna asintió. "Yo también."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Arjuna tenía catorce, Nitai doce. Esa tarde vinieron a mí.
 
@@ -3582,7 +3118,6 @@ Pero eso sería quitarles autonomía. Imponerles mi decisión. Y todo el unschoo
 
 Pero tenía claro que no iba a permitir que el instituto los abrumara como pasó en primaria.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Encontramos un instituto público cerca. Fui a hablar con el director antes de inscribirlos.
 
@@ -3638,7 +3173,6 @@ Eventualmente decidieron que el colegio convencional no era para ellos. Habían 
 
 Pero la experiencia les enseñó algo valioso: puedes estar en el sistema sin dejar que el sistema te defina. Y puedes salir cuando el sistema deja de servir tu propósito.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Cuando Arjuna cumplió diecisiete años—más allá de la edad de escolarización obligatoria—sentí un alivio tan profundo que casi me mareó.
 
@@ -3654,7 +3188,6 @@ Cuando Nitai llegó a esa misma edad dos años después, el alivio fue similar. 
 
 Habíamos sobrevivido. Los años vulnerables habían terminado. Nadie podía tocarnos ya.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Los primeros meses después de dejar el instituto fueron buenos. Arjuna volvió a sus proyectos, a sus intereses, a aprender a su ritmo.
 
@@ -3688,7 +3221,6 @@ Esa frase me golpeó más fuerte de lo que esperaba.
 
 Porque era mi peor miedo articulado por mi propio hijo: ¿y si no era suficiente?
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Intenté todo lo que sabía.
 
@@ -3702,7 +3234,6 @@ Ansiedad. No era "no entender." Era miedo acumulado.
 
 Y yo no sabía cómo resolverlo.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Semanas después, Arjuna seguía evitando las matemáticas. Hacía todo lo demás—programación, lectura, proyectos—pero si algo requería álgebra, lo saltaba.
 
@@ -3724,7 +3255,6 @@ Silencio.
 
 Tenía razón. Pero admitirlo dolía.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Encontré a Laura. Matemática jubilada, voluntaria en una biblioteca. Cincuenta y tantos años, paciente, sin el ego de profesor formal.
 
@@ -3740,7 +3270,6 @@ Arjuna volvió a casa callado.
 
 "Bien," dijo. Pausa. "Creo que entendí algo."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Tardó dos meses. Dos meses de sesiones semanales con Laura. Ella no "enseñaba"—conversaba. Encontraba dónde estaba el miedo, trabajaba desde ahí, sin juzgar.
 
@@ -3760,7 +3289,6 @@ Cerró el cuaderno. Me miró.
 
 "Gracias por buscar ayuda. Sé que fue difícil para ti."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Esa noche escribí en mi diario algo que no había querido admitir:
 
@@ -3778,7 +3306,6 @@ Que ideología sin flexibilidad es dogma.
 
 Que el mejor regalo que puedes dar a tus hijos no es tener todas las respuestas—es reconocer cuando no las tienes.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Arjuna a los dieciséis pasó por una fase de no hacer nada visible.
 
@@ -3812,7 +3339,6 @@ Pausa larga. "No."
 
 No respondió. Pero días después empezó a aprender edición de video. Solo, tutoriales de YouTube. Pequeños proyectos—editar clips de música, crear videos experimentales. No era "preparándose para una carrera." Era exploración. Y yo no pedía más.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Había algo que noté en esos años: cómo los recursos digitales habían cambiado todo.
 
@@ -3842,7 +3368,6 @@ Esa era la diferencia con la escuela. La escuela dice: "Aprende esto ahora, te g
 
 Y funcionaba. No perfecto—nada es perfecto. Pero funcionaba.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Una tarde los encontré en el jardín filmando algo extraño.
 
@@ -3888,7 +3413,6 @@ No aprendieron efectos especiales para llegar a la televisión japonesa. Llegaro
 
 Esa es la diferencia.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Nitai era diferente en todo. A los catorce tenía una energía muy concentrada. Sabía tocar instrumentos y le empezaron a llamar de varios lugares de España y el extranjero para participar y a veces liderar conciertos.
 
@@ -3902,7 +3426,6 @@ Tenía razón. Y estaba aprendiendo—a ahorrar, a llevar su propia economía, a
 
 Pero sobre todo, estaba aprendiendo confianza en sí mismo. Sus límites. Su capacidad. Eso no estaba en ningún currículo escolar.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 La socialización—el miedo eterno de quienes critican homeschooling—nunca fue un problema.
 
@@ -3920,7 +3443,6 @@ Una tarde Arjuna resolvió una disputa con un vendedor online que le había envi
 
 Eso era socialización real. No "jugar bonito" supervisado en patio de recreo. Interactuar con mundo real, resolver problemas reales, con personas reales.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Los años difíciles vinieron después.
 
@@ -3956,7 +3478,6 @@ Y yo me quedé en Tenerife. Solo otra vez. Como al principio, después de la mue
 
 Era lo que debía pasar. Pero dolió igual.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Mantuvimos contacto. Llamadas de Skype semanales. Emails ocasionales. Visitaban cuando podían—no a menudo, los vuelos eran caros. Pero suficiente para saber que estaban bien.
 
@@ -3974,7 +3495,6 @@ Nitai era similar. Había empezado a hacer "gigs" con su msica—algunos fallaro
 
 Esa era la libertad que les había dado el unschooling. Sin miedo al fracaso. Sin sentimiento de que tenían que seguir un camino predeterminado. Solo confianza de que podían averiguar las cosas, que el aprendizaje era proceso continuo, que la vida no terminaba si no seguías el guión estándar.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Recibí críticas, por supuesto. Familiares que decían: "Debiste haberlos obligado a estudiar." "Ahora están trabajando por su cuenta cuando podrían ser profesionales." "Les fallaste al no darles educación formal."
 
@@ -3988,7 +3508,6 @@ Su bienestar. Su felicidad. Su capacidad de navegar el mundo con confianza.
 
 Eso lo habíamos logrado.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Una tarde, Arjuna me llamó desde donde vivía. Veintitrés años.
 
@@ -4012,7 +3531,6 @@ Porque Arjuna y Nitai crecieron libres. Aprendieron sin ser rotos. Se convirtier
 
 Y eso—esa libertad fundamental—justificó cada momento difícil del camino.
 
-#+LATEX: \cleardoublepage
 ** Capítulo 11: El Resultado
 
 2024. Casi veinte años desde que saqué a los niños del colegio.
@@ -4021,7 +3539,6 @@ Arjuna tiene veintinueve. Nitai, veintisiete. Ambos viven fuera de España—Arj
 
 Y yo, en Tenerife todavía, mirando atrás con perspectiva que solo dan dos décadas.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Arjuna trabaja en área creativa—mezcla de diseño, producción audiovisual, proyectos independientes. No tiene título universitario. No siguió carrera tradicional. Pero tiene portafolio sólido, clientes satisfechos, ingresos estables.
 
@@ -4039,7 +3556,6 @@ Pensó largo rato. "Credenciales, quizá. A veces hay trabajos que no puedo soli
 
 Pausa. Luego: "Lo que no me falta es curiosidad. Todavía me gusta aprender. Veo a gente de mi edad que odia estudiar, que asocia aprendizaje con obligación, con sufrimiento. Yo no. Para mí aprender es placer. Y creo que eso viene de nunca haber sido obligado."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Nitai tiene su propia actividad de músico—pequeña, pero sostenible. Trabaja viajando a los sitios, maneja sus propios horarios. Como Arjuna, sin título universitario. Como Arjuna, sin arrepentimientos.
 
@@ -4075,7 +3591,6 @@ Cierra los ojos un momento. Cuando los abre, sonríe.
 
 "Sí." Me mira a través de la pantalla. "Gracias. Por confiar en nosotros. Por no obligarnos nunca. Por dejarnos ser quienes éramos. Sé que te costó todo. Y quiero que sepas que valió la pena."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Los dos hablan de su infancia con afecto.
 
@@ -4085,7 +3600,6 @@ Ninguno siente que les faltó algo crítico. Ninguno está resentido por no habe
 
 Y eso—más que cualquier otra métrica—me dice que funcionó.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 El foro ya no existe. Cumplió su función de ayudar a docenas de familias. Supongo que el hecho que los niños de los promotores salieron de la edad escolar, tuvo que ver en el parón. Estoy seguro que a dia de hoy, seguimos de alguna manera involucrados aunque menos activamente. Ocasionalmente respondo preguntas de familias nuevas, compartiendo la perspectiva de alguien que ya llegó al otro lado.
 
@@ -4097,7 +3611,6 @@ Pero bien. Felices. Autónomos. Capaces.
 
 Y eso era la meta desde el principio.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Recibo emails todavía. Familias que están considerando sacar a sus hijos del colegio. Familias que empezaron hace poco y no saben cómo seguir. Familias que llevan años y necesitan confirmación de que están haciendo lo correcto.
 
@@ -4107,7 +3620,6 @@ Les digo: "Dos décadas después, mis hijos están bien. Y tú también puedes h
 
 Algunos siguen adelante. Otros deciden quedarse en el sistema, hacer lo mejor que puedan dentro de él. Ambas decisiones son válidas. Cada familia es diferente.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 A veces me preguntan qué habría hecho diferente.
 
@@ -4117,7 +3629,6 @@ Pero las decisiones grandes—sacarlos del colegio, confiar en ellos—las volve
 
 Porque funcionó.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 La legalidad en España sigue siendo una zona gris. La educación en casa no está explícitamente permitida ni prohibida. Algunas familias son denunciadas, otras nunca lo han sido. Algunos jueces fallan a favor, otros en contra. Es un caos.
 
@@ -4131,7 +3642,6 @@ Pero para quienes lo necesitan, la opción existe. La comunidad existe. El conoc
 
 Y eso hace la diferencia.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Pienso a veces en el director de la escuela en Australia. El que me dio "Dumbing Us Down" en el 2000 después de la muerte de Yukari.
 
@@ -4143,7 +3653,6 @@ Y entonces no tendría lo que tengo ahora: dos hijos adultos que recuerdan su in
 
 Ese libro cambió la trayectoria de nuestras vidas. Y estoy agradecido.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 ** Los Libros que Me Acompañaron
 
@@ -4161,7 +3670,6 @@ Estos cuatro fueron mis fundamentos. Los releía cuando dudaba, cuando el miedo 
 
 No fueron guías paso a paso. Fueron compañeros de viaje. Voces que me recordaban: confía en tus hijos. Confía en el proceso. Confía en que el aprendizaje es natural como respirar.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Yukari está presente todavía. En las memorias de los niños—borrosas pero reales. En fotos que miramos ocasionalmente. En historias que cuento sobre ella.
 
@@ -4177,7 +3685,6 @@ Su muerte nos devastó. Pero su legado permanece. En cómo viven los niños. En 
 
 Ella estaría orgullosa. Y yo encuentro consuelo en eso.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Años después del encuentro de Lérida. En un supermercado cerca de casa en Tenerife.
 
@@ -4211,7 +3718,6 @@ No sé si sacó a su hija del colegio. No importa. Lo importante: había hecho u
 
 La conversación estaba cambiando. El movimiento crecía. Ya no éramos bichos raros aislados. Éramos posibilidad visible.
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Si pudiera hablar con mi yo de hace veinte años—padre viudo con dos niños fuera del colegio, sin saber qué diablos estaba haciendo—le diría esto:
 
@@ -4223,7 +3729,6 @@ Pero sigue. Confía. Los niños están bien. Estarán bien.
 
 Y un día—veinte años desde ahora—te sentarás a escribir sobre esto. Y mirarás a tus hijos adultos viviendo las vidas que eligieron. Felices. Capaces. Agradecidos."
 
-#+LATEX: \begin{center}* * *\end{center}
 
 Esta es mi historia. Una historia entre miles.
 
