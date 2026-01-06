@@ -352,7 +352,7 @@ no necesariamente reflejan las de ninguna organización.
 
 #+LATEX: \vspace{0.5cm}
 
-Impreso bajo demanda
+ISBN: 9798274768818
 
 #+LATEX: \end{flushleft}
 #+LATEX: \clearpage
@@ -402,11 +402,7 @@ Escribí este libro para las familias que están considerando caminos alternativ
 
 No ofrezco un método. Ofrezco una historia.
 
-#+LATEX: \vspace{0.5cm}
-#+LATEX: \begin{flushright}
-#+LATEX: \textit{J.M.F.}\\
-#+LATEX: \textit{Tenerife, 2025}
-#+LATEX: \end{flushright}
+
 
 #+LATEX: \clearpage
 
@@ -4274,3 +4270,4 @@ Hay otra forma.
 Confía en tus hijos. Confía en el proceso. Confía en ti mismo.
 
 Y crece en libertad.
+
