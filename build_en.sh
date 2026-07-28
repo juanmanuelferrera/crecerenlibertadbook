@@ -23,11 +23,38 @@
 set -e
 cd "$(dirname "$0")"
 
-grep -v "^#+LATEX_HEADER" book_en.org | grep -v "^#+LATEX_CLASS" > /tmp/gif_build.org
+# Se limpia el fichero para pandoc. Tres cosas, y las tres por el mismo
+# motivo: los bloques LaTeX del original están escritos para el exportador
+# de emacs, que numera y monta el índice de otra manera.
+#
+#   \addcontentsline  hacía falta porque org saca \chapter* (sin entrada en
+#                     el índice). Pandoc saca \chapter, que ya la crea. Con
+#                     las dos, cada sección del principio salía DOS VECES en
+#                     el índice: Contents, Contents, Foreword, Foreword...
+#
+#   \startmainmatter  reinicia el contador de páginas. El libro acababa con
+#                     dos páginas "1": el prólogo en la 11 y el capítulo 1
+#                     en la 3. El índice mandaba a sitios equivocados.
+#
+#   #+LATEX_HEADER    choca con los paquetes de pandoc (microtype da
+#                     "option clash").
+#   :UNNUMBERED:      pandoc lo convierte en \chapter*, y un \chapter* no
+#                     actualiza la cabecera de página. El epílogo, el
+#                     apéndice y la bibliografía salían con "6. WHAT COMES
+#                     NEXT" arriba. Como abajo se apaga la numeración
+#                     entera, quitarlo no numera nada y arregla la cabecera.
+grep -v "^#+LATEX_HEADER" book_en.org \
+  | grep -v "^#+LATEX_CLASS" \
+  | grep -v '^\\addcontentsline' \
+  | grep -v '^\\startmainmatter' \
+  | grep -v '^:UNNUMBERED:' \
+  > /tmp/gif_build.org
 
 cat > /tmp/gif_header.tex <<'TEX'
 \DeclareTextCommandDefault{\textquote}[1]{``#1''}
-\providecommand{\startmainmatter}{\mainmatter}
+% Los títulos ya llevan su número escrito ("1. An Introduction..."), así que
+% LaTeX no debe añadir otro encima.
+\setcounter{secnumdepth}{-1}
 TEX
 
 pandoc /tmp/gif_build.org -o growing_in_freedom.pdf \
@@ -38,7 +65,9 @@ pandoc /tmp/gif_build.org -o growing_in_freedom.pdf \
   -V geometry:top=13mm -V geometry:bottom=13mm \
   -V mainfont="Libertinus Serif" -V fontsize=12pt
 
-pandoc book_en.org -o growing_in_freedom.epub --toc
+# Sin --toc a propósito: el EPUB ya lleva su índice de navegación (nav.xhtml),
+# que es el que usa el lector. Con --toc salían los dos y parecía duplicado.
+pandoc book_en.org -o growing_in_freedom.epub
 
 echo
 echo "  PDF   $(pdfinfo growing_in_freedom.pdf | awk '/^Pages/{print $2}') páginas"

@@ -82,7 +82,7 @@
 #+LATEX_HEADER: \fancypagestyle{fancy}{%
 #+LATEX_HEADER:   \fancyhf{}%
 #+LATEX_HEADER:   \fancyfoot[C]{\thepage}%
-#+LATEX_HEADER:   \fancyhead[LE]{\small\textsc{Crecer en Libertad}}%
+#+LATEX_HEADER:   \fancyhead[LE]{\small\textsc{No Homework, No Marks}}%
 #+LATEX_HEADER:   \fancyhead[RO]{\small\textsc{\rightmark}}%
 #+LATEX_HEADER:   \renewcommand{\headrulewidth}{0.5pt}%
 #+LATEX_HEADER:   \renewcommand{\footrulewidth}{0pt}%
@@ -203,10 +203,10 @@
 #+LATEX_HEADER:     linkcolor=black,
 #+LATEX_HEADER:     filecolor=black,
 #+LATEX_HEADER:     urlcolor=blue,
-#+LATEX_HEADER:     pdftitle={Crecer en Libertad},
+#+LATEX_HEADER:     pdftitle={No Homework, No Marks},
 #+LATEX_HEADER:     pdfauthor={Juan Manuel Ferrera Díaz},
-#+LATEX_HEADER:     pdfsubject={Crianza y Educación Alternativa},
-#+LATEX_HEADER:     pdfkeywords={educación alternativa, homeschooling, crianza respetuosa, unschooling}
+#+LATEX_HEADER:     pdfsubject={Parenting and Alternative Education},
+#+LATEX_HEADER:     pdfkeywords={alternative education, homeschooling, respectful parenting, unschooling}
 #+LATEX_HEADER: }
 
 # Title page and front matter will be inserted manually below
@@ -218,7 +218,7 @@
 \thispagestyle{empty}
 \centering
 \vspace*{2.5in}
-{\fontsize{24}{29}\selectfont\textsc{Crecer en Libertad}\par}
+{\fontsize{24}{29}\selectfont\textsc{No Homework, No Marks}\par}
 \end{titlepage}
 
 % Blank page (even) to push full title to odd page
@@ -234,12 +234,12 @@
 \null
 \vspace{1.5in}
 
-{\fontsize{32}{38}\selectfont\textsc{Crecer}\par}
+{\fontsize{32}{38}\selectfont\textsc{No Homework,}\par}
 \vspace{0.15cm}
-{\fontsize{32}{38}\selectfont\textsc{en Libertad}\par}
+{\fontsize{32}{38}\selectfont\textsc{No Marks}\par}
 
 \vspace{0.8cm}
-{\fontsize{14}{17}\selectfont\textit{Aprendiendo juntos}\par}
+{\fontsize{14}{17}\selectfont\textit{Growing in Freedom}\par}
 
 \vspace{2.5cm}
 
@@ -260,19 +260,17 @@
 
 \noindent
 {\footnotesize
-\textsc{Crecer en Libertad}: \textit{Aprendiendo juntos}\\[0.8em]
+\textsc{No Homework, No Marks}: \textit{Growing in Freedom}\\[0.8em]
 Copyright \copyright\ 2025 Juan Manuel Ferrera Díaz\\[0.8em]
-Todos los derechos reservados.\\[1.2em]
+All rights reserved.\\[1.2em]
 
-ISBN 979-8-XXXX-XXXX-X (tapa blanda)\\
+ISBN 979-8-XXXX-XXXX-X (paperback)\\
 ISBN 979-8-XXXX-XXXX-X (ebook)\\[1.2em]
 
-Primera edición, 2025\\[1.2em]
+First edition, 2025\\[1.2em]
 
-Impreso en Estados Unidos de América\\[1.2em]
-
-\textit{Para más información sobre educación en libertad, visita:}\\
-\texttt{www.crecerenlibertad.org}
+\textit{The daily card, and more on all this:}\\
+\texttt{ferrera.me}
 }
 
 \vspace{2cm}
@@ -285,30 +283,15 @@ Impreso en Estados Unidos de América\\[1.2em]
 \vfill
 \begin{center}
 {\large\itshape
-Para todos los niños y niñas\\
-que crecen en libertad,\\[1em]
-y para las familias valientes\\
-que eligen caminar\\
-este sendero menos transitado.}
+For every child\\
+growing up free,\\[1em]
+and for the families brave enough\\
+to walk this road\\
+when almost nobody else does.}
 \end{center}
 \vfill
 \vfill
 
-\cleardoublepage
-#+END_EXPORT
-
-* Contents
-:PROPERTIES:
-:UNNUMBERED: t
-:END:
-
-#+BEGIN_EXPORT latex
-\thispagestyle{empty}
-\tableofcontents
-\cleardoublepage
-#+END_EXPORT
-
-#+BEGIN_EXPORT latex
 \cleardoublepage
 #+END_EXPORT
 
@@ -1397,21 +1380,6 @@ The law matters. But don't let it be the thing that stops you giving your child 
 
 #+BEGIN_EXPORT latex
 \cleardoublepage
-#+END_EXPORT
-
-#+BEGIN_EXPORT latex
-\cleardoublepage
-#+END_EXPORT
-
-* Index
-:PROPERTIES:
-:UNNUMBERED: t
-:END:
-
-#+BEGIN_EXPORT latex
-\thispagestyle{plain}
-\addcontentsline{toc}{chapter}{Index}
-% \printindex  % Commented out - makeidx package not configured
 #+END_EXPORT
 
 #+BEGIN_EXPORT latex

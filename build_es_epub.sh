@@ -39,10 +39,18 @@ def arregla(m):
 
 t = re.sub(r'#\+BEGIN_EXPORT latex\n(?:(?!#\+END_EXPORT).)*?\\chapter\*\{.*?#\+END_EXPORT\n',
            arregla, t, flags=re.S)
+
+# "Índice" existe para que el exportador de emacs coloque ahí el índice a
+# mano, y "Índice Alfabético" para un \printindex que lleva años comentado.
+# En el EPUB las dos salen como secciones vacías. Fuera.
+t = re.sub(r'\* Índice\n(?:(?!\* Prólogo).)*', '', t, flags=re.S)
+t = re.sub(r'\* Índice Alfabético\n(?:(?!\* ).)*', '', t, flags=re.S)
 Path('/tmp/cel_build.org').write_text(t)
 PY
 
-pandoc /tmp/cel_build.org -o crecer_en_libertad.epub --toc
+# Sin --toc: el EPUB ya lleva su índice de navegación, que es el que usa el
+# lector. Con los dos parecía duplicado.
+pandoc /tmp/cel_build.org -o crecer_en_libertad.epub
 
 echo
 echo "  EPUB  $(python3 -c "import zipfile;print(len([n for n in zipfile.ZipFile('crecer_en_libertad.epub').namelist() if n.endswith('.xhtml')]))") secciones"
