@@ -79,7 +79,18 @@ PY
 
 # Sin --toc: el EPUB ya lleva su índice de navegación, que es el que usa el
 # lector. Con los dos parecía duplicado.
-pandoc /tmp/cel_build.org -o crecer_en_libertad.epub
+# La cubierta la genera ./portada.sh.
+pandoc /tmp/cel_build.org -o crecer_en_libertad.epub --epub-cover-image=cover_es.png
+
+# El PDF español sale de emacs (book.pdf) y aquí no hay emacs, así que no se
+# regenera: solo se le antepone la portada, en un fichero aparte para no
+# tocar el original.
+pdfunite cover_es.pdf book.pdf /tmp/cel_con_portada.pdf
+
+# pdfunite se lleva por delante el título del PDF.
+printf '[ /Title (Crecer en Libertad) /Author (Juan Manuel Ferrera Diaz) /DOCINFO pdfmark\n' > /tmp/cel_meta.txt
+gs -q -o crecer_en_libertad.pdf -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress \
+   /tmp/cel_con_portada.pdf /tmp/cel_meta.txt
 
 echo
 echo "  EPUB  $(python3 -c "import zipfile;print(len([n for n in zipfile.ZipFile('crecer_en_libertad.epub').namelist() if n.endswith('.xhtml')]))") secciones"

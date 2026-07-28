@@ -118,7 +118,18 @@ pandoc /tmp/gif_build.org -o growing_in_freedom.pdf \
 
 # Sin --toc a propósito: el EPUB ya lleva su índice de navegación (nav.xhtml),
 # que es el que usa el lector. Con --toc salían los dos y parecía duplicado.
-pandoc /tmp/gif_epub.org -o growing_in_freedom.epub
+# La cubierta la genera ./portada.sh. Va como imagen dentro del EPUB y como
+# primera página del PDF.
+pandoc /tmp/gif_epub.org -o growing_in_freedom.epub --epub-cover-image=cover_en.png
+
+mv growing_in_freedom.pdf /tmp/gif_sin_portada.pdf
+pdfunite cover_en.pdf /tmp/gif_sin_portada.pdf /tmp/gif_con_portada.pdf
+
+# pdfunite se lleva por delante el título del PDF, que es lo que ve el
+# lector en la pestaña y en la biblioteca de su lector de libros.
+printf '[ /Title (No Homework, No Marks) /Author (Juan Manuel Ferrera Diaz) /DOCINFO pdfmark\n' > /tmp/gif_meta.txt
+gs -q -o growing_in_freedom.pdf -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress \
+   /tmp/gif_con_portada.pdf /tmp/gif_meta.txt
 
 echo
 echo "  PDF   $(pdfinfo growing_in_freedom.pdf | awk '/^Pages/{print $2}') páginas"
