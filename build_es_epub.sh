@@ -118,7 +118,22 @@ gs -q -o /tmp/cel_p1.pdf  -sDEVICE=pdfwrite -dFirstPage=1 -dLastPage=3        bo
 gs -q -o /tmp/cel_p3.pdf  -sDEVICE=pdfwrite -dFirstPage=5 -dLastPage=$TOTAL   book.pdf
 pdfunite /tmp/cel_p1.pdf /tmp/cel_cred.pdf /tmp/cel_p3.pdf /tmp/cel_cuerpo.pdf
 
-pdfunite cover_es.pdf /tmp/cel_cuerpo.pdf /tmp/cel_con_portada.pdf
+# Cuatro páginas que sobran, y las cuatro son restos del exportador de org:
+#
+#   7 y 8    Un capítulo titulado "Índice" y su página en blanco. Debajo no
+#            hay nada: el índice de verdad viene justo después, con su
+#            propio título ("Índice general"), que lo pone \tableofcontents.
+#   91 y 92  "Índice Alfabético" y su blanca. Está vacío desde siempre,
+#            porque \printindex lleva años comentado.
+#
+# Se quitan del PDF montado. Los números impresos no se tocan: van dentro
+# de cada página, así que el índice sigue mandando bien.
+gs -q -o /tmp/cel_a.pdf -sDEVICE=pdfwrite -dFirstPage=1  -dLastPage=6  /tmp/cel_cuerpo.pdf
+gs -q -o /tmp/cel_b.pdf -sDEVICE=pdfwrite -dFirstPage=9  -dLastPage=90 /tmp/cel_cuerpo.pdf
+gs -q -o /tmp/cel_c.pdf -sDEVICE=pdfwrite -dFirstPage=93 -dLastPage=93 /tmp/cel_cuerpo.pdf
+pdfunite /tmp/cel_a.pdf /tmp/cel_b.pdf /tmp/cel_c.pdf /tmp/cel_limpio.pdf
+
+pdfunite cover_es.pdf /tmp/cel_limpio.pdf /tmp/cel_con_portada.pdf
 
 # pdfunite se lleva por delante el título del PDF.
 printf '[ /Title (Crecer en Libertad) /Author (Juan Manuel Ferrera Diaz) /DOCINFO pdfmark\n' > /tmp/cel_meta.txt
