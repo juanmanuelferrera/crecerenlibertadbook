@@ -264,9 +264,6 @@
 Copyright \copyright\ 2025 Juan Manuel Ferrera Díaz\\[0.8em]
 Todos los derechos reservados.\\[1.2em]
 
-ISBN 979-8-XXXX-XXXX-X (tapa blanda)\\
-ISBN 979-8-XXXX-XXXX-X (ebook)\\[1.2em]
-
 Primera edición, 2025\\[1.2em]
 
 Impreso en Estados Unidos de América\\[1.2em]

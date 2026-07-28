@@ -83,9 +83,46 @@ PY
 pandoc /tmp/cel_build.org -o crecer_en_libertad.epub --epub-cover-image=cover_es.png
 
 # El PDF español sale de emacs (book.pdf) y aquí no hay emacs, así que no se
-# regenera: solo se le antepone la portada, en un fichero aparte para no
-# tocar el original.
-pdfunite cover_es.pdf book.pdf /tmp/cel_con_portada.pdf
+# regenera entero. Pero la página de créditos (la 4) llevaba dos ISBN de
+# relleno, "979-8-XXXX-XXXX-X", y este libro se vende en PDF y EPUB, donde no
+# hace falta ISBN. Así que se rehace esa página sola, con el mismo LaTeX del
+# original menos los ISBN, y se empalma en su sitio. book.pdf no se toca.
+cat > /tmp/cel_cred.tex <<'TEX'
+\documentclass[12pt,twoside]{book}
+\usepackage[paperwidth=6in,paperheight=9in,inner=15mm,outer=10mm,top=13mm,bottom=13mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Libertinus Serif}
+\usepackage{setspace}\setstretch{1.15}
+\pagestyle{empty}
+\begin{document}
+\thispagestyle{empty}
+\vspace*{\fill}
+
+\noindent
+{\footnotesize
+\textsc{Crecer en Libertad}: \textit{Aprendiendo juntos}\\[0.8em]
+Copyright \copyright\ 2025 Juan Manuel Ferrera Díaz\\[0.8em]
+Todos los derechos reservados.\\[1.2em]
+
+Primera edición, 2025\\[1.2em]
+
+Impreso en Estados Unidos de América\\[1.2em]
+
+\textit{Para más información sobre educación en libertad, visita:}\\
+\texttt{www.crecerenlibertad.org}
+}
+
+\vspace{2cm}
+\end{document}
+TEX
+xelatex -interaction=batchmode -output-directory=/tmp /tmp/cel_cred.tex >/dev/null 2>&1
+
+TOTAL=$(pdfinfo book.pdf | awk '/^Pages/{print $2}')
+gs -q -o /tmp/cel_p1.pdf  -sDEVICE=pdfwrite -dFirstPage=1 -dLastPage=3        book.pdf
+gs -q -o /tmp/cel_p3.pdf  -sDEVICE=pdfwrite -dFirstPage=5 -dLastPage=$TOTAL   book.pdf
+pdfunite /tmp/cel_p1.pdf /tmp/cel_cred.pdf /tmp/cel_p3.pdf /tmp/cel_cuerpo.pdf
+
+pdfunite cover_es.pdf /tmp/cel_cuerpo.pdf /tmp/cel_con_portada.pdf
 
 # pdfunite se lleva por delante el título del PDF.
 printf '[ /Title (Crecer en Libertad) /Author (Juan Manuel Ferrera Diaz) /DOCINFO pdfmark\n' > /tmp/cel_meta.txt

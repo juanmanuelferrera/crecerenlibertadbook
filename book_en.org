@@ -269,9 +269,6 @@
 Copyright \copyright\ 2025 Juan Manuel Ferrera Díaz\\[0.8em]
 All rights reserved.\\[1.2em]
 
-ISBN 979-8-XXXX-XXXX-X (paperback)\\
-ISBN 979-8-XXXX-XXXX-X (ebook)\\[1.2em]
-
 First edition, 2025\\[1.2em]
 
 \textit{The daily card, and more on all this:}\\
