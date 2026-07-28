@@ -106,10 +106,6 @@ Todos los derechos reservados.\\[1.2em]
 
 Primera edición, 2025\\[1.2em]
 
-Impreso en Estados Unidos de América\\[1.2em]
-
-\textit{Para más información sobre educación en libertad, visita:}\\
-\texttt{www.crecerenlibertad.org}
 }
 
 \vspace{2cm}
