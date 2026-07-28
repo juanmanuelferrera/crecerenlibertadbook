@@ -1,5 +1,5 @@
-#+TITLE: Growing in Freedom
-#+SUBTITLE: Learning Together
+#+TITLE: No Homework, No Marks
+#+SUBTITLE: Growing in Freedom
 #+AUTHOR: Juan Manuel Ferrera Diaz
 #+DATE: 2025
 #+LANGUAGE: en
