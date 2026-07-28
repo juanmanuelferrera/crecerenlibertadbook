@@ -428,10 +428,9 @@ And to our children, our real teachers on this road. Their curiosity, their deli
 #+BEGIN_EXPORT latex
 \cleardoublepage
 \part{Foundations: Understanding Free-Range Parenting}
-\chapter*{1. An Introduction to Free-Range Parenting}
-\addcontentsline{toc}{chapter}{1. An Introduction to Free-Range Parenting}
-\markboth{An Introduction to Free-Range Parenting}{An Introduction to Free-Range Parenting}
 #+END_EXPORT
+
+* 1. An Introduction to Free-Range Parenting
 
 It was an ordinary morning when my four-year-old asked me, \textquote{Dad, why is the sky blue?} Instead of giving him a quick answer or telling him we'd look it up later, we sat down together. What started as a question about the color of the sky turned into two hours on light, prisms, rainbows, and why sunsets are red. He ran the whole conversation. I went along for the ride.
 
@@ -476,10 +475,10 @@ You might be wondering: \textquote{This all sounds lovely, but is there anything
 #+END_EXPORT
 
 #+BEGIN_EXPORT latex
-\chapter*{2. The History and Theory of Alternative Education}
-\addcontentsline{toc}{chapter}{2. The History and Theory of Alternative Education}
-\markboth{History and Theory}{History and Theory}
+\cleardoublepage
 #+END_EXPORT
+
+* 2. The History and Theory of Alternative Education
 
 Sofía is seven and has never set foot in a classroom. When I ask her what she did yesterday, her eyes light up and she tells me she spent the whole afternoon watching ants in the garden. \textquote{Did you know they talk with their antennas?} Then she pulled out the encyclopedia, looked things up online, and ended the day drawing a full ant colony with tunnels and chambers. Nobody told her to study insects. Nobody assigned her a \textquote{project.} Like millions of children before her, she followed what she wanted to know.
 
@@ -540,10 +539,9 @@ That's what comes next.
 #+BEGIN_EXPORT latex
 \cleardoublepage
 \part{Practice: Living Free-Range Parenting}
-\chapter*{3. Everyday Strategies and Tools}
-\addcontentsline{toc}{chapter}{3. Everyday Strategies and Tools}
-\markboth{Strategies and Tools}{Strategies and Tools}
 #+END_EXPORT
+
+* 3. Everyday Strategies and Tools
 
 John Taylor Gatto took apart our illusions about school. /Dumbing Us Down/ was the shout that woke up a whole generation of parents. When I first read it I was angry—angry at the years I'd spent inside a system he described so plainly. But I was also relieved. I wasn't mad. The system really was built to confuse, to breed dependence, to smother curiosity.
 
@@ -825,10 +823,10 @@ The next chapter isn't going to lie to you: teaching this way means swimming aga
 #+END_EXPORT
 
 #+BEGIN_EXPORT latex
-\chapter*{4. Handling Social Pressure and Criticism}
-\addcontentsline{toc}{chapter}{4. Handling Social Pressure and Criticism}
-\markboth{Handling Social Pressure}{Handling Social Pressure}
+\cleardoublepage
 #+END_EXPORT
+
+* 4. Handling Social Pressure and Criticism
 
 The first time I told my mother we were going to raise our son without school, there was a ten-second silence that felt like a year. Then came the question: \textquote{And what will the neighbors think?} Not /how will he learn?/ Not /what does he need?/ But /what will people say?/
 
@@ -924,3 +922,516 @@ But here's the trap: if you measure success only by standardized tests, you've a
 Now you have the answers. Keep them. Practice them in the mirror if you have to. You'll need them.
 
 But remember this: you don't have to convince anybody. You owe your mother-in-law no explanation, nor your pediatrician, nor the neighbor. Your only duty is to your child—and he doesn't need you to win arguments. He needs you to trust him.
+
+*** Digital Tools
+
+Twenty years ago, teaching at home meant buying expensive encyclopedias and praying the local library had the book you needed. Today, with a connection, you have more knowledge at hand than any nineteenth-century university could have dreamed of.
+
+Technology opened up education in ways John Holt never imagined. It can also swamp you. Which platforms? Which apps are worth it? How do you stop digital learning from turning into staring at a screen?
+
+Here are the tools thousands of families, mine included, have tried. You don't need all of them. You shouldn't use all of them. Take the ones that fit your family and what your children are interested in.
+
+**** Learning Platforms
+
+*/Khan Academy/* (/khanacademy.org/)\index{Khan Academy}: Free, with courses from basic arithmetic to advanced calculus, plus science, history and programming. Short, clear videos, at your own pace. My son learned trigonometry here, explained better than in any textbook I ever had.
+
+*/Coursera and edX/*: Free university courses from MIT, Stanford and Harvard. Good for teenagers who want to go further into something or find out what higher education feels like before committing to it.
+
+*/Duolingo/*\index{Duolingo}: Languages as a game. It isn't perfect and it doesn't replace real immersion, but it's a good place to start. Free and hard to put down.
+
+*/Scratch/* (/scratch.mit.edu/)\index{Scratch}: MIT's platform for learning to program by building games and animations. Good from about seven. They don't only learn code—they learn to think logically and solve problems.
+
+**** Apps Worth Having
+
+For the youngest (three to seven):
+
+- */Endless Alphabet/*: Vocabulary and phonics, visual and interactive. My sons picked up dozens of words playing with it.
+- */DragonBox/*: A series that teaches algebra and geometry through games. Children solve equations without noticing they're doing math.
+
+For the middle years (eight to fourteen):
+
+- */LightBot/*: Programming concepts through puzzles. Fun and it works.
+- */Toca Nature/*: Build your own natural world and watch the food chains. Good for waking up an interest in biology.
+
+**** Science and Engineering
+
+- */Robotics kits/*: LEGO Mindstorms, Arduino, Raspberry Pi. They cost something up front, but they change how a child learns. Watching your son program a robot to pick things up is learning across the board in action: programming, physics, math and problem-solving in one project.
+
+- */Science kits/*: Look for Thames & Kosmos or National Geographic. Chemistry, physics and biology experiments you can do at the kitchen table.
+
+**** YouTube: the free university
+
+Don't write off YouTube. Picked over with some care, it's remarkable:
+
+- */Crash Course/*: Whole courses in history, science, literature and philosophy, presented by people who care about them.
+- */Kurzgesagt – In a Nutshell/*: Animated videos on science and hard ideas, explained so you can follow them.
+- */Veritasium, VSauce, MinutePhysics/*: Channels that make science exciting and reachable.
+
+**** The warning that has to go here
+
+All of these are means, not ends. Technology opens the door to knowledge. It doesn't replace curiosity, conversation, or doing the thing yourself.
+
+If your child spends six hours a day in front of a screen doing online courses, you've rebuilt school in digital form. That isn't education in freedom. It's passive consumption with a new name.
+
+Use it alongside the rest. Let him watch a video about volcanoes—then build one with baking soda. Let him learn about birds in an app—then go out with binoculars. The screen opens doors. Real life is where the learning goes deep.
+
+
+With these, your practical resources are complete. You have the books, the communities, the things to do, and now the technology. You're equipped.
+
+After reading about strategies, criticism and social pressure, I know what you're thinking: /this sounds exhausting. Is it really worth it?/ It's the question we ask at three in the morning when we can't sleep, after another tense conversation with our parents, when our child looks up and asks why we're different.
+
+The next chapter is my answer. Not theory—real stories. Families who came out the other side and looked back without regret. Children who grew up without school and are now capable, inventive adults. Because you need to know this isn't a risky experiment. It's a road thousands walked before you.
+
+I'm going to introduce you to Patricia, who took on her entire family and whose children are now her best argument. To Hadrián, who learned to read at nine—nine!—and now devours books. To whole communities built from nothing because somebody decided their children deserved better.
+
+If the last chapter gave you the armor, this one gives you the certainty that you've backed the right horse.
+
+#+BEGIN_EXPORT latex
+\cleardoublepage
+\part{Encouragement and What Comes Next}
+#+END_EXPORT
+
+* 5. Families Who Made It Work
+
+Three years after taking my children out of school, I ran into the head of the school they would have gone to. It was awkward. She knew our decision and I knew she didn't approve of it. Then something I didn't expect happened: she asked after my children. Not sarcastically. She actually wanted to know.
+
+I told her my eldest, who at seven was \textquote{behind} by school standards because he still didn't read fluently, was now ten and getting through four-hundred-page novels. That my youngest, who never sat in a math class, understands fractions because she cooks with me and doubles recipes. That both of them have friends, things they love, and projects that run for months because nobody tells them it's time to move on to the next subject.
+
+The head nodded slowly and said something I've never forgotten: \textquote{I wish every child had that chance.}
+
+This chapter isn't propaganda. It's evidence. These are the stories you need at two in the morning when you doubt. Real cases of ordinary families—not heroes, not teaching geniuses—who simply trusted that their children could do well outside the system. And they did.
+
+In Part Two I told you /my/ story: my road with Arjuna and Nitai, the Spanish learned with colored sticks, the areas we calculated to paint rooms, the way we handled ordinary school on our own terms. That was my own demonstration, in depth, of what this can look like.
+
+Now I want you to meet other families. Some I've mentioned in passing—Patricia, and Marta and Julio with Hadrián—and now they get their own space. Because if I only tell you my experience, you could think it worked for him, my situation is different. You need to see it work for all kinds of families: mothers who took on relatives, fathers who built communities out of nothing, children who learned to read at nine and now can't be pulled away from a book.
+
+Here's the proof. Not in theory. In real life, with real children, in imperfect families like yours and mine.
+
+*** Families Who Teach at Home
+
+Over the years we've heard plenty of stories from families who decided to teach at home. What comes through is the effort and the nerve of parents who fought for the right to choose, against legal and social pressure. What they show is that home can be a place where children learn more than academic content—they also learn how to be with people and how to handle themselves.
+
+**** Patricia: taking on the whole family
+
+Patricia is a mother I met at the Crecer en Libertad gatherings. By then she'd been teaching her two children outside the system for three years. Her road wasn't easy.
+
+\textquote{My family called me irresponsible,} she told me one afternoon while our children played in the park. \textquote{My mother actually cried when I said I was taking them out of school. She said, 'You're wrecking their future.'}
+
+But Patricia had seen something in her children her family hadn't. Her eldest, Marcos, who was eight, came home from school the same way every day: bag on the floor, blank stare, silence. When she asked what he'd learned, he shrugged. \textquote{Nothing.}
+
+\textquote{It wasn't that he'd learned nothing,} Patricia says. \textquote{It was that nothing had /mattered/. He'd spent six hours following orders, filling in sheets, waiting for the bell. And something in him was going out.}
+
+The break came when Marcos, who had always loved dinosaurs, came home crying because his teacher had taken away the paleontology book he was reading during math. \textquote{This isn't dinosaur time,} she said. \textquote{It's fractions time.}
+
+Patricia decided that week.
+
+The first months were chaos. Marcos was deschooling—the stretch where children need time to come down from school and remember that learning can be a pleasure. He spent weeks doing nothing productive by school standards. He built with LEGO. He read comics. He watched documentaries.
+
+\textquote{My mother came to visit and found me at eleven in the morning with Marcos in his pajamas watching a BBC documentary about the Jurassic. She looked at me as though I'd lost my mind. 'This is education?' she asked me.}
+
+But Patricia held. Three months later Marcos started asking questions. First about dinosaurs, then geology, then tectonic plates, then volcanoes. One interest pulled the next. Patricia joined the dots—found books, museums, amateur paleontologists.
+
+At ten, Marcos wrote a twenty-page essay on the extinction of the dinosaurs that took in current theories about the asteroid impact, the geological evidence, and a critical look at the alternatives. He wrote it for pleasure. Nobody assigned it.
+
+\textquote{My mother read that essay,} Patricia told me, smiling. \textquote{And for the first time in three years she said nothing critical. Only: 'Marcos knows more about this than I know about my own degree.'}
+
+Marcos is twelve now. He wants to be a paleontologist. Maybe he will be, maybe he'll find something else. What matters is that he /loves/ learning. The spark that was going out at school now burns.
+
+And Patricia's family, the one that called her irresponsible, now asks her for advice.
+
+**** The traveling family: the world as a classroom
+
+I met Laura and Miguel at a homeschoolers' gathering in Barcelona. But they didn't live in Barcelona—they didn't live anywhere permanently. For five years they traveled Europe, Asia and Latin America with their three children, aged seven, ten and thirteen, and made the whole world their classroom.
+
+\textquote{People always ask us, 'But how do they learn without school?'} Laura said. \textquote{And I answer, 'How could they /not/ learn, surrounded by all this?'}
+
+In Thailand her children learned about Buddhism by visiting temples and talking to monks. In Peru they studied Inca history walking through Machu Picchu with a local guide who explained how the aqueducts were engineered. In Morocco they practiced math haggling in the souks—currency conversion, percentages, what money is actually worth in a given place.
+
+\textquote{My eldest, Claudia, learned more about economics bargaining with sellers in Kathmandu than I learned in two years of secondary school,} Miguel says. \textquote{She understood supply and demand, profit margins, what tourism does to a local economy—all of it hands-on.}
+
+But the most valuable part wasn't the academic content. It was what it did to how the children see the world.
+
+\textquote{When we were in Vietnam, a local family invited us to dinner,} Laura says. \textquote{They lived in a bamboo house with a dirt floor. We ate rice and vegetables sitting on the ground. My children played with the local children even though they had no language in common—gestures, laughing, a ball they made out of something.}
+
+That night Claudia asked her mother: \textquote{Why are they happy if they have so little?} It started long conversations about wealth, happiness and how differently other people see things—the sort no textbook teaches with the same weight.
+
+The children picked up the basics of five languages, enough to get by, out of necessity. They learned geography not by memorizing capitals but by reading real maps, planning routes, working out time zones because they had to call family in Spain.
+
+\textquote{And math? Science?} I asked.
+
+\textquote{Khan Academy in the evenings, when we had wifi,} Miguel says. \textquote{An hour a day. And then they applied it constantly in real life—distances, converting Celsius to Fahrenheit, working out why the monsoon rains fall when they do in India.}
+
+After five years they came back to Spain. The children folded into local activities, sports, homeschool groups. And something worth noting: they talk about Asia, Africa and Latin America not as far-off exotic places but as real places with real people they met.
+
+\textquote{Claudia said to me not long ago, 'Mum, on the television they say refugees are dangerous. But we met refugee families in Greece. They were like us—they only wanted their children safe,'} Laura says, with her eyes filling. \textquote{No school would have given her that.}
+
+They traveled on very little—Couchsurfing, cheap hostels, cooking their own food. It wasn't luxury. It was a decision. And the result is three children with a view of the world, real feeling for other people, and an appetite for learning about cultures, languages and history.
+
+What will they do as adults? They don't know. But they'll be citizens of the world and not only of one country.
+
+**** Samuel: dyslexia without the label
+
+Samuel's story reached me through his mother, Elena, on a homeschooling forum. Samuel was diagnosed with severe dyslexia at seven. The school recommended special education, speech therapy three times a week, and lowered academic expectations.
+
+\textquote{They basically told us Samuel would never read fluently,} Elena wrote. \textquote{That we'd have to accept his 'limitations.'}
+
+Elena didn't accept it. Not because she denied the dyslexia—dyslexia is real—but because she refused the story of limitation. She took Samuel out of school and went looking for another way.
+
+She found the Orton-Gillingham method, built for children with dyslexia. Thirty minutes every morning of structured work—multisensory phonics, cards, games with letters. The rest of the day Samuel learned with no pressure on him.
+
+\textquote{I read aloud to him two hours a day,} Elena says. \textquote{Adventure novels, science fiction, whatever he wanted. And while I read, he followed the words with his finger. I never made him read himself.}
+
+Something happened around the age of ten. Samuel started to read on his own—quietly, slowly, but /for pleasure/. Comics first, then graphic novels, then books with more text on the page.
+
+\textquote{At twelve he was reading Harry Potter,} Elena says. Not at the level of children his age, but with understanding and with pleasure. And this mattered more: he didn't hate reading. He didn't feel stupid or slow.
+
+What made the difference wasn't only the method. It was the surroundings. At home Samuel wasn't the boy with learning difficulties. There were no comparisons. No red marks. No shame.
+
+Samuel also had strengths school never counted. He was excellent at visual math—geometry, patterns, building in three dimensions. With LEGO he made complicated structures without instructions. With strategy games he worked through hard logical problems.
+
+\textquote{At school it was all reading and writing,} Elena says. \textquote{Samuel failed at what they measured, so he was a failure. At home we could see all of him—spatial, logical, physical. He was a whole child, not a label.}
+
+At fourteen Samuel reads reasonably well. Writing is still hard—he uses spellcheckers and text-to-speech when he needs them. But he's learning programming, where spelling matters less, and 3D design, and he wants to study architecture.
+
+\textquote{Would he have got there in school?} Elena asks. \textquote{Maybe. But not without deep damage. Not without years of feeling inferior, broken, incapable.}
+
+The lesson isn't that homeschooling cures dyslexia. The lesson is that when you take away constant comparison, when you let a child work at his own speed, when you count more than one kind of intelligence, children do well. Including, especially, children with \textquote{learning difficulties.}
+
+
+These are three stories. I could tell you thirty. Families in small city flats. Rural families with vegetable patches. Single mothers with two jobs. Couples with five children. Every one different in its details and identical underneath: when you trust that your child can learn, when you make a place built on respect and freedom, when you let curiosity lead—children learn. Not in spite of there being no school. Precisely because there isn't one.
+
+*** What Our Children Teach Us
+
+Learning doesn't only run one way. Parents teach, and they also learn from their children. Plenty of home-educating parents find their children have a curiosity and a set of abilities that take them by surprise. Through the questions children ask, parents end up rethinking what they believed about school, and giving freedom and play their proper weight.
+
+What parents describe is how children, with nothing in the way, come up with their own ways of learning. Moments that would have been routine turn into something real, where playing and exploring do the work. A child who started reading and writing on his own after a stretch of unstructured time shows what play can do. Both parent and child end up somewhere that curiosity and shared responsibility can grow, and where each person's own progress counts.
+
+*** Learning Together: the Family as a School
+
+Teaching at home puts the family at the center of learning. It recognizes that learning happens between people, and that everybody in the house both gives and gets. Sharing what you know and what you can do makes a place where people learn together. Ordinary things—cooking, gardening, a project everybody has a hand in—turn into the moments that count.
+
+It also matters to build something with other families doing the same. Support networks let parents swap resources and ideas while the children are around other children. Families who meet up to do things together don't only get closer at home—the children learn to read each other and to work problems out side by side.
+
+Children changing, everybody learning from everybody, and a community around it: those are the three legs of this. Learning isn't confined to a room or an hour. It runs through the day, and every house becomes a place where something is happening. Parents and children grow up together.
+
+These stories will have given you some hope. Maybe they made your eyes sting. Patricia, Hadrián, all those families who made it work—they're the proof.
+
+But now I have an uncomfortable question: what then?
+
+Your child grows up in freedom. He does well, learns at his own pace, gets deep into what he loves. Good. But he doesn't live only in your house. He lives in a world where almost every other child goes to school. Where employers ask about qualifications. Where the school system carries on, grinding through one generation after another.
+
+Does this stay inside your family? Or does it have to be bigger than that?
+
+#+BEGIN_EXPORT latex
+\cleardoublepage
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\cleardoublepage
+#+END_EXPORT
+
+* 6. What Comes Next, and Your Part in It
+
+Five years on. My son is twelve. I'm in the supermarket, in the queue. The neighbor who used to look at me with pity—the one who asked \textquote{and what about socialization?} in that falsely concerned voice—comes over.
+
+\textquote{Listen,} he says, almost whispering. \textquote{My son is suffering at school. He doesn't want to go. He cries every morning.} A long pause. \textquote{How... how did you start?}
+
+There it is. The moment you realize this was never only about your family.
+
+*** What a Different Future Might Look Like
+
+Every family that chooses this is an act of resistance. Not violent, not political. Just human. We're saying: our children deserve better, and we're going to give it to them.
+
+But here's the uncomfortable part: while we teach our children in freedom, millions of children are still stuck in a system that flattens them. Alternative education—unschooling, Montessori, Waldorf, homeschooling—offers models that work. That take the individual child seriously. That let children be children.
+
+When does it stop being \textquote{alternative} and become normal?
+
+*** Your Part in It
+
+Conscious parenting\index{conscious parenting} starts with you. With being there when your child asks something. With thinking about why you react the way you do. With recognizing that your fears—about his future, about what people will say, about whether he'll \textquote{succeed}—are yours and not his.
+
+Teaching a child to feel for other people\index{empathy} isn't a technique. It's living in a way that shows him feelings matter, other people matter, and that being human is a strength and not a weakness.
+
+But let's be honest: this is bigger than your family.
+
+The neighbor in the supermarket asked me how to start. I gave him John Holt. I told him about the communities. I offered him a coffee so we could talk properly. Three months later he took his son out of school.
+
+His son now has somebody to play with—mine. Two more families joined. There are five of us. Next year there'll be ten. Or twenty.
+
+You don't have to start a movement. The movement is already there. You only have to join it. Put your story somewhere a desperate person at two in the morning will find it. Get to know other families, even one, so you aren't alone. Stand up for the right of families to choose, when the chance comes. Get other people to question what they assume, just by living your own way without apologizing for it.
+
+Every conversation counts. Every family that joins multiplies what's possible. Every child raised in freedom becomes an adult who remembers that learning can be a pleasure.
+
+*** The Question That Started It
+
+Back to the beginning. To the morning my son asked: \textquote{Dad, why is the sky blue?}
+
+If I'd said \textquote{I don't know} and gone back to my coffee, it would have been one more question, forgotten in five minutes. If I'd given him the complete answer—Rayleigh scattering, short wavelengths, the atmosphere—he'd have memorized empty words.
+
+Instead we sat down. We looked into it together. He led, I went along. Two hours later he understood not only why the sky is blue but something that matters far more: that his questions count. That learning is finding out, not reciting. That adults don't have all the answers, and that's fine.
+
+That morning changed our life. Not because he learned about the visible spectrum. Because we both learned we could trust his curiosity.
+
+He's twelve now. He still asks. And I still don't have all the answers.
+
+But we keep looking into things together.
+
+Your child will ask you something tomorrow. Something ordinary. The question matters less than what you do with it.
+
+That moment—the instant you decide whether to give a quick answer or sit down and find out together—is where all of this starts.
+
+You don't need a perfect plan. You don't need to know the theories. You don't need to be brave in front of the whole world.
+
+You only need to choose, in that moment, to trust your child's curiosity.
+
+The rest comes on its own.
+
+#+BEGIN_EXPORT latex
+\cleardoublepage
+#+END_EXPORT
+
+* Epilogue
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+#+BEGIN_EXPORT latex
+\thispagestyle{plain}
+\addcontentsline{toc}{chapter}{Epilogue}
+#+END_EXPORT
+
+Raising and teaching children in freedom isn't only a private choice. It's a push to change what we understand about learning and about childhood. Through this book we've gone over different ways of doing it, and kept coming back to natural learning, a child's independence, and the communities that hold families up.
+
+Community is the part that carries you. Together, as families, we get stronger by swapping what we've lived and holding each other up. Every story shared reflects a shared commitment to changing how we think about raising and teaching children. We've run into real difficulties, from social criticism to resistance from school systems, and those difficulties are also where the argument for a more open and respectful education gets made.
+
+Choosing to teach at home, or to do it some other unconventional way, is a statement of trust in what a particular child could become. The range of approaches matters: every family can find its own way across the whole spread of alternative education. Recognizing that range is good for all of us.
+
+How a child feels matters as much as what he knows. Making a place where children feel safe and valued, where love and trust are built up, is what lets them grow. And while we're feeding curiosity, we also have to look at what we ourselves believe and how it shows up in what we do each day.
+
+Every one of us can shift something. Looking ahead, picture a world where this is the normal way. A future where families, teachers and communities work together, respect individual choices, and build places worth learning in.
+
+This epilogue is a call to act. Let's make somewhere safe for our children, with love running through it. Let's turn criticism into conversation. Closing this book, let's carry the determination to change something.
+
+The adventure goes on. Let's keep growing together and take the beauty of being free seriously. Let's be part of something that redefines what it means to teach with love.
+
+#+BEGIN_EXPORT latex
+\cleardoublepage
+#+END_EXPORT
+
+* Appendix: The Legal Basics
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+#+BEGIN_EXPORT latex
+\thispagestyle{plain}
+\addcontentsline{toc}{chapter}{Appendix: The Legal Basics}
+#+END_EXPORT
+
+Before starting down this road it's natural to ask: is it legal to teach at home where I live? It's the most common question, and the one that produces the most fear. Legal fear can stop you before you take the first step.
+
+The short answer: it depends where you are. But in most of the places where you'll be reading this, teaching at home is legal, or sits in a grey area that lets you get on with it.
+
+Here's the basic picture by region. I'm not a lawyer and this isn't legal advice, but it's enough to know where to start and where to ask.
+
+*** Spain: a grey area that lets you do it
+
+In Spain, teaching at home sits in a legal gap. It's neither explicitly allowed nor explicitly banned. The constitution guarantees the right to an education, and the law requires schooling between six and sixteen—but \textquote{schooling} is read in different ways.
+
+Thousands of families teach at home in Spain without trouble. Some get a visit from social services, but if the child is clearly learning and clearly well, serious legal consequences are unusual.
+
+  *What to do:*
+- Join ALE, the Free Education Association, for current legal advice
+- Keep a record of what your children are doing (portfolios, photographs, projects)
+- Have your answers ready if social services asks
+- Get to know local families already doing it—the community is the thing that helps
+
+*The fear against what actually happens:*
+
+Here's the truth you need to hear: the fear people carry is far bigger than what actually happens.
+
+For parental rights to be removed in Spain, something serious has to be going on—domestic violence, drugs, severe neglect. Teaching at home, on its own, is not grounds for losing custody. Nowhere near.
+
+What's the worst that can happen if it reaches a court? That a judge orders you to send your child to school. That's it. No enormous fines. No prison. Nobody takes your children. Only an order to enroll them. And getting that far is unlikely.
+
+My own experience: some people who resented us reported us. The social workers came to the house. They went over everything. They talked to the children. They found them well looked after, happy, and learning. There was no problem.
+
+But the complaints kept coming. I had to go and see the provincial prosecutor for minors, who threatened me with fines and legal consequences. It was unpleasant. It was stressful.
+
+Do you know what happened? We moved to another province. And that was the end of it. Once we were outside that jurisdiction, the whole thing came to nothing. No fines. No court. Nothing.
+
+The lesson: the system barks more than it bites. If your children are well—and they will be—the authorities have no real interest in chasing you. They have actual abuse and neglect to deal with. They aren't going to spend resources on families where the children are obviously thriving.
+
+*** Latin America: it varies enormously
+
+The situation changes sharply from country to country:
+
+- *Mexico:* Legal and relatively straightforward. Thousands of families do it without real obstacles.
+- *Argentina:* A grey area much like Spain. Families do it; the authorities generally don't intervene.
+- *Chile:* Legal since 2018. Requires notifying the education ministry and annual assessments.
+- *Colombia:* Legal. Requires validation through ICFES examinations.
+- *Brazil:* Explicitly banned since 2018, by a contested Supreme Court decision.
+
+  *What to do:* Find the homeschooling groups for your particular country. Laws change, and local communities have the current information.
+
+*** United States: the easiest place
+
+The US is one of the friendliest countries for home education. It's legal in all fifty states, though each state has its own rules.
+
+- *Texas, Alaska, Oklahoma:* Minimal regulation. No notification or assessment required.
+- *California, New York:* Stricter. Notification, records, or affiliation with a supervised program.
+- Organizations like *HSLDA* (Home School Legal Defense Association) provide legal defense if something comes up.
+
+If you're in the US, look up your state's rules at /hslda.org/.
+
+*** Canada: legal, varies by province
+
+Every province has its own rules:
+
+- *Ontario:* Very flexible. Informal notification only.
+- *Alberta:* Registration and periodic assessments.
+- *Quebec:* Stricter. The education plan has to be approved.
+
+Contact provincial homeschooling groups for specifics.
+
+*** Europe: from banned to free
+
+- *United Kingdom:* Legal and fairly free. You only have to notify if the child was already enrolled.
+- *France:* Legal, with annual inspections since recent reforms.
+- *Germany:* *Banned.* Germany has the strictest laws in Europe. Families who persist can face heavy fines or lose custody. Many German families move to a neighboring country in order to teach at home.
+- *Netherlands, Belgium, Sweden:* Legal, with notification and supervision requirements.
+- *Norway:* Banned except in unusual circumstances, such as distance from a school.
+
+*The key point:* If you live somewhere it's banned or very difficult, look into flexible-schooling arrangements or free schools that respect how you want to do it.
+
+*** What if my country isn't listed?
+
+Look for:
+1. Social media groups: \textquote{Homeschooling [your country]}
+2. Local alternative-education organizations
+3. Online forums on respectful parenting
+
+You'll nearly always find families already doing it who can point you the right way.
+
+*** The Most Important Thing Here
+
+*Don't let legal fear stop you.*
+
+In most places, thousands of families teach at home without trouble. Legal intervention is rare and usually follows an accusation of neglect, which has nothing to do with home education itself.
+
+If a child is clearly learning, around other people, and happy, the authorities rarely step in, even in the legal grey areas.
+
+*** Key Legal Resources
+
+- *HSLDA* (/hslda.org/): Legal defense in the US and international resources
+- *ALE Spain* (/educacionlibre.org/): The Spanish association, with legal advice
+- *Local groups:* Always your best source of current information
+
+
+The law matters. But don't let it be the thing that stops you giving your child the education he deserves. Find out where you stand, get to know other families, keep a record of what your children are doing—and trust that thousands of families crossed this water before you and got to the other side.
+
+#+BEGIN_EXPORT latex
+\cleardoublepage
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\cleardoublepage
+#+END_EXPORT
+
+* Bibliography
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+#+BEGIN_EXPORT latex
+\thispagestyle{plain}
+\addcontentsline{toc}{chapter}{Bibliography}
+#+END_EXPORT
+
+1. Alavida. Educational platform for alternatives to conventional schooling. http://www.alavida.org
+2. Aldort, Naomi. /Raising Our Children, Raising Ourselves/. Book Publishers Network, 2005.
+3. Aron, Elaine. /The Highly Sensitive Person/. Broadway Books, 1996.
+4. Barlow, J. D. et al. \textquote{The importance of play in education.} /Journal of Childhood Studies/, vol. 43, no. 1, 2018, pp. 15-28.
+5. Bowlby, John. /A Secure Base: Parent-Child Attachment and Healthy Human Development/. Basic Books, 1988.
+6. Cachafeiro, Rosa. /La sexualidad y el funcionamiento de la dominación/. Pretoria, 2010.
+7. Chaplin, Charles. \textquote{When I Loved Myself Enough.}
+8. Damasio, Antonio. /Descartes' Error/. Putnam, 1994.
+9. Damasio, Antonio. /Looking for Spinoza/. Harcourt, 2003.
+10. De León, J. E. V. M. J. /La educación libre/. Editorial X, 2015.
+11. Freire, Paulo. /Pedagogy of the Oppressed/. Continuum, 1970.
+12. Forcades, Teresa. Talks and interviews on ethics and capitalism (various years).
+13. Gardner, Howard. /Frames of Mind: The Theory of Multiple Intelligences/. Basic Books, 1983.
+14. Gatto, John Taylor. /Dumbing Us Down: The Hidden Curriculum of Compulsory Schooling/. New Society Publishers, 1992.
+15. Gatto, John Taylor. /The Underground History of American Education/. Oxford Village Press, 2000.
+16. Gray, Peter. /Free to Learn: Why Unleashing the Instinct to Play Will Make Our Children Happier, More Self-Reliant, and Better Students for Life/. Basic Books, 2015.
+17. Gutman, Laura. /Crianza tranquila/. Editorial Medici, 2007.
+18. Hilliard, Asa G. III. /The Maroon Within Us: Selected Essays on Black History and Culture/. University of North Carolina Press, 1995.
+19. Hornedo Rocha, Braulio. /Reflexiones sobre la escolarización/.
+20. Illich, Ivan. /Deschooling Society/. Harper & Row, 1971.
+21. Janov, Arthur. /The Primal Scream/. Putnam, 1970.
+22. Jara, Miguel. \textquote{The myth of Pandora's Box, or herd immunity.}
+23. Katsch, Bernhard. /Calendario para Padres/.
+24. Liedloff, Jean. /The Continuum Concept: In Search of Happiness Lost/. Addison-Wesley, 1986.
+25. Massó Guijarro, Ester. \textquote{Breastfeeding as a catalyst of feminist social revolution.}
+26. Miller, Alice. /The Drama of the Gifted Child/. Basic Books, 1979.
+27. Moreno Sardá, Amparo. \textquote{The place of sexuality in human development.} Journals of psychology and education, 2015.
+28. Maturana, Humberto & Varela, Francisco. /The Tree of Knowledge: The Biological Roots of Human Understanding/. Shambhala, 1987.
+29. Perales Bermejo, Laura. Articles on parenting and the emotions (blogs and online publications).
+30. Piaget, Jean. /The Psychology of the Child/. Basic Books, 1969.
+31. Puig, Marc. \textquote{Raising and educating children in the twenty-first century.}
+32. Revista Historia. \textquote{The history of education in Spain.} Various articles, 2023.
+33. Ray, Brian D. \textquote{Academic achievement and demographic traits of homeschool students: a nationwide study.}
+34. Rogers, Barbara. /Home Education: The Choice That Changes Lives/.
+35. Rogers, Carl. /On Becoming a Person/. Houghton Mifflin, 1961.
+36. Rodríguez, Casilda. /¿Quién educa?/ Ediciones Akal, 2018.
+37. Savater, Fernando. \textquote{Education and Freedom.} Article, 22 March 2012.
+38. Stern, André. /I Was Never Sent to School/ (/Yo nunca fui a la escuela/). RBA, 2012.
+39. \textquote{Un mundo por aprender.} Colombian blog on education without school.
+40. Wain, Alex. \textquote{The role of natural learning.} /Educational Review/, vol. 60, no. 2, 2008, pp. 123-141.
+
+*Online Resources:*
+
+1. ALE (Asociación para la Educación Libre), Spain. www.ale.org
+2. Homeschooling en Acción. Support group for home-educating families. www.homeschoolingenaccion.com
+3. KIDDIFY. Platform for young people to share what they know. www.kiddify.com
+
+#+BEGIN_EXPORT latex
+\cleardoublepage
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\cleardoublepage
+#+END_EXPORT
+
+* Index
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+#+BEGIN_EXPORT latex
+\thispagestyle{plain}
+\addcontentsline{toc}{chapter}{Index}
+% \printindex  % Commented out - makeidx package not configured
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+\cleardoublepage
+#+END_EXPORT
+
+* About the Author
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+#+BEGIN_EXPORT latex
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{About the Author}
+#+END_EXPORT
+
+*Juan Manuel Ferrera Díaz* is a father, a self-taught man, and an advocate of alternative education. With no formal higher education, he is himself an example of what this book argues: the learning that goes deepest comes out of real need and real curiosity, not an imposed curriculum.
+
+Over his life he has taught himself programming, design, educational philosophy, and whatever else his projects and interests demanded—not because a course required it but because life did. That has given him an unusual grasp of how self-directed learning actually works.
+
+His commitment to raising children in freedom comes out of being a father and of finding out first-hand that qualifications are not the same thing as knowledge or ability. This book is the result of years of self-directed research, thinking, and the practical business of raising his own children outside the school system.
+
+/If this book was useful to you, pass it on to another family who might need it. And if you want to tell me what you made of it, write to me—I read everything./
