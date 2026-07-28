@@ -45,6 +45,35 @@ t = re.sub(r'#\+BEGIN_EXPORT latex\n(?:(?!#\+END_EXPORT).)*?\\chapter\*\{.*?#\+E
 # En el EPUB las dos salen como secciones vacías. Fuera.
 t = re.sub(r'\* Índice\n(?:(?!\* Prólogo).)*', '', t, flags=re.S)
 t = re.sub(r'\* Índice Alfabético\n(?:(?!\* ).)*', '', t, flags=re.S)
+
+# LO MÁS IMPORTANTE DE AQUÍ
+#
+# El libro usa \textquote{...} para las comillas, 193 veces. Para pandoc eso
+# es LaTeX crudo, y en el EPUB el LaTeX crudo SE TIRA: el fichero salía sin
+# una sola frase entrecomillada. Faltaban casi dos mil palabras y eran los
+# diálogos: "Papá, ¿estás bien de la cabeza?", "Porque podemos", lo que le
+# dijo el director. Aquí se convierten en comillas de verdad.
+#
+# Los \index{...} se quitan: el índice alfabético lleva años desactivado y,
+# pegados a una cursiva, la rompen y salen las barras impresas.
+t = re.sub(r'\\index\{[^{}]*\}', '', t)
+prev = None
+while prev != t:
+    prev = t
+    t = re.sub(r'\\textquote\{([^{}]*)\}', r'«\1»', t)
+# Una cursiva pegada a una raya o a un salto de línea no la reconoce pandoc y
+# salen las barras impresas: "/homeschooling/—no por capricho". Se separa.
+t = re.sub(r'([A-Za-zÁÉÍÓÚáéíóúñ])/(—|\\\\)', r'\1/ \2', t)
+
+# Con #+OPTIONS H:3 los encabezados de cuarto nivel no son encabezados.
+# Emacs los saca como viñetas; pandoc los numera, que inventa un orden que no
+# significa nada. Van como párrafo destacado.
+t = re.sub(r'^\*\*\*\* (.+)$', r'*\1*', t, flags=re.M)
+
+sobran = len(re.findall(r'\\textquote', t))
+if sobran:
+    print(f'  ! quedan {sobran} \\textquote sin convertir')
+
 Path('/tmp/cel_build.org').write_text(t)
 PY
 

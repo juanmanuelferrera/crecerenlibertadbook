@@ -212,6 +212,11 @@
 # Title page and front matter will be inserted manually below
 
 #+BEGIN_EXPORT latex
+% Números romanos hasta el capítulo 1. Va aquí y no en el preámbulo porque
+% la plantilla de pandoc mete su propio \mainmatter justo antes del cuerpo,
+% y eso deja la portada en arábigos. \startmainmatter, al final de los
+% agradecimientos, es el que cambia a arábigos y reinicia en 1.
+\pagenumbering{roman}
 % Half title page (no page number) - always starts on page 1 (odd)
 % Inspired by Penguin Classics minimalist design
 \begin{titlepage}
@@ -293,6 +298,12 @@ when almost nobody else does.}
 \vfill
 
 \cleardoublepage
+
+% El índice va aquí, después de la portada y la dedicatoria, y no antes.
+% Pandoc lo pone delante de todo si se le pasa --toc, y entonces la portada
+% aparece detrás del índice, en mitad del libro.
+\tableofcontents
+\cleardoublepage
 #+END_EXPORT
 
 * Foreword
@@ -305,7 +316,7 @@ when almost nobody else does.}
 \addcontentsline{toc}{chapter}{Foreword}
 #+END_EXPORT
 
-/By Anna/\\
+/By Anna/ \\
 /Co-founder of Crecer en Libertad, along with Marta and the author/
 
 Traditional schooling is under more question every year, and free-range parenting\index{free-range parenting} stands there as an alternative worth looking at. This book is an invitation to think again about how we raise and teach children, with the child's curiosity and independence\index{children's autonomy} as the ground everything else stands on.
@@ -366,7 +377,7 @@ Anna and Marta have carried this project. What they saw, and their gift for maki
 
 My thanks as well to every family who shared what they've lived for this book, to the researchers whose work lit up this field, and above all to my sons, who have been my real teachers.
 
-/Crecer en Libertad/—growing in freedom—isn't only the title of this book. It's a way of living, a bet on trusting our children and what they can do on their own. It's also an invitation to question what's settled, to imagine an education that is more human, more respectful, closer to what children actually need.
+/Crecer en Libertad/ —growing in freedom— isn't only the title of this book. It's a way of living, a bet on trusting our children and what they can do on their own. It's also an invitation to question what's settled, to imagine an education that is more human, more respectful, closer to what children actually need.
 
 I hope you find in these pages some inspiration and some company for your own road, whatever shape it takes.
 
